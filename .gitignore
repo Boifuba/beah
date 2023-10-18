@@ -1,6 +1,3 @@
 .env
 node_modules/
-TODO.md
-backup/
-todo.md
-tutorial.json
+.vscode/
