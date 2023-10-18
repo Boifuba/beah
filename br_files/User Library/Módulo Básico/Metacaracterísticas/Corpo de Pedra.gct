@@ -1,0 +1,757 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "a2790dc2-af45-471b-ae6f-e834fdebe8ec",
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "3f6e8ae7-c9ce-423f-b081-50eff50bfdd5",
+			"container_type": "meta_trait",
+			"name": "Metacaracterística: Corpo de Pedra",
+			"reference": "B263",
+			"calc": {
+				"points": 140
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "fc23cb04-9322-4757-9aff-d4c51fd4d0bb",
+					"name": "Resistência a Dano",
+					"physical": true,
+					"exotic": true,
+					"levels": "5",
+					"points_per_level": 5,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "1569c82c-6219-4796-9f1f-cefa53525e09",
+							"disabled": true,
+							"name": "Campo de Força",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "8f398083-6684-485b-a32f-50872836135e",
+							"disabled": true,
+							"name": "Enrijecido",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total",
+							"levels": 1
+						},
+						{
+							"type": "modifier",
+							"id": "ae4286b5-c00b-4d72-8883-953305e9cc47",
+							"disabled": true,
+							"name": "Absorção",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 80,
+							"affects": "total",
+							"notes": "Amplia @Habilidade@"
+						},
+						{
+							"type": "modifier",
+							"id": "071a61d9-cc0d-491e-b91d-2383990dca82",
+							"disabled": true,
+							"name": "Absorção",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 80,
+							"affects": "total",
+							"notes": "Só para cura"
+						},
+						{
+							"type": "modifier",
+							"id": "a7d5222e-10ef-4131-a556-1832fac3fd85",
+							"disabled": true,
+							"name": "Absorção",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"notes": "Amplia qualquer habilidade"
+						},
+						{
+							"type": "modifier",
+							"id": "b4c507b0-f8b3-4676-9eb1-890fdb45cc89",
+							"disabled": true,
+							"name": "Reflexão",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "3e2f5308-ef98-4461-a801-6c7f612d9cee",
+							"disabled": true,
+							"name": "Maldição",
+							"reference": "H14",
+							"cost_type": "points",
+							"cost": -1,
+							"affects": "total",
+							"notes": "@Rara@"
+						},
+						{
+							"type": "modifier",
+							"id": "2fd5bbb4-ad6e-40ff-95df-5a7677e50a68",
+							"disabled": true,
+							"name": "Maldição",
+							"reference": "H14",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total",
+							"notes": "@Ocasional@"
+						},
+						{
+							"type": "modifier",
+							"id": "201bd4cf-f708-40b5-bd18-f63f2e1d5313",
+							"disabled": true,
+							"name": "Maldição",
+							"reference": "H14",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"notes": "@Comum@"
+						},
+						{
+							"type": "modifier",
+							"id": "0296ab3b-365c-4442-bfc4-99683c5c929e",
+							"disabled": true,
+							"name": "Maldição",
+							"reference": "H14",
+							"cost_type": "percentage",
+							"cost": -15,
+							"affects": "total",
+							"notes": "@Muito Comum@"
+						},
+						{
+							"type": "modifier",
+							"id": "82cd39de-43d8-413d-ab60-bc5b39f7bf36",
+							"disabled": true,
+							"name": "Direcional",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Frente"
+						},
+						{
+							"type": "modifier",
+							"id": "16c7ca55-82b4-47f2-89f1-e5eb587017b1",
+							"disabled": true,
+							"name": "Flexível",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "b22f061d-3371-47e5-be15-065c0a3e39b8",
+							"disabled": true,
+							"name": "Limitada",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "@Forma de Ataque Muito Comum@"
+						},
+						{
+							"type": "modifier",
+							"id": "0b239b3d-80bb-45f7-985d-3a44a2b54146",
+							"disabled": true,
+							"name": "Semiablativa",
+							"reference": "B84",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d8365fcf-5321-4f81-9bd3-02c6ace83302",
+							"disabled": true,
+							"name": "Sem Armadura",
+							"reference": "B84",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "471711fb-d00c-4b91-89a4-3d5b29b385d5",
+							"disabled": true,
+							"name": "Direcional",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "@Direção: Costas, Direita, Esquerda, Acima ou Abaixo@"
+						},
+						{
+							"type": "modifier",
+							"id": "076ecfbc-f9c6-45fd-9447-1ea566fa3f77",
+							"disabled": true,
+							"name": "Limitada",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "@Forma de Ataque Comum@"
+						},
+						{
+							"type": "modifier",
+							"id": "4d446755-fcdf-42cc-ab2a-7b81e3d46f18",
+							"disabled": true,
+							"name": "Pele Resistente",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "Qualquer efeito que requer uma ruptura na pele ou contato com a pele afetará o personagem."
+						},
+						{
+							"type": "modifier",
+							"id": "de86009f-a703-4a65-8331-99c6d94a3666",
+							"disabled": true,
+							"name": "Limitada",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -60,
+							"affects": "total",
+							"notes": "@Forma de Ataque Ocasional@"
+						},
+						{
+							"type": "modifier",
+							"id": "a4fda4ff-3e17-4b25-a6ce-d759f7e421db",
+							"disabled": true,
+							"name": "Ablativa",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -80,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "f70a3649-f61d-46da-98ff-bd1d376575d5",
+							"disabled": true,
+							"name": "Limitada",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -80,
+							"affects": "total",
+							"notes": "@Forma de Ataque Rara@"
+						},
+						{
+							"type": "modifier",
+							"id": "8925b26a-cd37-449e-9cc8-a0e922241fad",
+							"disabled": true,
+							"name": "Laminada",
+							"reference": "RSWL18",
+							"cost_type": "percentage",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "3a9d8b97-dbfc-44b7-beed-cc3ea717fdbd",
+							"disabled": true,
+							"name": "À Prova de Maldição",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "94e86049-c516-4c4b-8a3e-5fc3766960d4",
+							"disabled": true,
+							"name": "Somente Maldições",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": 0,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "fc37cff1-6d1b-45fe-acec-37cb1bac5fdf",
+							"disabled": true,
+							"name": "Parcial (@Ponto de Impacto, 1 nível por -1 de modificador de ataque, Tronco vale -10%@)",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						}
+					],
+					"reference": "B83",
+					"calc": {
+						"points": 25
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "skull"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "face"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "neck"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "torso"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "vitals"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "groin"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "arm"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "hand"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "leg"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "foot"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "tail"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "wing"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "fin"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "brain"
+						}
+					],
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "0daeb0b3-24fc-4d25-8d0a-f47563d669d2",
+					"name": "Não Respira",
+					"physical": true,
+					"exotic": true,
+					"base_points": 20,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "c8da27cd-fc36-4247-ad4c-3086ea4f2b60",
+							"disabled": true,
+							"name": "Guelras",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "85e2eb4a-2f95-4970-a704-e2aca0a303c2",
+							"disabled": true,
+							"name": "Guelras",
+							"reference": "B73",
+							"cost_type": "points",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Sufoca no ar"
+						},
+						{
+							"type": "modifier",
+							"id": "b1ba3955-3209-4ce1-8d56-efc727ab2320",
+							"disabled": true,
+							"name": "Absorção de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d17fa595-ee78-48b2-a3bb-45fd546b4b1d",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 25 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "d2a1d815-87f3-4d98-bd86-5337eac8fab9",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 50 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "61e2a3b9-7b65-451c-a22a-3fb0ba420b58",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -30,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 100 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "4b34d3f8-0846-4674-93b2-bb0943afe0a8",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 200 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "aa2d5038-cd78-4eda-ba57-0442b47a92fe",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 300 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "4eab8b94-9246-4148-ab9b-38ec0adfdfaf",
+							"disabled": true,
+							"name": "Combustão de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						}
+					],
+					"reference": "B73",
+					"calc": {
+						"points": 20
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "ca1fd497-4f1b-43a7-89f5-0075735dfbe9",
+					"name": "Fragilidade (Quebradiço)",
+					"physical": true,
+					"exotic": true,
+					"base_points": -15,
+					"reference": "B143",
+					"calc": {
+						"points": -15
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "94d1717d-4c44-4a38-96b0-6ef546aac882",
+					"name": "Tolerância a Ferimentos",
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "830c9f48-8abe-4999-bbfd-171e219a639f",
+							"disabled": true,
+							"name": "Difuso",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 100,
+							"affects": "total",
+							"notes": "O personagem é imune a lesões incapacitantes e reduz o dano que ele sofre com a maioria dos golpes físicos; a maioria dos inimigos (a critério do Mestre) não é capaz de empurrar ou agarrar o personagem! Ele não sangra, não é afetado por toxinas de origem sanguínea é imune a ataques que interrompem a circulação de uma parte do sangue do corpo. Ataques por perfuração ou perfurantes (de qualquer gravidade) nunca provocam mais que 1 PV de dano, independente do dano penetrante! Outros tipos de ataques também nunca causam mais que 2 PV de dano. Exceção: ataques de área, de cone e explosões causam o dano normal."
+						},
+						{
+							"type": "modifier",
+							"id": "fc98a05b-9731-4db3-834b-9174957bb5e1",
+							"name": "Homogêneo",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 40,
+							"affects": "total",
+							"notes": "Aplica-se os seguintes modificadores de ferimento: perf e pa++, ×1/2; pa+, ×1/3; pa, ×1/5; e pa-, ×1/10"
+						},
+						{
+							"type": "modifier",
+							"id": "ae7f38ac-5536-4755-be44-16e8754a53e6",
+							"name": "Sem Sangue",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "O personagem não sangra, não é afetado por toxinas de origem sanguínea é imune a ataques que interrompem a circulação de uma parte do sangue do corpo"
+						},
+						{
+							"type": "modifier",
+							"id": "6ec83aa2-109c-45b3-850a-3c7287631937",
+							"disabled": true,
+							"name": "Sem Cérebro",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "O cérebro do personagem não pode ser usado como alvo para causar dano adicional. um golpe no crânio ou no olho é considerado como um golpe normal no rosto (com a diferença que um ferimento no olho pode mutilar esse órgão)."
+						},
+						{
+							"type": "modifier",
+							"id": "e3fea14a-eaa4-4986-badf-804e4839ae5d",
+							"disabled": true,
+							"name": "Sem Olhos",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "O personagem não tem olhos, logo eles não podem ser atacados. O personagem é imune a ataques que produzem cegueira."
+						},
+						{
+							"type": "modifier",
+							"id": "b7e62da3-890d-494f-9456-6d9f8dfaa394",
+							"disabled": true,
+							"name": "Sem Cabeça",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 7,
+							"affects": "total",
+							"notes": "Crânio, cérebro e rosto não podem ser usados como alvo"
+						},
+						{
+							"type": "modifier",
+							"id": "11d90cd5-2bc2-4073-80a3-892f42b52b07",
+							"disabled": true,
+							"name": "Sem Pescoço",
+							"reference": "B95",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "O personagem não tem pescoço. Por esse motivo, ele não tem o ponto de impacto “pescoço” e não pode ser decapitado, asfixiado nem estrangulado."
+						},
+						{
+							"type": "modifier",
+							"id": "488cb626-c47d-4815-b79c-18b5b301584a",
+							"disabled": true,
+							"name": "Sem Órgãos Vitais",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "Considere todos os golpes em “órgãos vitais” ou na “virilha” como golpes no tronco."
+						},
+						{
+							"type": "modifier",
+							"id": "3c5fdf76-0f1b-42d8-b5f5-1d2ed98e20e7",
+							"disabled": true,
+							"name": "Não-Vivo",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 20,
+							"affects": "total",
+							"notes": "Aplica-se os seguintes modificadores de ferimento: perf e pa++, ×1; pa+, ×1/2; pa, ×1/3; e pa-, ×1/5"
+						}
+					],
+					"reference": "B94",
+					"calc": {
+						"points": 45
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "5ba32dd3-4c82-4692-81a0-02348dea7e87",
+					"name": "Resistência à Pressão",
+					"physical": true,
+					"exotic": true,
+					"levels": "3",
+					"points_per_level": 5,
+					"reference": "B84",
+					"calc": {
+						"points": 15
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "e71138c5-c97d-40ef-8e06-2096d7c7654b",
+					"round_down": true,
+					"name": "Resistente",
+					"physical": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "9c3f732f-4545-411b-a9fb-426e577cff56",
+							"name": "Riscos ao Metabolismo",
+							"reference": "B85",
+							"cost_type": "points",
+							"cost": 30,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "4d714a4a-3297-415b-b969-7f0e0d71330c",
+							"disabled": true,
+							"name": "@Comum: Venenos, Enjoos, etc.@",
+							"reference": "B85",
+							"cost_type": "points",
+							"cost": 15,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "da15141e-c364-40ec-b0ab-53fd4275c4ee",
+							"disabled": true,
+							"name": "@Ocasional: Doenças, Venenos Ingeridos, etc.@",
+							"reference": "B85",
+							"cost_type": "points",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "9b6031d0-1103-48b0-a71e-a377c9575121",
+							"disabled": true,
+							"name": "@Raro: Aceleração, Doença de Altitude, Doença de Descompressão, Enjoo Marítimo, Enjoo Espacial, Nanomáquinas, etc.@",
+							"reference": "B85",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "649f122e-9f80-4fc2-bbc5-08db24cd71fd",
+							"name": "Imunidade",
+							"reference": "B85",
+							"cost_type": "multiplier",
+							"cost": 1
+						},
+						{
+							"type": "modifier",
+							"id": "d6658503-89d5-4bb2-a1d1-8f3230a6048c",
+							"disabled": true,
+							"name": "+8 nos testes de HT para Resistir",
+							"reference": "B85",
+							"cost_type": "multiplier",
+							"cost": 0.5
+						},
+						{
+							"type": "modifier",
+							"id": "6f986fa6-5d9b-4b2b-b5a7-e0675ba9299e",
+							"disabled": true,
+							"name": "+3 nos testes de HT para Resistir",
+							"reference": "B85",
+							"cost_type": "multiplier",
+							"cost": 0.33
+						}
+					],
+					"reference": "B84",
+					"calc": {
+						"points": 30
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "7cd9c82c-ef26-42c1-8ea4-aa232a68e4fb",
+					"name": "Lacrado",
+					"physical": true,
+					"exotic": true,
+					"base_points": 15,
+					"reference": "B68",
+					"calc": {
+						"points": 15
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "b0bc545a-9f53-4eff-a8cf-15bcf7c88a93",
+					"name": "Resistência ao Vácuo",
+					"physical": true,
+					"exotic": true,
+					"base_points": 5,
+					"reference": "B84",
+					"calc": {
+						"points": 5
+					},
+					"categories": [
+						"Vantagem"
+					]
+				}
+			]
+		}
+	]
+}

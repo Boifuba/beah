@@ -1,0 +1,82 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "fcb33885-73ee-4c6b-9d79-0db56be7206b",
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "ae529965-b8ed-4ba8-b931-1c54c72c385f",
+			"container_type": "meta_trait",
+			"name": "Metacaracterística: Ictioide",
+			"reference": "B263",
+			"calc": {
+				"points": -50
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "1c06acd5-a178-4dce-980f-93d28e1dffd2",
+					"name": "Sem Pernas (Aquático)",
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "f089b133-af3b-4cb0-a2c7-1f6f5f709bde",
+							"disabled": true,
+							"name": "Não Mergulha",
+							"reference": "B156",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "2dddb38a-f44a-4bc9-ba06-d7c0696160da",
+							"disabled": true,
+							"name": "Incapaz de proteger @Nadadeiras/Mastros/Remos/Velas@",
+							"reference": "B156",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						}
+					],
+					"reference": "B156",
+					"calc": {
+						"points": 0
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "04ae170d-56c3-4846-a495-5160887f6061",
+					"name": "Sem Manuseadores",
+					"physical": true,
+					"base_points": -50,
+					"reference": "B149",
+					"calc": {
+						"points": -50
+					},
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"categories": [
+						"Desvantagem"
+					]
+				}
+			]
+		}
+	]
+}

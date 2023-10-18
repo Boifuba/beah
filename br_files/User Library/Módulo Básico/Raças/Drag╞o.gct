@@ -1,0 +1,1771 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "7deeb189-f1a0-467d-8df6-b6e4505d7dc9",
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "c71a7c2d-a119-4e41-b270-bd722a7806c4",
+			"container_type": "race",
+			"name": "Dragão (Básico)",
+			"reference": "B261",
+			"ancestry": "Human",
+			"calc": {
+				"points": 260
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "078b4723-6028-4d1d-8259-7e6c6e8b8440",
+					"name": "Modificadores de Atributos",
+					"physical": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "426b92b6-fb9a-4a99-8fb7-d883f6687452",
+							"name": "ST +15",
+							"reference": "B14",
+							"cost_type": "points",
+							"cost": 120,
+							"affects": "total",
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": 15,
+									"attribute": "st"
+								}
+							],
+							"notes": "Inclui -20% de MT"
+						},
+						{
+							"type": "modifier",
+							"id": "3643d031-93c9-4d2d-ad9f-992f8a392934",
+							"name": "Per +3",
+							"reference": "B16",
+							"cost_type": "points",
+							"cost": 15,
+							"affects": "total",
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": 3,
+									"attribute": "perception"
+								}
+							]
+						},
+						{
+							"type": "modifier",
+							"id": "51f61151-34ce-4c0d-89b3-049c717e2f87",
+							"name": "Vont +3",
+							"reference": "B16",
+							"cost_type": "points",
+							"cost": 15,
+							"affects": "total",
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": 3,
+									"attribute": "will"
+								}
+							]
+						},
+						{
+							"type": "modifier",
+							"id": "75fad6d4-cb7a-410a-b39f-655936184e6d",
+							"name": "MT +2",
+							"reference": "B16",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": 2,
+									"attribute": "sm"
+								}
+							]
+						}
+					],
+					"reference": "B14",
+					"calc": {
+						"points": 150
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "e99653d1-adbb-4ffa-8e9d-59624c18d685",
+					"name": "Mão Fraca",
+					"physical": true,
+					"levels": "3",
+					"points_per_level": -5,
+					"reference": "B150",
+					"calc": {
+						"points": -15
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "advantage_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "manuseadores precários"
+								}
+							}
+						]
+					},
+					"notes": "O personagem sofre uma penalidade nas tarefas que exigem mão firme. Cada nível (até no máximo 3) implica numa penalidade de -2 nessas tarefas.",
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "c1a0dd19-f20c-4687-b43c-cd54f01b9ae0",
+					"name": "Garras Pontudas",
+					"physical": true,
+					"base_points": 8,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "corte",
+								"st": "thr"
+							},
+							"usage": "Pisotear",
+							"reach": "C,1",
+							"parry": "Não",
+							"block": "Não",
+							"calc": {
+								"level": 0,
+								"parry": "Não",
+								"block": "Não",
+								"damage": "thr corte"
+							},
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Briga"
+								},
+								{
+									"type": "skill",
+									"name": "Boxe"
+								},
+								{
+									"type": "skill",
+									"name": "Caratê"
+								}
+							]
+						},
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "perf",
+								"st": "thr"
+							},
+							"usage": "Chute",
+							"reach": "C,1",
+							"parry": "Não",
+							"block": "Não",
+							"calc": {
+								"level": 0,
+								"parry": "Não",
+								"block": "Não",
+								"damage": "thr perf"
+							},
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Briga"
+								},
+								{
+									"type": "skill",
+									"name": "Boxe"
+								},
+								{
+									"type": "skill",
+									"name": "Caratê"
+								}
+							]
+						}
+					],
+					"reference": "B61",
+					"calc": {
+						"points": 8
+					},
+					"notes": "Pés",
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "82ef350e-cee2-4646-a394-2dc30c21d28d",
+					"name": "Resistência a Dano",
+					"physical": true,
+					"exotic": true,
+					"levels": "6",
+					"points_per_level": 5,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "8f3312f5-993e-4ab6-8964-c76047ce16e8",
+							"disabled": true,
+							"name": "Campo de Força",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "3f4dc015-dae7-4fa6-a8cc-bb844c2f04cc",
+							"disabled": true,
+							"name": "Enrijecido",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total",
+							"levels": 1
+						},
+						{
+							"type": "modifier",
+							"id": "d9cb2478-dc2a-41cd-bd93-01489731e781",
+							"disabled": true,
+							"name": "Absorção",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 80,
+							"affects": "total",
+							"notes": "Amplia @Habilidade@"
+						},
+						{
+							"type": "modifier",
+							"id": "f1b05acd-8bff-4dd4-98e8-ca842669a943",
+							"disabled": true,
+							"name": "Absorção",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 80,
+							"affects": "total",
+							"notes": "Só para cura"
+						},
+						{
+							"type": "modifier",
+							"id": "efa207f6-8cc3-452c-80e6-a3d6030239ad",
+							"disabled": true,
+							"name": "Absorção",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"notes": "Amplia qualquer habilidade"
+						},
+						{
+							"type": "modifier",
+							"id": "59a08cf3-e296-4749-8071-4225fb2f1e1a",
+							"disabled": true,
+							"name": "Reflexão",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "05773920-545e-41ef-9747-35c2b2c760ed",
+							"disabled": true,
+							"name": "Maldição",
+							"reference": "H14",
+							"cost_type": "points",
+							"cost": -1,
+							"affects": "total",
+							"notes": "@Rara@"
+						},
+						{
+							"type": "modifier",
+							"id": "dcd67818-be9d-4842-8457-6652c835793b",
+							"disabled": true,
+							"name": "Maldição",
+							"reference": "H14",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total",
+							"notes": "@Ocasional@"
+						},
+						{
+							"type": "modifier",
+							"id": "664d1ff6-e5a2-47ce-b753-54fd66d882ac",
+							"disabled": true,
+							"name": "Maldição",
+							"reference": "H14",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"notes": "@Comum@"
+						},
+						{
+							"type": "modifier",
+							"id": "a3937ebc-f70c-41e2-8ad5-1faaa0efacb1",
+							"disabled": true,
+							"name": "Maldição",
+							"reference": "H14",
+							"cost_type": "percentage",
+							"cost": -15,
+							"affects": "total",
+							"notes": "@Muito Comum@"
+						},
+						{
+							"type": "modifier",
+							"id": "432c58cd-b572-42e0-9566-b497ad8f7014",
+							"disabled": true,
+							"name": "Direcional",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Frente"
+						},
+						{
+							"type": "modifier",
+							"id": "925aae6b-43c3-4eb7-b649-487e240051be",
+							"disabled": true,
+							"name": "Flexível",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "7fc48912-8585-4f0a-9a78-3548ef88dd55",
+							"disabled": true,
+							"name": "Limitada",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "@Forma de Ataque Muito Comum@"
+						},
+						{
+							"type": "modifier",
+							"id": "c860468a-774d-41db-ad5e-c2d11d8618c8",
+							"disabled": true,
+							"name": "Semiablativa",
+							"reference": "B84",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d667a088-fb8f-487e-8261-1ff3b73b9065",
+							"name": "Sem Armadura",
+							"reference": "B84",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "69f8299b-1b5d-4d81-96b0-2bb5db45ffd5",
+							"disabled": true,
+							"name": "Direcional",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "@Direção: Costas, Direita, Esquerda, Acima ou Abaixo@"
+						},
+						{
+							"type": "modifier",
+							"id": "8b8cc811-dcd5-4de9-a59f-517267b99dc5",
+							"disabled": true,
+							"name": "Limitada",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "@Forma de Ataque Comum@"
+						},
+						{
+							"type": "modifier",
+							"id": "87232930-55a6-4028-b216-4756fee61b12",
+							"disabled": true,
+							"name": "Pele Resistente",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "Qualquer efeito que requer uma ruptura na pele ou contato com a pele afetará o personagem."
+						},
+						{
+							"type": "modifier",
+							"id": "90c5945c-a052-41ed-b324-9bd63c7949d7",
+							"disabled": true,
+							"name": "Limitada",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -60,
+							"affects": "total",
+							"notes": "@Forma de Ataque Ocasional@"
+						},
+						{
+							"type": "modifier",
+							"id": "a16e496f-98ae-4a83-b141-a829c142d726",
+							"disabled": true,
+							"name": "Ablativa",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -80,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "e80086c4-f237-4de4-b401-e958aabd40a8",
+							"disabled": true,
+							"name": "Limitada",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -80,
+							"affects": "total",
+							"notes": "@Forma de Ataque Rara@"
+						},
+						{
+							"type": "modifier",
+							"id": "c66dada5-3dbb-4199-82ce-48025a8f256f",
+							"disabled": true,
+							"name": "Laminada",
+							"reference": "RSWL18",
+							"cost_type": "percentage",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "61789bcc-0fc8-4ee6-8684-c6c4c8124877",
+							"disabled": true,
+							"name": "À Prova de Maldição",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "0c27990e-e78f-456c-82fe-bbb3ada911ad",
+							"disabled": true,
+							"name": "Somente Maldições",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": 0,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d503932a-99a2-4884-a7ee-6731faf0a06e",
+							"disabled": true,
+							"name": "Parcial (@Ponto de Impacto, 1 nível por -1 de modificador de ataque, Tronco vale -10%@)",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						}
+					],
+					"reference": "B83",
+					"calc": {
+						"points": 18
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "skull"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "face"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "neck"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "torso"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "vitals"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "groin"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "arm"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "hand"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "leg"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "foot"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "tail"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "wing"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "fin"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "brain"
+						}
+					],
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "73f1eccc-c9f5-4d4c-9cb6-fa6b6b66cb4e",
+					"name": "Olfato Discriminatório",
+					"physical": true,
+					"exotic": true,
+					"base_points": 15,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "9e0a5ab8-5989-48d8-a25b-c22ce669c7b0",
+							"disabled": true,
+							"name": "Percepção de Emoções",
+							"reference": "B74",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "76d2e3ef-ce19-408e-9095-28c214909206",
+							"disabled": true,
+							"name": "Consulta",
+							"reference": "P47",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						}
+					],
+					"reference": "B74",
+					"calc": {
+						"points": 15
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "1b9f41f9-da8a-4d19-bb2e-3e59ba715602",
+					"name": "Fogo de Dragão",
+					"physical": true,
+					"exotic": true,
+					"levels": "4",
+					"points_per_level": 5,
+					"weapons": [
+						{
+							"type": "ranged_weapon",
+							"damage": {
+								"type": "qmd",
+								"base": "1d"
+							},
+							"usage": "Baforada",
+							"accuracy": "3",
+							"range": "20/2",
+							"rate_of_fire": "1",
+							"shots": "3/dia",
+							"calc": {
+								"level": 0,
+								"range": "20/2",
+								"damage": "1d qmd"
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Ataque Inato",
+									"specialization": "Sopro"
+								},
+								{
+									"type": "skill",
+									"name": "Ataque Inato",
+									"modifier": -2
+								},
+								{
+									"type": "dx",
+									"modifier": -4
+								}
+							]
+						}
+					],
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "f98d93d2-d44e-49cf-9129-2518705a5689",
+							"disabled": true,
+							"name": "Cíclico",
+							"reference": "B104",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"levels": 1,
+							"notes": "1 seg"
+						},
+						{
+							"type": "modifier",
+							"id": "f8dd8baf-b09f-40e8-add8-73a3679c0696",
+							"disabled": true,
+							"name": "Cíclico",
+							"reference": "B104",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total",
+							"levels": 1,
+							"notes": "10 seg"
+						},
+						{
+							"type": "modifier",
+							"id": "d3bf10f6-6a0f-47ea-8564-b4aefec5d188",
+							"disabled": true,
+							"name": "Cíclico",
+							"reference": "B104",
+							"cost_type": "percentage",
+							"cost": 40,
+							"affects": "total",
+							"levels": 1,
+							"notes": "1 min"
+						},
+						{
+							"type": "modifier",
+							"id": "c1c68257-4d79-4477-bd8a-dc0ec37b64b3",
+							"disabled": true,
+							"name": "Cíclico",
+							"reference": "B104",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total",
+							"levels": 1,
+							"notes": "1 h"
+						},
+						{
+							"type": "modifier",
+							"id": "fb2994f2-bd8b-4703-89ac-a6d2621b7b46",
+							"disabled": true,
+							"name": "Cíclico",
+							"reference": "B104",
+							"cost_type": "percentage",
+							"cost": 10,
+							"affects": "total",
+							"levels": 1,
+							"notes": "1 dia"
+						},
+						{
+							"type": "modifier",
+							"id": "051334d3-2c08-46de-9d6b-9d6ef75909cb",
+							"disabled": true,
+							"name": "Cíclico",
+							"reference": "B104",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total",
+							"levels": 1,
+							"notes": "1 seg; Resistível"
+						},
+						{
+							"type": "modifier",
+							"id": "29b10b4d-3836-4da1-a773-e7201bf24b48",
+							"disabled": true,
+							"name": "Cíclico",
+							"reference": "B104",
+							"cost_type": "percentage",
+							"cost": 25,
+							"affects": "total",
+							"levels": 1,
+							"notes": "10 seg; Resistível"
+						},
+						{
+							"type": "modifier",
+							"id": "96897cdb-a7c5-4303-9f72-6b23b7197882",
+							"disabled": true,
+							"name": "Cíclico",
+							"reference": "B104",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total",
+							"levels": 1,
+							"notes": "1 min; Resistível"
+						},
+						{
+							"type": "modifier",
+							"id": "151cd452-a43b-4f18-ae1f-192bcc96240a",
+							"disabled": true,
+							"name": "Cíclico",
+							"reference": "B104",
+							"cost_type": "percentage",
+							"cost": 10,
+							"affects": "total",
+							"levels": 1,
+							"notes": "1 h; Resistível"
+						},
+						{
+							"type": "modifier",
+							"id": "f4822e90-f157-4a58-8872-980ca33d5bcb",
+							"disabled": true,
+							"name": "Cíclico",
+							"reference": "B104",
+							"cost_type": "percentage",
+							"cost": 5,
+							"affects": "total",
+							"levels": 1,
+							"notes": "1 dia; Resistível"
+						},
+						{
+							"type": "modifier",
+							"id": "4385c858-b402-4e31-a560-0734cb0c3dfe",
+							"disabled": true,
+							"name": "Contagioso",
+							"reference": "B104",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total",
+							"notes": "Levemente"
+						},
+						{
+							"type": "modifier",
+							"id": "47454ea8-d67d-4336-a984-46767d2f3704",
+							"disabled": true,
+							"name": "Contagioso",
+							"reference": "B104",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total",
+							"notes": "Altamente"
+						},
+						{
+							"type": "modifier",
+							"id": "518d4a24-a605-4ad3-90e0-aa6d7e0290b1",
+							"disabled": true,
+							"name": "Trauma por Impacto Duplo",
+							"reference": "B108",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total",
+							"notes": "1 PV de trauma por impacto para cada 10 pontos de dano básico"
+						},
+						{
+							"type": "modifier",
+							"id": "f59a8121-57a7-4438-a26c-bc6ca60dc83b",
+							"disabled": true,
+							"name": "Explosão",
+							"reference": "B108",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total",
+							"levels": 1
+						},
+						{
+							"type": "modifier",
+							"id": "53ae4d26-6335-4ad4-9c49-ea83a0d1488e",
+							"disabled": true,
+							"name": "Fragmentação",
+							"reference": "B108",
+							"cost_type": "percentage",
+							"cost": 15,
+							"affects": "total",
+							"levels": 1
+						},
+						{
+							"type": "modifier",
+							"id": "ac11a11c-bb24-4b1d-b584-8cc36ce75625",
+							"disabled": true,
+							"name": "Fragmentação",
+							"reference": "B108",
+							"cost_type": "percentage",
+							"cost": 15,
+							"affects": "total",
+							"levels": 1,
+							"notes": "Quente"
+						},
+						{
+							"type": "modifier",
+							"id": "da3a080e-cd1b-4d2f-8086-4dc7bf855363",
+							"disabled": true,
+							"name": "Radiação",
+							"reference": "B108",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "873e552e-999b-4f74-8baa-6e20d1f77e3e",
+							"disabled": true,
+							"name": "Sobretensão",
+							"reference": "B108",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "76da3a7f-0644-4a23-8c86-d0615a89e479",
+							"disabled": true,
+							"name": "Divisor de Armadura",
+							"reference": "B105",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total",
+							"notes": "2"
+						},
+						{
+							"type": "modifier",
+							"id": "d8fb840a-6c33-4d7a-9fc5-28611fa001f8",
+							"disabled": true,
+							"name": "Divisor de Armadura",
+							"reference": "B105",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"notes": "3"
+						},
+						{
+							"type": "modifier",
+							"id": "4704b7ae-88d3-482a-ba1c-96a06916c432",
+							"disabled": true,
+							"name": "Divisor de Armadura",
+							"reference": "B105",
+							"cost_type": "percentage",
+							"cost": 150,
+							"affects": "total",
+							"notes": "5"
+						},
+						{
+							"type": "modifier",
+							"id": "0ee45bb5-a7fc-40bc-bffd-0db47a222ea1",
+							"disabled": true,
+							"name": "Divisor de Armadura",
+							"reference": "B105",
+							"cost_type": "percentage",
+							"cost": 200,
+							"affects": "total",
+							"notes": "10"
+						},
+						{
+							"type": "modifier",
+							"id": "211d12ce-90df-40fb-9062-bc2af48d1206",
+							"disabled": true,
+							"name": "Efeito Colateral",
+							"reference": "B105",
+							"cost_type": "percentage",
+							"cost": 0,
+							"affects": "total",
+							"notes": "@Efeito@"
+						},
+						{
+							"type": "modifier",
+							"id": "1ed91f63-e289-417e-8715-b0130f27de0f",
+							"disabled": true,
+							"name": "Sintomas",
+							"reference": "B109",
+							"cost_type": "percentage",
+							"cost": 0,
+							"affects": "total",
+							"notes": "@Efeito@"
+						},
+						{
+							"type": "modifier",
+							"id": "fc2e8fbf-2839-4b6b-9a09-fbab83d82eec",
+							"disabled": true,
+							"name": "Divisor de Armadura",
+							"reference": "B112",
+							"cost_type": "percentage",
+							"cost": -30,
+							"affects": "total",
+							"notes": "0,5"
+						},
+						{
+							"type": "modifier",
+							"id": "7c4000e8-f084-44e9-a45d-e25715a6ac6a",
+							"disabled": true,
+							"name": "Divisor de Armadura",
+							"reference": "B112",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total",
+							"notes": "0.2"
+						},
+						{
+							"type": "modifier",
+							"id": "6a7f92fc-fe8c-4a89-877b-c1472da4f67f",
+							"disabled": true,
+							"name": "Divisor de Armadura",
+							"reference": "B112",
+							"cost_type": "percentage",
+							"cost": -70,
+							"affects": "total",
+							"notes": "0.1"
+						},
+						{
+							"type": "modifier",
+							"id": "0ea3f64d-b789-46d8-8bf5-d0c24fa8bcbe",
+							"disabled": true,
+							"name": "Sem Ferimento",
+							"reference": "B113",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "9483c4ff-53fc-4182-beac-317924a3a7a2",
+							"disabled": true,
+							"name": "Sobretensão em Arco",
+							"reference": "PSI20",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "b9b59d7a-be90-4ac0-be46-3416b991c774",
+							"name": "Cone",
+							"reference": "B104",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"notes": "5 metros"
+						},
+						{
+							"type": "modifier",
+							"id": "505bf63a-0498-44c1-8f8c-727ec98b00e3",
+							"name": "Uso Limitado",
+							"reference": "B116",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "3 Utilizações por Dia"
+						},
+						{
+							"type": "modifier",
+							"id": "b19b8c68-d565-4683-9662-0facc662ec3a",
+							"name": "Alcance Reduzido",
+							"reference": "B110",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Divisor de Distância 5"
+						}
+					],
+					"reference": "B42",
+					"calc": {
+						"points": 32
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "7f2388a9-eec4-47b4-aa66-6af9bad3963f",
+					"name": "Cauda de Dragão",
+					"physical": true,
+					"exotic": true,
+					"base_points": 5,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "cont",
+								"st": "thr",
+								"modifier_per_die": 1
+							},
+							"usage": "Golpe c/ Cauda",
+							"reach": "C",
+							"parry": "0",
+							"block": "Não",
+							"calc": {
+								"level": 0,
+								"parry": "0",
+								"block": "Não",
+								"damage": "thr (+1 per die) cont"
+							},
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Briga"
+								}
+							]
+						}
+					],
+					"reference": "B61",
+					"calc": {
+						"points": 5
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "cdfd6dfd-97b9-4f59-ae1b-d28f6282da11",
+					"allow_half_levels": true,
+					"name": "Deslocamento Ampliado (Ar)",
+					"physical": true,
+					"exotic": true,
+					"levels": "0.5",
+					"points_per_level": 20,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "e811213e-b209-4c1d-80ef-523ec2ac828e",
+							"disabled": true,
+							"name": "Bônus de Manuseio",
+							"reference": "B52",
+							"cost_type": "percentage",
+							"cost": 5,
+							"affects": "total",
+							"levels": 1
+						},
+						{
+							"type": "modifier",
+							"id": "152f1997-66aa-4c17-89cb-ef33f80c5a29",
+							"disabled": true,
+							"name": "Redutor de Manuseio",
+							"reference": "B52",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total",
+							"levels": 1
+						},
+						{
+							"type": "modifier",
+							"id": "476e75c9-b392-452e-bd8e-e2f3a1c24193",
+							"disabled": true,
+							"name": "Newtoniana",
+							"reference": "B52",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "a88c3f55-69d5-4d76-94ee-a882a38a08c1",
+							"disabled": true,
+							"name": "Limitado a Estradas",
+							"reference": "B52",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "abf14e80-7be7-4d32-b310-2c6b6f254fbd",
+							"disabled": true,
+							"name": "Total",
+							"reference": "P49",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "b2c4d390-5b70-4301-96a4-cff0dd2cbb37",
+							"disabled": true,
+							"name": "Cósmica",
+							"reference": "SU26",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total",
+							"notes": "Aceleração Instantânea"
+						},
+						{
+							"type": "modifier",
+							"id": "940df375-9178-4482-8cc2-da1532000353",
+							"disabled": true,
+							"name": "Cósmica",
+							"reference": "SU27",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total",
+							"notes": "Total Capacidade de Manobra"
+						}
+					],
+					"reference": "B52",
+					"calc": {
+						"points": 10
+					},
+					"notes": "Multiplica o Deslocamento Aéreo normal por 1 + nível",
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "4e1871cc-eb81-48eb-a6d1-534dd33a7396",
+					"name": "Ataque Adicional",
+					"physical": true,
+					"levels": "1",
+					"points_per_level": 25,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "139a65de-2c99-4f73-9153-c2a2f285fdc3",
+							"disabled": true,
+							"name": "Ataque Múltiplo",
+							"reference": "P49",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "41611214-428e-4af0-9b8f-c026a1901e0f",
+							"disabled": true,
+							"name": "Perícia Única",
+							"reference": "P49",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "@Perícia@"
+						}
+					],
+					"reference": "B42",
+					"calc": {
+						"points": 25
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "876223c1-1f18-4d2d-99a4-a40ce1d7681f",
+					"name": "Pernas Adicionais",
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "7de740e5-ef38-413c-81a1-ea7ffad0a75b",
+							"name": "4",
+							"reference": "B77",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d1108410-8522-4f89-a67a-5b1acd21265e",
+							"disabled": true,
+							"name": "@5 ou 6@",
+							"reference": "B77",
+							"cost_type": "points",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "4e48eeb7-3f1b-4732-ae14-1e8bd408215d",
+							"disabled": true,
+							"name": "@7 ou +@",
+							"reference": "B77",
+							"cost_type": "points",
+							"cost": 15,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "e476bc30-8fd0-4e2c-8b7f-10668e82be25",
+							"disabled": true,
+							"name": "Comprida",
+							"reference": "B77",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"levels": 1
+						},
+						{
+							"type": "modifier",
+							"id": "f65f21e9-e742-434c-9cfe-74b75eb9a75f",
+							"disabled": true,
+							"name": "Incapaz de Chutar",
+							"reference": "B78",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "41d5a29a-d098-4aa7-b640-c5593ae97bca",
+							"disabled": true,
+							"name": "Extraflexível",
+							"reference": "MATG27",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "92d11737-6b62-4f68-82b1-58e9993471fc",
+							"disabled": true,
+							"name": "Pés Preênsis",
+							"reference": "MATG28",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						}
+					],
+					"reference": "B77",
+					"calc": {
+						"points": 5
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "67c9aae3-eaac-48a2-bc3e-bbab356162d6",
+					"name": "Voo",
+					"physical": true,
+					"exotic": true,
+					"base_points": 40,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "d136b938-06da-4574-8739-1be16cad67fe",
+							"disabled": true,
+							"name": "Voo Espacial Newtoniano",
+							"reference": "B99",
+							"cost_type": "percentage",
+							"cost": 25,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "f79ba61c-3d67-419a-b011-1a06a28f04f4",
+							"disabled": true,
+							"name": "Voo Espacial",
+							"reference": "B99",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "3132c759-5248-4637-b495-049789541e90",
+							"disabled": true,
+							"name": "Incapaz de Pairar",
+							"reference": "B99",
+							"cost_type": "percentage",
+							"cost": -15,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "53633869-4f39-4521-ae48-ac507eb6c9c6",
+							"disabled": true,
+							"name": "Planar Controlado",
+							"reference": "B100",
+							"cost_type": "percentage",
+							"cost": -45,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "620938a7-7cfa-4ea2-a48c-e1674d953956",
+							"disabled": true,
+							"name": "Planar",
+							"reference": "B100",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "cb7ccb94-148e-4d7a-8aeb-e949ddd966ea",
+							"disabled": true,
+							"name": "Mais Leve que o Ar",
+							"reference": "B100",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "410fb0af-be6e-4b3f-9f0a-89dd0e676da6",
+							"disabled": true,
+							"name": "Limite Baixo de Voo",
+							"reference": "B100",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"notes": "9 m"
+						},
+						{
+							"type": "modifier",
+							"id": "3d0d9c42-3ebd-429b-aadc-83fe4de0324e",
+							"disabled": true,
+							"name": "Limite Baixo de Voo",
+							"reference": "B56",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "3 m"
+						},
+						{
+							"type": "modifier",
+							"id": "038920a8-cbe5-4ad4-a618-0cc6a6657cdb",
+							"disabled": true,
+							"name": "Limite Baixo de Voo",
+							"reference": "B56",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total",
+							"notes": "1,5 m"
+						},
+						{
+							"type": "modifier",
+							"id": "b115a92e-7836-4c9f-bbe3-6fac7a6bafde",
+							"disabled": true,
+							"name": "Asas Pequenas",
+							"reference": "B99",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d93f9b72-c520-4930-8d08-7a893c2fd2eb",
+							"disabled": true,
+							"name": "Somente Voo Espacial",
+							"reference": "B100",
+							"cost_type": "percentage",
+							"cost": -75,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "6951a676-ff7d-4656-8cc1-130629138d7e",
+							"name": "Alado",
+							"reference": "B99",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "e3b92394-e246-4f9f-ac3f-dce5f5f57d37",
+							"disabled": true,
+							"name": "Planetário",
+							"reference": "P50",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "a2e77ba0-326e-4201-a2e5-9194350ca263",
+							"disabled": true,
+							"name": "Exige Superfície",
+							"reference": "P50",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "afe87170-c8f8-482c-b4b1-ccbd12ac2cdb",
+							"disabled": true,
+							"name": "Lenta",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total",
+							"notes": "Basic Speed"
+						},
+						{
+							"type": "modifier",
+							"id": "1ef0b8a4-033a-4ed0-9464-6127d03f7ad2",
+							"disabled": true,
+							"name": "Lenta, Deslocamento 1",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": -45,
+							"affects": "total"
+						}
+					],
+					"reference": "B98",
+					"calc": {
+						"points": 30
+					},
+					"notes": "O Deslocamento do personagem em voo é igual à sua Velocidade Básica × 2; descarte todas as frações",
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "cdc89210-40e8-4a6a-9930-e200374e82ab",
+					"name": "Gula",
+					"mental": true,
+					"base_points": -5,
+					"cr": 12,
+					"reference": "B143",
+					"calc": {
+						"points": -5
+					},
+					"notes": "O personagem deve fazer um teste de autocontrole para resistir qualquer iguaria tentadora ou um bom vinho, se por alguma razão precisar fazê-lo. No caso de um fracasso, ele consome a refeição sem se importar com as consequências.",
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "20408b0b-bf99-49d2-acab-779a483446ce",
+					"name": "Cobiça",
+					"mental": true,
+					"base_points": -15,
+					"cr": 12,
+					"reference": "B126",
+					"calc": {
+						"points": -15
+					},
+					"notes": "O personagem deve fazer um teste de autocontrole sempre que algum patrimônio for oferecido como pagamento por um trabalho lícito, proventos de uma aventura, pilhagem ou apenas isca. No caso de um fracasso, ele fará o que for preciso para obter o pagamento.",
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "e207f739-431e-4c12-afac-99246dfe70c4",
+					"name": "Horizontal",
+					"physical": true,
+					"exotic": true,
+					"base_points": -10,
+					"reference": "B145",
+					"calc": {
+						"points": -10
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "c1c9a486-0f47-44ab-be5c-496d7d2202f6",
+					"name": "Longevidade",
+					"physical": true,
+					"base_points": 2,
+					"reference": "B69",
+					"calc": {
+						"points": 2
+					},
+					"notes": "O personagem só fracassa nos testes de envelhecimento se obtiver um 17 ou 18 — ou só 18 se sua HT modificada for maior ou igual a 17",
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "874c4aa6-5409-469f-bfc5-e224bd07d0ee",
+					"name": "Aptidão Mágica",
+					"mental": true,
+					"supernatural": true,
+					"levels": "0",
+					"base_points": 5,
+					"points_per_level": 10,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "9fdfa407-cf25-4051-83a9-85f25f6d74f0",
+							"disabled": true,
+							"name": "Dança",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"id": "6e98e78a-62ab-4382-a524-1b1cad4ca87b",
+							"disabled": true,
+							"name": "Manifestação Obscura",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"id": "b7441d42-378a-47d9-b518-e07a8b31d3df",
+							"disabled": true,
+							"name": "Manifestação Diurna",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"id": "fe559f34-81cc-47ba-b3ec-0a45c50c76c2",
+							"disabled": true,
+							"name": "Musical",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"id": "851615df-28f5-4f72-bc10-b60ff64d21af",
+							"disabled": true,
+							"name": "Manifestação Noturna",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"id": "8e84564f-4322-49aa-b7b3-20f31887278e",
+							"disabled": true,
+							"name": "Uma Única Escola",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only",
+							"notes": "@Escola@"
+						},
+						{
+							"type": "modifier",
+							"id": "92128f7f-ba48-4c83-81a5-d0fb82ba62be",
+							"disabled": true,
+							"name": "Solitária",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"id": "f16e74ef-4a22-46f1-8630-af20b3eb270d",
+							"disabled": true,
+							"name": "Canção",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						}
+					],
+					"reference": "B40",
+					"calc": {
+						"points": 5
+					},
+					"features": [
+						{
+							"type": "spell_bonus",
+							"amount": 1,
+							"per_level": true,
+							"match": "all_colleges"
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "taumatologia"
+							}
+						}
+					],
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "c9246ff8-1ac0-4328-81e4-581cba64a776",
+					"name": "Avareza",
+					"mental": true,
+					"base_points": -10,
+					"cr": 12,
+					"reference": "B123",
+					"calc": {
+						"points": -10
+					},
+					"notes": "O personagem deve fazer um teste de autocontrole sempre que tiver que gastar algum dinheiro. Se a despesa for grande, o teste de autocontrole sofre uma penalidade de -5 ou maior (a critério do Mestre). Um fracasso significa que o personagem deve se recusar a gastar o dinheiro.",
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "b65e2bf5-9e77-4b69-a04b-85f7384cd207",
+					"name": "Visão Noturna",
+					"physical": true,
+					"levels": "8",
+					"points_per_level": 1,
+					"reference": "B97",
+					"calc": {
+						"points": 8
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "3c07d9d8-3d96-4814-8913-24e6fbf369fb",
+					"name": "Presas",
+					"physical": true,
+					"exotic": true,
+					"base_points": 2,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "perf",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Mordida",
+							"reach": "C",
+							"parry": "Não",
+							"block": "Não",
+							"calc": {
+								"level": 0,
+								"parry": "Não",
+								"block": "Não",
+								"damage": "thr-1 perf"
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Briga"
+								},
+								{
+									"type": "dx"
+								}
+							]
+						}
+					],
+					"reference": "B52",
+					"calc": {
+						"points": 2
+					},
+					"categories": [
+						"Vantagem"
+					]
+				}
+			]
+		}
+	],
+	"skills": [
+		{
+			"type": "skill",
+			"id": "9338a49c-fb2a-45e1-a2fe-5e3c5e441e6f",
+			"name": "Briga",
+			"reference": "B185",
+			"difficulty": "dx/e",
+			"points": 1,
+			"features": [
+				{
+					"type": "weapon_bonus",
+					"amount": 1,
+					"per_level": true,
+					"selection_type": "weapons_with_required_skill",
+					"name": {
+						"compare": "is",
+						"qualifier": "Briga"
+					},
+					"level": {
+						"compare": "at_least",
+						"qualifier": 2
+					}
+				}
+			],
+			"categories": [
+				"Combate Corpo a Corpo",
+				"Combate/Arma"
+			]
+		},
+		{
+			"type": "skill",
+			"id": "b9acb90c-24a9-4c17-8b68-89de5c3b54d8",
+			"name": "Ataque Inato",
+			"reference": "B183",
+			"specialization": "Sopro",
+			"difficulty": "dx/e",
+			"points": 1,
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Ataque Inato",
+					"modifier": -2
+				}
+			],
+			"categories": [
+				"Combate à Distância",
+				"Combate/Arma"
+			]
+		}
+	]
+}

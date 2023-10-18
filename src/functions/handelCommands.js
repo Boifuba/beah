@@ -23,7 +23,7 @@ module.exports = (client) => {
 
         (async () => {
             try {
-                console.log('Started refreshing application (/) commands.');
+                console.log('Iniciando o bot...');
 
                 await rest.put(
                     Routes.applicationCommands(clientId), {
@@ -31,7 +31,7 @@ module.exports = (client) => {
                     },
                 );
 
-                console.log('Successfully reloaded application (/) commands.');
+                console.log('Iniciando comandos...');
             } catch (error) {
                 console.error(error);
             }

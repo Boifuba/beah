@@ -7,7 +7,7 @@ module.exports = {
     .addNumberOption((option) =>
       option
         .setName("nh")
-        .setDescription("The amount of coins to subtract")
+        .setDescription("Insira uma valor para calcular desvantagens")
         .setRequired(true)
     ),
 
@@ -121,12 +121,7 @@ module.exports = {
       let { critical_success, success, failure, critical_failure } =
         foundObject;
 
-      console.log("critical_success:", critical_success);
-      console.log("success:", success);
-      console.log("failure:", failure);
-      console.log("critical_failure:", critical_failure);
-
-      const embed = new EmbedBuilder();
+           const embed = new EmbedBuilder();
 
       embed.setColor(0x5506ce).addFields(
         {

@@ -1,0 +1,90 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "038c6d7b-2022-4c72-b344-65fbf56975a2",
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "90ed8a08-a7eb-4164-bf93-cfb62935e2c7",
+			"container_type": "meta_trait",
+			"name": "Metacaracterística: Veículo Terrestre",
+			"reference": "B263",
+			"calc": {
+				"points": -100
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "69d985fc-5b65-40ac-95d6-43e411f9861c",
+					"name": "Horizontal",
+					"physical": true,
+					"exotic": true,
+					"base_points": -10,
+					"reference": "B145",
+					"calc": {
+						"points": -10
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "ac2cd33a-0106-415f-8ecb-7400a6c8cda2",
+					"name": "Sem Pernas (Com Rodas)",
+					"physical": true,
+					"exotic": true,
+					"base_points": -20,
+					"reference": "B156",
+					"calc": {
+						"points": -20
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "32616b9c-dff1-42ae-8343-9a7ded8ea4a0",
+					"name": "Sem Manuseadores",
+					"physical": true,
+					"base_points": -50,
+					"reference": "B149",
+					"calc": {
+						"points": -50
+					},
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "3be57e9f-7b37-4cec-b219-8d05c339bd94",
+					"name": "Entorpecido",
+					"physical": true,
+					"base_points": -20,
+					"reference": "B137",
+					"calc": {
+						"points": -20
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				}
+			]
+		}
+	]
+}

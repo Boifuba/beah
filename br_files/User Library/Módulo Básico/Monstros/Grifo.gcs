@@ -1,0 +1,1793 @@
+{
+	"type": "character",
+	"version": 2,
+	"id": "7a7516aa-1d10-4033-87ab-445a8759fd51",
+	"settings": {
+		"default_length_units": "ft_in",
+		"default_weight_units": "lb",
+		"user_description_display": "tooltip",
+		"modifiers_display": "inline",
+		"notes_display": "inline",
+		"skill_level_adj_display": "tooltip",
+		"use_multiplicative_modifiers": false,
+		"use_modifying_dice_plus_adds": false,
+		"damage_progression": "basic_set",
+		"use_simple_metric_conversions": true,
+		"show_college_in_sheet_spells": false,
+		"show_difficulty": false,
+		"show_advantage_modifier_adj": false,
+		"show_equipment_modifier_adj": false,
+		"show_spell_adj": true,
+		"use_title_in_footer": false,
+		"page": {
+			"paper_size": "na-letter",
+			"top_margin": "0.25 in",
+			"left_margin": "0.25 in",
+			"bottom_margin": "0.25 in",
+			"right_margin": "0.25 in",
+			"orientation": "portrait"
+		},
+		"block_layout": [
+			"reactions",
+			"melee",
+			"ranged",
+			"advantages skills",
+			"spells",
+			"equipment",
+			"other_equipment",
+			"notes"
+		],
+		"attributes": [
+			{
+				"id": "st",
+				"type": "integer",
+				"name": "ST",
+				"full_name": "Força",
+				"attribute_base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 10
+			},
+			{
+				"id": "dx",
+				"type": "integer",
+				"name": "DX",
+				"full_name": "Destreza",
+				"attribute_base": "10",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "iq",
+				"type": "integer",
+				"name": "IQ",
+				"full_name": "Inteligência",
+				"attribute_base": "10",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "ht",
+				"type": "integer",
+				"name": "HT",
+				"full_name": "Vitalidade",
+				"attribute_base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "will",
+				"type": "integer",
+				"name": "Vontade",
+				"full_name": "",
+				"attribute_base": "$iq",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "fright_check",
+				"type": "integer",
+				"name": "Verif. de Pânico",
+				"full_name": "",
+				"attribute_base": "$will",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "per",
+				"type": "integer",
+				"name": "Percepção",
+				"full_name": "",
+				"attribute_base": "$iq",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "vision",
+				"type": "integer",
+				"name": "Visão",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "hearing",
+				"type": "integer",
+				"name": "Audição",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "taste_smell",
+				"type": "integer",
+				"name": "Paladar e Olfato",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "touch",
+				"type": "integer",
+				"name": "Tato",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "basic_speed",
+				"type": "decimal",
+				"name": "Vel. Básica",
+				"full_name": "",
+				"attribute_base": "($dx+$ht)/4",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "basic_move",
+				"type": "integer",
+				"name": "Desl. Básico",
+				"full_name": "",
+				"attribute_base": "floor($basic_speed)",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "fp",
+				"type": "pool",
+				"name": "PF",
+				"full_name": "Pontos de Fadiga",
+				"attribute_base": "$ht",
+				"cost_per_point": 3,
+				"cost_adj_percent_per_sm": 0,
+				"thresholds": [
+					{
+						"state": "Inconsciente",
+						"explanation": "",
+						"multiplier": -1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Desmaiado",
+						"explanation": "Para fazer qualquer coisa diferente de conversar ou descansar, o personagem precisa fazer um teste de Vontade; em caso de fracasso, ele cai por esgotamento, incapacitado\nCada PF perdido também resultará na perda de 1 PV\nDeslocamento, Esquiva e ST reduzidos pela metade (MB426)",
+						"multiplier": 0,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Cansado",
+						"explanation": "Deslocamento, Esquiva e ST reduzidos pela metade (MB426)",
+						"multiplier": 1,
+						"divisor": 3,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Cansando",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": -1,
+						"ops": [
+
+						]
+					},
+					{
+						"state": "Descansado",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+
+						]
+					}
+				]
+			},
+			{
+				"id": "hp",
+				"type": "pool",
+				"name": "PV",
+				"full_name": "Pontos de Vida",
+				"attribute_base": "$st",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 10,
+				"thresholds": [
+					{
+						"state": "Morto",
+						"explanation": "",
+						"multiplier": -5,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Morrendo #4",
+						"explanation": "Teste de HT para não morrer\nTeste de HT-4 a cada segundo para evitar a inconsciência\nDeslocamento e Esquiva reduzidos pela metade (MB419)",
+						"multiplier": -4,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Morrendo #3",
+						"explanation": "Teste de HT para não morrer\nTeste de HT-3 a cada segundo para evitar a inconsciência\nDeslocamento e Esquiva reduzidos pela metade (MB419)",
+						"multiplier": -3,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Morrendo #2",
+						"explanation": "Teste de HT para não morrer\nTeste de HT-2 a cada segundo para evitar a inconsciência\nDeslocamento e Esquiva reduzidos pela metade (MB419)",
+						"multiplier": -2,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Morrendo #1",
+						"explanation": "Teste de HT para não morrer\nTeste de HT-1 a cada segundo para evitar a inconsciência\nDeslocamento e Esquiva reduzidos pela metade (MB419)",
+						"multiplier": -1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Desmaiado",
+						"explanation": "Teste de HT a cada segundo para evitar a inconsciência\nDeslocamento e Esquiva reduzidos pela metade (MB419)",
+						"multiplier": 0,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Cambaleando",
+						"explanation": "Deslocamento e Esquiva reduzidos pela metade (MB419)",
+						"multiplier": 1,
+						"divisor": 3,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Ferido",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": -1,
+						"ops": [
+
+						]
+					},
+					{
+						"state": "Ileso",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+
+						]
+					}
+				]
+			}
+		],
+		"hit_locations": {
+			"id": "humanoid",
+			"name": "Humanoide",
+			"roll": "3d",
+			"locations": [
+				{
+					"id": "eye",
+					"choice_name": "Olhos",
+					"table_name": "Olhos",
+					"slots": 0,
+					"hit_penalty": -9,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Only impaling (imp), piercing (pi-, pi, pi+, pi++), and tight-beam burning (burn) attacks can target the eye – and only from the front or sides. Injury over HP÷10 blinds the eye. Otherwise, treat as skull, but without the extra DR!",
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "skull",
+					"choice_name": "Crânio",
+					"table_name": "Crânio",
+					"slots": 2,
+					"hit_penalty": -7,
+					"dr_bonus": 2,
+					"description": "An attack that misses by 1 hits the torso instead. Wounding modifier is x4. Knockdown rolls are at -10. Critical hits use the Critical Head Blow Table (B556). Exception: These special effects do not apply to toxic (tox) damage.",
+					"calc": {
+						"roll_range": "3-4",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "face",
+					"choice_name": "Rosto",
+					"table_name": "Rosto",
+					"slots": 1,
+					"hit_penalty": -5,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Jaw, cheeks, nose, ears, etc. If the target has an open-faced helmet, ignore its DR. Knockdown rolls are at -5. Critical hits use the Critical Head Blow Table (B556). Corrosion (cor) damage gets a x1½ wounding modifier, and if it inflicts a major wound, it also blinds one eye (both eyes on damage over full HP). Random attacks from behind hit the skull instead.",
+					"calc": {
+						"roll_range": "5",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Perna",
+					"table_name": "Perna Dir",
+					"slots": 2,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "6-7",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Braço",
+					"table_name": "Braço Dir",
+					"slots": 1,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
+					"calc": {
+						"roll_range": "8",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "torso",
+					"choice_name": "Tronco",
+					"table_name": "Tronco",
+					"slots": 2,
+					"hit_penalty": 0,
+					"dr_bonus": 0,
+					"description": "",
+					"calc": {
+						"roll_range": "9-10",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "groin",
+					"choice_name": "Virilha",
+					"table_name": "Virilha",
+					"slots": 1,
+					"hit_penalty": -3,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Human males and the males of similar species suffer double shock from crushing (cr) damage, and get -5 to knockdown rolls. Otherwise, treat as a torso hit.",
+					"calc": {
+						"roll_range": "11",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Braço",
+					"table_name": "Braço Esq",
+					"slots": 1,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
+					"calc": {
+						"roll_range": "12",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Perna",
+					"table_name": "Perna Esq",
+					"slots": 2,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "13-14",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "hand",
+					"choice_name": "Mão",
+					"table_name": "Mão",
+					"slots": 1,
+					"hit_penalty": -4,
+					"dr_bonus": 0,
+					"description": "If holding a shield, double the penalty to hit: -8 for shield hand instead of -4. Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "15",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "foot",
+					"choice_name": "Pé",
+					"table_name": "Pé",
+					"slots": 1,
+					"hit_penalty": -4,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "16",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "neck",
+					"choice_name": "Pescoço",
+					"table_name": "Pescoço",
+					"slots": 2,
+					"hit_penalty": -5,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Neck and throat. Increase the wounding multiplier of crushing (cr) and corrosion (cor) attacks to x1½, and that of cutting (cut) damage to x2. At the GM’s option, anyone killed by a cutting (cut) blow to the neck is decapitated!",
+					"calc": {
+						"roll_range": "17-18",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "vitals",
+					"choice_name": "Órg. Vitais",
+					"table_name": "Órg. Vitais",
+					"slots": 0,
+					"hit_penalty": -3,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Heart, lungs, kidneys, etc. Increase the wounding modifier for an impaling (imp) or any piercing (pi-, pi, pi+, pi++) attack to x3. Increase the wounding modifier for a tight-beam burning (burn) attack to x2. Other attacks cannot target the vitals.",
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 2
+						}
+					}
+				}
+			]
+		}
+	},
+	"created_date": "May 16, 2020, 12:00 AM",
+	"modified_date": "Mar 29, 2021, 2:27 PM",
+	"profile": {
+		"name": "Grifo",
+		"weight": "300 kg",
+		"SM": 1
+	},
+	"attributes": [
+		{
+			"attr_id": "st",
+			"adj": 7,
+			"calc": {
+				"value": 17,
+				"points": 35
+			}
+		},
+		{
+			"attr_id": "dx",
+			"adj": 2,
+			"calc": {
+				"value": 12,
+				"points": 24
+			}
+		},
+		{
+			"attr_id": "iq",
+			"adj": -5,
+			"calc": {
+				"value": 5,
+				"points": -100
+			}
+		},
+		{
+			"attr_id": "ht",
+			"adj": 2,
+			"calc": {
+				"value": 12,
+				"points": 20
+			}
+		},
+		{
+			"attr_id": "will",
+			"adj": 6,
+			"calc": {
+				"value": 11,
+				"points": 30
+			}
+		},
+		{
+			"attr_id": "fright_check",
+			"adj": 0,
+			"calc": {
+				"value": 13,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "per",
+			"adj": 7,
+			"calc": {
+				"value": 12,
+				"points": 35
+			}
+		},
+		{
+			"attr_id": "vision",
+			"adj": 0,
+			"calc": {
+				"value": 15,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "hearing",
+			"adj": 0,
+			"calc": {
+				"value": 12,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "taste_smell",
+			"adj": 0,
+			"calc": {
+				"value": 12,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "touch",
+			"adj": 0,
+			"calc": {
+				"value": 12,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "basic_speed",
+			"adj": 0,
+			"calc": {
+				"value": 6,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "basic_move",
+			"adj": 0,
+			"calc": {
+				"value": 6,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "fp",
+			"adj": 0,
+			"damage": 0,
+			"calc": {
+				"value": 12,
+				"current": 12,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "hp",
+			"adj": 0,
+			"damage": 0,
+			"calc": {
+				"value": 17,
+				"current": 17,
+				"points": 0
+			}
+		}
+	],
+	"total_points": 70,
+	"advantages": [
+		{
+			"type": "advantage",
+			"id": "db41054e-666d-49a2-a436-8086e0613602",
+			"name": "Visão Aguçada",
+			"physical": true,
+			"levels": "3",
+			"points_per_level": 2,
+			"reference": "B88",
+			"calc": {
+				"points": 6
+			},
+			"features": [
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"per_level": true,
+					"attribute": "vision"
+				}
+			],
+			"categories": [
+				"Vantagem"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "d2e60f84-1eac-43f2-ba49-7c75b5e4949b",
+			"name": "Garras Afiadas",
+			"physical": true,
+			"base_points": 5,
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "corte",
+						"st": "thr"
+					},
+					"usage": "Chute",
+					"reach": "C,1",
+					"parry": "Não",
+					"block": "Não",
+					"calc": {
+						"level": 12,
+						"parry": "Não",
+						"block": "Não",
+						"damage": "1d+3 corte"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Caratê",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Briga",
+							"modifier": -2
+						}
+					]
+				}
+			],
+			"reference": "B61",
+			"calc": {
+				"points": 5
+			},
+			"notes": "Pés",
+			"categories": [
+				"Vantagem"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "6a5e2fac-8555-4e05-9649-6e754ea5db42",
+			"name": "Reflexos em Combate",
+			"mental": true,
+			"base_points": 15,
+			"reference": "B82",
+			"calc": {
+				"points": 15
+			},
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "advantage_prereq",
+						"has": false,
+						"name": {
+							"compare": "is",
+							"qualifier": "Noção do Tempo Ampliado"
+						}
+					}
+				]
+			},
+			"features": [
+				{
+					"type": "skill_bonus",
+					"amount": 1,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "starts_with",
+						"qualifier": "sacar rápido"
+					}
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"attribute": "dodge"
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"attribute": "parry"
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"attribute": "block"
+				},
+				{
+					"type": "attribute_bonus",
+					"amount": 2,
+					"attribute": "fright_check"
+				}
+			],
+			"notes": "O personagem nunca fica “paralisado” em uma situação de surpresa; +6 em todos os testes de IQ para voltar a si ou se recuperar de uma situação de surpresa ou “atordoamento” mental.  Seu grupo recebe +1 nos testes de iniciativa (+2 se você for o líder)",
+			"categories": [
+				"Vantagem"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "5bdcbceb-d78f-4614-bf9f-940332fadcc0",
+			"name": "Resistência a Dano",
+			"physical": true,
+			"exotic": true,
+			"levels": "2",
+			"points_per_level": 5,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "cf16a115-3945-4e6a-8fec-db3d12ecc311",
+					"disabled": true,
+					"name": "Campo de Força",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": 20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "f6e7d715-65bb-4432-9f84-30c4c64b3834",
+					"disabled": true,
+					"name": "Enrijecido",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": 20,
+					"affects": "total",
+					"levels": 1
+				},
+				{
+					"type": "modifier",
+					"id": "54c7a982-2119-4f96-bb58-4a8d0e6125ba",
+					"disabled": true,
+					"name": "Absorção",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": 80,
+					"affects": "total",
+					"notes": "Amplia @Habilidade@"
+				},
+				{
+					"type": "modifier",
+					"id": "c4cb5b93-3501-4f12-9b60-5e3df7860838",
+					"disabled": true,
+					"name": "Absorção",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": 80,
+					"affects": "total",
+					"notes": "Só para cura"
+				},
+				{
+					"type": "modifier",
+					"id": "079c2b6b-fbcc-41ac-a1b1-6857f15dd10c",
+					"disabled": true,
+					"name": "Absorção",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": 100,
+					"affects": "total",
+					"notes": "Amplia qualquer habilidade"
+				},
+				{
+					"type": "modifier",
+					"id": "f0889f09-1eb9-4c0e-8b20-e38eea6a3661",
+					"disabled": true,
+					"name": "Reflexão",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": 100,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "1a4fc9a8-7e8f-46ad-a21e-77a424a740e9",
+					"disabled": true,
+					"name": "Maldição",
+					"reference": "H14",
+					"cost_type": "points",
+					"cost": -1,
+					"affects": "total",
+					"notes": "@Rara@"
+				},
+				{
+					"type": "modifier",
+					"id": "e7a6e291-2df6-4288-a238-14ef98a6b5d2",
+					"disabled": true,
+					"name": "Maldição",
+					"reference": "H14",
+					"cost_type": "percentage",
+					"cost": -5,
+					"affects": "total",
+					"notes": "@Ocasional@"
+				},
+				{
+					"type": "modifier",
+					"id": "488abd93-07e5-42ed-9eab-fb172c199eac",
+					"disabled": true,
+					"name": "Maldição",
+					"reference": "H14",
+					"cost_type": "percentage",
+					"cost": -10,
+					"affects": "total",
+					"notes": "@Comum@"
+				},
+				{
+					"type": "modifier",
+					"id": "a7f5cf0c-d95d-469a-9638-d6189ef654c7",
+					"disabled": true,
+					"name": "Maldição",
+					"reference": "H14",
+					"cost_type": "percentage",
+					"cost": -15,
+					"affects": "total",
+					"notes": "@Muito Comum@"
+				},
+				{
+					"type": "modifier",
+					"id": "ec54e529-c53d-4057-b2c4-d94a7ce86891",
+					"disabled": true,
+					"name": "Direcional",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": -20,
+					"affects": "total",
+					"notes": "Frente"
+				},
+				{
+					"type": "modifier",
+					"id": "ac4b59d8-f9dc-4904-94a7-b0e03e4e7922",
+					"disabled": true,
+					"name": "Flexível",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": -20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "d7c15154-1d1b-443e-8913-0cf4e148b6be",
+					"disabled": true,
+					"name": "Limitada",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": -20,
+					"affects": "total",
+					"notes": "@Forma de Ataque Muito Comum@"
+				},
+				{
+					"type": "modifier",
+					"id": "382f887c-7ff7-4083-8423-26494f11aba3",
+					"disabled": true,
+					"name": "Semiablativa",
+					"reference": "B84",
+					"cost_type": "percentage",
+					"cost": -20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "9157d511-cce5-4ea1-8512-f46fd57ac16f",
+					"disabled": true,
+					"name": "Sem Armadura",
+					"reference": "B84",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "979c5d04-a77b-4f8c-8f89-0eb111720471",
+					"disabled": true,
+					"name": "Direcional",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "total",
+					"notes": "@Direção: Costas, Direita, Esquerda, Acima ou Abaixo@"
+				},
+				{
+					"type": "modifier",
+					"id": "f457ccd1-6b26-4e8d-980c-50f0a7b77ce4",
+					"disabled": true,
+					"name": "Limitada",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "total",
+					"notes": "@Forma de Ataque Comum@"
+				},
+				{
+					"type": "modifier",
+					"id": "e7917eea-7aea-474d-aa82-fa9cb9e18648",
+					"disabled": true,
+					"name": "Pele Resistente",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": -40,
+					"affects": "total",
+					"notes": "Qualquer efeito que requer uma ruptura na pele ou contato com a pele afetará o personagem."
+				},
+				{
+					"type": "modifier",
+					"id": "26e28c61-a5a6-4ae9-94b0-aa224c6b6166",
+					"disabled": true,
+					"name": "Limitada",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": -60,
+					"affects": "total",
+					"notes": "@Forma de Ataque Ocasional@"
+				},
+				{
+					"type": "modifier",
+					"id": "7deac9ab-cb2d-48de-acef-885bb7d28d3d",
+					"disabled": true,
+					"name": "Ablativa",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": -80,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "289b6432-0459-463c-8ea1-d864ff93a313",
+					"disabled": true,
+					"name": "Limitada",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": -80,
+					"affects": "total",
+					"notes": "@Forma de Ataque Rara@"
+				},
+				{
+					"type": "modifier",
+					"id": "df99defd-33a7-4b98-a11c-90ce5cbde007",
+					"disabled": true,
+					"name": "Laminada",
+					"reference": "RSWL18",
+					"cost_type": "percentage",
+					"cost": 10,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "0b164f83-4d00-4619-9c0e-9fc0688b3907",
+					"disabled": true,
+					"name": "À Prova de Maldição",
+					"reference": "PSI14",
+					"cost_type": "percentage",
+					"cost": 50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "c30b6bc8-9bbd-4ca5-ab7a-4952a3aafbb6",
+					"disabled": true,
+					"name": "Somente Maldições",
+					"reference": "PSI14",
+					"cost_type": "percentage",
+					"cost": 0,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "8cd6a7fe-46a1-47bd-b6b6-689ad23d5324",
+					"disabled": true,
+					"name": "Parcial (@Ponto de Impacto, 1 nível por -1 de modificador de ataque, Tronco vale -10%@)",
+					"reference": "B83",
+					"cost_type": "percentage",
+					"cost": -10,
+					"affects": "total"
+				}
+			],
+			"reference": "B83",
+			"calc": {
+				"points": 10
+			},
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "skull"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "face"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "neck"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "torso"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "vitals"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "groin"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "arm"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "hand"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "leg"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "foot"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "tail"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "wing"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "fin"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 1,
+					"per_level": true,
+					"location": "brain"
+				}
+			],
+			"categories": [
+				"Vantagem"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "3ff4e11a-39ee-4387-88fc-b704d80db830",
+			"allow_half_levels": true,
+			"name": "Deslocamento Ampliado (Ar: 24)",
+			"physical": true,
+			"exotic": true,
+			"levels": "1",
+			"points_per_level": 20,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "52949201-e64e-426e-8914-87c500052e85",
+					"disabled": true,
+					"name": "Bônus de Manuseio",
+					"reference": "B52",
+					"cost_type": "percentage",
+					"cost": 5,
+					"affects": "total",
+					"levels": 1
+				},
+				{
+					"type": "modifier",
+					"id": "6bc70c4a-5bb8-4b05-9a65-7cf39869bf3e",
+					"disabled": true,
+					"name": "Redutor de Manuseio",
+					"reference": "B52",
+					"cost_type": "percentage",
+					"cost": -5,
+					"affects": "total",
+					"levels": 1
+				},
+				{
+					"type": "modifier",
+					"id": "2c984a8b-b72a-43d4-96d0-88ea61de25db",
+					"disabled": true,
+					"name": "Newtoniana",
+					"reference": "B52",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "699b6ae8-d1cd-4fb3-ac27-75582abba66e",
+					"disabled": true,
+					"name": "Limitado a Estradas",
+					"reference": "B52",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "ccb472ae-44a3-4e8d-9ce6-efce20e599f7",
+					"disabled": true,
+					"name": "Total",
+					"reference": "P49",
+					"cost_type": "percentage",
+					"cost": -20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "a375644c-a2d5-4200-82d2-b23c0d2d1c3c",
+					"disabled": true,
+					"name": "Cósmica",
+					"reference": "SU26",
+					"cost_type": "percentage",
+					"cost": 50,
+					"affects": "total",
+					"notes": "Aceleração Instantânea"
+				},
+				{
+					"type": "modifier",
+					"id": "c96277d8-eecf-4c9a-9270-a6d1a5057d33",
+					"disabled": true,
+					"name": "Cósmica",
+					"reference": "SU27",
+					"cost_type": "percentage",
+					"cost": 50,
+					"affects": "total",
+					"notes": "Total Capacidade de Manobra"
+				}
+			],
+			"reference": "B52",
+			"calc": {
+				"points": 20
+			},
+			"categories": [
+				"Vantagem"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "0cdb731a-5c52-4be5-9f65-8c681ef741e8",
+			"name": "Voo",
+			"physical": true,
+			"exotic": true,
+			"base_points": 40,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "5cd375b2-62ea-40f3-b82c-2eb5a2acb396",
+					"disabled": true,
+					"name": "Voo Espacial Newtoniano",
+					"reference": "B99",
+					"cost_type": "percentage",
+					"cost": 25,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "612c3a4c-8ce6-43a9-8aef-8da604c76972",
+					"disabled": true,
+					"name": "Voo Espacial",
+					"reference": "B99",
+					"cost_type": "percentage",
+					"cost": 50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "e9f9e346-51fc-4224-8633-6e37e728fe86",
+					"disabled": true,
+					"name": "Incapaz de Pairar",
+					"reference": "B99",
+					"cost_type": "percentage",
+					"cost": -15,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "41db1c58-6d0e-4f2f-8007-7e9c53d87b96",
+					"disabled": true,
+					"name": "Planar Controlado",
+					"reference": "B100",
+					"cost_type": "percentage",
+					"cost": -45,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "c54179b2-833a-475b-ad73-16bef8e1c75b",
+					"disabled": true,
+					"name": "Planar",
+					"reference": "B100",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "14a7fcd0-970f-481d-b430-64197a18da54",
+					"disabled": true,
+					"name": "Mais Leve que o Ar",
+					"reference": "B100",
+					"cost_type": "percentage",
+					"cost": -10,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "679de7c0-0454-4a1f-83b9-4115ca6d1acf",
+					"disabled": true,
+					"name": "Limite Baixo de Voo",
+					"reference": "B100",
+					"cost_type": "percentage",
+					"cost": -10,
+					"affects": "total",
+					"notes": "9 m"
+				},
+				{
+					"type": "modifier",
+					"id": "14b17e48-9b0a-43e9-b69c-956518f80d6c",
+					"disabled": true,
+					"name": "Limite Baixo de Voo",
+					"reference": "B56",
+					"cost_type": "percentage",
+					"cost": -20,
+					"affects": "total",
+					"notes": "3 m"
+				},
+				{
+					"type": "modifier",
+					"id": "6a76a0eb-5c5f-4456-8fb2-f012093e81a2",
+					"disabled": true,
+					"name": "Limite Baixo de Voo",
+					"reference": "B56",
+					"cost_type": "percentage",
+					"cost": -25,
+					"affects": "total",
+					"notes": "1,5 m"
+				},
+				{
+					"type": "modifier",
+					"id": "ea4d4ffa-1b5a-458f-a52c-1b85ae23c72f",
+					"disabled": true,
+					"name": "Asas Pequenas",
+					"reference": "B99",
+					"cost_type": "percentage",
+					"cost": -10,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "d4fa59ec-c1fd-46e7-a38d-a40f4062a153",
+					"disabled": true,
+					"name": "Somente Voo Espacial",
+					"reference": "B100",
+					"cost_type": "percentage",
+					"cost": -75,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "823b7f81-fd7d-4142-bf85-7df75fd5c7ff",
+					"name": "Alado",
+					"reference": "B99",
+					"cost_type": "percentage",
+					"cost": -25,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "60b4753a-6ee5-45d3-867b-1bd58e2715c4",
+					"disabled": true,
+					"name": "Planetário",
+					"reference": "P50",
+					"cost_type": "percentage",
+					"cost": -5,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "b629cc57-6cc9-4ce5-8a08-2123e9cb786a",
+					"disabled": true,
+					"name": "Exige Superfície",
+					"reference": "P50",
+					"cost_type": "percentage",
+					"cost": -20,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"id": "c4efc237-c011-459d-9304-a8cf0dfd0542",
+					"disabled": true,
+					"name": "Lenta",
+					"reference": "PSI14",
+					"cost_type": "percentage",
+					"cost": -25,
+					"affects": "total",
+					"notes": "Basic Speed"
+				},
+				{
+					"type": "modifier",
+					"id": "19953344-2cde-433e-88ca-a6d4c0a260bc",
+					"disabled": true,
+					"name": "Lenta, Deslocamento 1",
+					"reference": "PSI14",
+					"cost_type": "percentage",
+					"cost": -45,
+					"affects": "total"
+				}
+			],
+			"reference": "B98",
+			"calc": {
+				"points": 30
+			},
+			"notes": "O Deslocamento do personagem em voo é igual à sua Velocidade Básica × 2; descarte todas as frações",
+			"categories": [
+				"Vantagem"
+			]
+		},
+		{
+			"type": "advantage_container",
+			"id": "782ffd79-2d2d-40ca-af9d-30778b47aab6",
+			"container_type": "meta_trait",
+			"name": "Metacaracterística: Quadrúpede",
+			"reference": "B263",
+			"calc": {
+				"points": -35
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "6c61d47e-f570-41eb-a17c-196347bbfe95",
+					"name": "Pernas Adicionais",
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "7b94113c-abb8-4c0e-a2e2-f99e8b1377ab",
+							"name": "4",
+							"reference": "B77",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "6ceaf087-7667-4294-8d21-94b1e55f5db3",
+							"disabled": true,
+							"name": "@5 ou 6@",
+							"reference": "B77",
+							"cost_type": "points",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "589b6628-ef1b-4ed5-8ffd-8b40266c9b3c",
+							"disabled": true,
+							"name": "@7 ou +@",
+							"reference": "B77",
+							"cost_type": "points",
+							"cost": 15,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "afe2d6b6-ce1d-4c33-9952-b3a2ac423dc3",
+							"disabled": true,
+							"name": "Comprida",
+							"reference": "B77",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"levels": 1
+						},
+						{
+							"type": "modifier",
+							"id": "74290630-11fd-489f-ae7b-5190ec7427c0",
+							"disabled": true,
+							"name": "Incapaz de Chutar",
+							"reference": "B78",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "e251e5e9-845d-4af4-a63a-106763ce2899",
+							"disabled": true,
+							"name": "Extraflexível",
+							"reference": "MATG27",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "987bcf81-75af-4fed-bd25-9931606057a5",
+							"disabled": true,
+							"name": "Pés Preênsis",
+							"reference": "MATG28",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						}
+					],
+					"reference": "B77",
+					"calc": {
+						"points": 5
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "30fefbc4-841d-42cb-99c8-aed912c0370c",
+					"name": "Horizontal",
+					"physical": true,
+					"exotic": true,
+					"base_points": -10,
+					"reference": "B145",
+					"calc": {
+						"points": -10
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "b150fe29-d53e-4842-ab53-e83436cf92dc",
+					"name": "Manuseadores Precários",
+					"physical": true,
+					"base_points": -30,
+					"reference": "B149",
+					"calc": {
+						"points": -30
+					},
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"categories": [
+						"Desvantagem"
+					]
+				}
+			]
+		},
+		{
+			"type": "advantage_container",
+			"id": "ccaee55f-f74e-46d3-9fdd-e3bc1aa4934f",
+			"container_type": "meta_trait",
+			"name": "Metacaracterística: Animal Selvagem",
+			"reference": "B263",
+			"calc": {
+				"points": -30
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "b74ac558-7377-4fe8-bd3a-d0e9c6819706",
+					"name": "Bestial",
+					"mental": true,
+					"exotic": true,
+					"base_points": -10,
+					"reference": "B124",
+					"calc": {
+						"points": -10
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "635d47b1-0d7b-44e3-b4f9-ab5d98a055e5",
+					"name": "Incapaz de Falar",
+					"physical": true,
+					"base_points": -15,
+					"reference": "B145",
+					"calc": {
+						"points": -15
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "advantage_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "gagueira"
+								}
+							}
+						]
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "f13f45b2-eb6e-4837-824c-3ade32589b7e",
+					"name": "Sem Imaginação",
+					"mental": true,
+					"base_points": -5,
+					"reference": "B155",
+					"calc": {
+						"points": -5
+					},
+					"notes": "O personagem sofre uma penalidade de -2 em qualquer tarefa que exigir criatividade ou imaginação, incluindo a maioria dos testes da perícia Artista, todos os testes de Engenharia para criar invenções e todos os testes de habilidade para utilizar a vantagem Desenvolvedor.",
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "a5a5b3e5-a9ba-41bd-b69f-6ebcca2b3cae",
+					"name": "Características Proibidas (IQ Fixa)",
+					"mental": true,
+					"reference": "B263",
+					"calc": {
+						"points": 0
+					}
+				}
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "19ce92c0-4359-42e1-a032-bfc93a958594",
+			"name": "Bico Afiado",
+			"physical": true,
+			"exotic": true,
+			"base_points": 1,
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "pa+",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Bicada",
+					"reach": "C",
+					"parry": "Não",
+					"block": "Não",
+					"calc": {
+						"level": 14,
+						"parry": "Não",
+						"block": "Não",
+						"damage": "1d+2 pa+"
+					},
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Briga"
+						}
+					]
+				}
+			],
+			"modifiers": [
+				{
+					"type": "modifier",
+					"id": "06267fcd-b9c6-4209-aec9-4445e7a074dc",
+					"disabled": true,
+					"name": "Concedido pela Mordida de Vampiro",
+					"reference": "B72",
+					"cost_type": "points",
+					"cost": -1,
+					"affects": "total"
+				}
+			],
+			"reference": "B52",
+			"calc": {
+				"points": 1
+			},
+			"categories": [
+				"Qualidade"
+			]
+		}
+	],
+	"skills": [
+		{
+			"type": "skill",
+			"id": "f9ba5039-2d0c-4c3d-a26c-fd966d94ef3a",
+			"name": "Briga",
+			"reference": "B185",
+			"difficulty": "dx/e",
+			"points": 4,
+			"calc": {
+				"level": 14,
+				"rsl": "DX+2"
+			},
+			"features": [
+				{
+					"type": "weapon_bonus",
+					"amount": 1,
+					"per_level": true,
+					"selection_type": "weapons_with_required_skill",
+					"name": {
+						"compare": "is",
+						"qualifier": "Briga"
+					},
+					"level": {
+						"compare": "at_least",
+						"qualifier": 2
+					}
+				}
+			],
+			"categories": [
+				"Combate Corpo a Corpo",
+				"Combate/Arma"
+			]
+		}
+	],
+	"notes": [
+		{
+			"type": "note",
+			"id": "b3ee1ebf-de5f-4036-8ad3-44cc623c14e8",
+			"text": "2 hexágonos.\n\nO grifo é uma criatura bela, com a cabeça, asa e pés dianteiros de uma águia e a parte traseira de um leão. Ele é imune a habilidades que só afetam os mamíferos ou pássaros, uma vez que ele não é nem um nem outro!\n\nUm grifo pode ser domado se for capturado ainda jovem, mas com uma penalidade de -3 nos testes de Adestramento de Animais. Um grifo indomado em boa saúde pode ser vendido por $5.000; um grifo domado não tem preço e não irá cooperar com ninguém, exceção seu treinador.",
+			"reference": "B460"
+		}
+	],
+	"calc": {
+		"swing": "3d-1",
+		"thrust": "1d+2",
+		"basic_lift": "58 lb",
+		"lifting_st_bonus": 0,
+		"striking_st_bonus": 0,
+		"throwing_st_bonus": 0,
+		"move": [
+			6,
+			4,
+			3,
+			2,
+			1
+		],
+		"dodge": [
+			10,
+			9,
+			8,
+			7,
+			6
+		],
+		"dodge_bonus": 1,
+		"block_bonus": 1,
+		"parry_bonus": 1
+	}
+}

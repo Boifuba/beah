@@ -1,0 +1,1942 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "62cecc1e-c106-4b45-ac52-db31adcfe9de",
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "fc4e4122-0f54-4a28-9540-5e7c0e45fa39",
+			"container_type": "race",
+			"name": "Vampiro",
+			"reference": "B262",
+			"ancestry": "Human",
+			"calc": {
+				"points": 150
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "c5238af0-529b-41af-b379-ff203a8fb4fa",
+					"name": "Forma Alternativa",
+					"physical": true,
+					"exotic": true,
+					"base_points": 15,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "eb5807ec-084e-43c1-bed3-b3e252363504",
+							"disabled": true,
+							"name": "Cosmética",
+							"reference": "B72",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "4b4bd50c-8e04-48e9-ad75-f0acd2be6b2f",
+							"disabled": true,
+							"name": "Mudança com Absorção",
+							"reference": "P75",
+							"cost_type": "percentage",
+							"cost": 5,
+							"affects": "total",
+							"levels": 1,
+							"notes": "@Nível de Mudança com Absorção. 1 Nenhuma, 2, Leve, 3, Média, 4, Pesada, 5, Muito Pesada@"
+						},
+						{
+							"type": "modifier",
+							"id": "cb87d4b7-1c39-4f15-a8e0-9adead6a5878",
+							"disabled": true,
+							"name": "Mudança Ativa",
+							"reference": "P75",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "98e786ff-c702-400c-854f-e9e8d965b826",
+							"disabled": true,
+							"name": "Dano Não-Recíproco",
+							"reference": "P75",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "30b8a6f6-cea6-425b-88cf-13ae13223f13",
+							"disabled": true,
+							"name": "Uma Vez Ativa, Sempre Ativa",
+							"reference": "P75",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "b7e54db5-e853-467b-8012-70ce1989599c",
+							"disabled": true,
+							"name": "Descanso Recíproco",
+							"reference": "P75",
+							"cost_type": "percentage",
+							"cost": 30,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "b871d021-3cbc-48e7-9c43-2709c27f2e2e",
+							"disabled": true,
+							"name": "Forma Projetada",
+							"reference": "P75",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "b4dd7ad5-c04b-486a-ac7f-6ca245c4334d",
+							"disabled": true,
+							"name": "Gasto Adicional de Tempo",
+							"reference": "B112",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"levels": 1
+						}
+					],
+					"reference": "B71",
+					"calc": {
+						"points": 15
+					},
+					"notes": "Morcego",
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "e8779a23-3c48-476d-98a9-395badecd882",
+					"name": "Forma Alternativa",
+					"physical": true,
+					"exotic": true,
+					"base_points": 15,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "2d265235-4d7e-4155-ba46-4720185355ad",
+							"disabled": true,
+							"name": "Cosmética",
+							"reference": "B72",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "40cac4c9-7d46-4c4a-acf5-c97e908c8717",
+							"disabled": true,
+							"name": "Mudança com Absorção",
+							"reference": "P75",
+							"cost_type": "percentage",
+							"cost": 5,
+							"affects": "total",
+							"levels": 1,
+							"notes": "@Nível de Mudança com Absorção. 1 Nenhuma, 2, Leve, 3, Média, 4, Pesada, 5, Muito Pesada@"
+						},
+						{
+							"type": "modifier",
+							"id": "9929f309-6146-4ea4-9508-d94c85060d9e",
+							"disabled": true,
+							"name": "Mudança Ativa",
+							"reference": "P75",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "69906177-4449-4e70-a2c9-9a3225c1154d",
+							"disabled": true,
+							"name": "Dano Não-Recíproco",
+							"reference": "P75",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "732c71fa-476e-4c21-ad2f-6df54606023a",
+							"disabled": true,
+							"name": "Uma Vez Ativa, Sempre Ativa",
+							"reference": "P75",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "1595f498-fc56-4c88-973f-af533e3f7166",
+							"disabled": true,
+							"name": "Descanso Recíproco",
+							"reference": "P75",
+							"cost_type": "percentage",
+							"cost": 30,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "038a2477-db8b-4ac1-a775-87ba41cc762a",
+							"disabled": true,
+							"name": "Forma Projetada",
+							"reference": "P75",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d6562d4a-8f92-4035-a1f7-dfe9122b7cc2",
+							"disabled": true,
+							"name": "Gasto Adicional de Tempo",
+							"reference": "B112",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"levels": 1
+						}
+					],
+					"reference": "B71",
+					"calc": {
+						"points": 15
+					},
+					"notes": "Lobo",
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "5f78802c-c8aa-4c47-b030-2591c78f8f47",
+					"name": "Modificadores de Atributos",
+					"physical": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "65817a68-8c6d-4a99-a45c-a38c0be0a9d0",
+							"name": "ST +6",
+							"reference": "B14",
+							"cost_type": "points",
+							"cost": 60,
+							"affects": "total",
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": 6,
+									"attribute": "st"
+								}
+							]
+						},
+						{
+							"type": "modifier",
+							"id": "1bd5726b-1ccb-452e-a6f4-230360c9ebf5",
+							"name": "HP +4",
+							"reference": "B16",
+							"cost_type": "points",
+							"cost": 8,
+							"affects": "total",
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": 4,
+									"attribute": "hp"
+								}
+							]
+						},
+						{
+							"type": "modifier",
+							"id": "a7c88cd3-68fc-444b-a738-44c2ef365374",
+							"name": "Per +3",
+							"reference": "B16",
+							"cost_type": "points",
+							"cost": 15,
+							"affects": "total",
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": 3,
+									"attribute": "perception"
+								}
+							]
+						}
+					],
+					"reference": "B14",
+					"calc": {
+						"points": 83
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "78845406-9403-40ab-9a21-d10d9746b9ef",
+					"name": "Dependência (Caixão preenchido com terra da cidade natal)",
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "b81450e6-04de-4b09-aad5-0ce15ea9d637",
+							"disabled": true,
+							"name": "Raridade: Rara",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -30,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "c27e10ed-079a-4238-bf1b-9567eb15b443",
+							"name": "Raridade: Ocasional",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "ea4a28c6-8dcf-473f-be05-64689a0ebf63",
+							"disabled": true,
+							"name": "Raridade: Comum",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "5b96e8da-0042-4fdb-9b46-4217141e23f2",
+							"disabled": true,
+							"name": "Raridade: Muito Comum",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "c87a7304-d350-45c0-8b72-e49b3c063cbb",
+							"disabled": true,
+							"name": "Ilegal",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "ebd9e92e-451e-44b2-b410-088bf2b9478d",
+							"disabled": true,
+							"name": "Frequência: Constante",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 5,
+							"notes": "Perde 1 PV por minuto sem ela."
+						},
+						{
+							"type": "modifier",
+							"id": "65047419-ec7a-47fd-afc7-729edaeb495c",
+							"disabled": true,
+							"name": "Frequência: De hora em hora",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 4,
+							"notes": "Perde 1 PV por 10 minutos sem a aplicação de uma dose horária."
+						},
+						{
+							"type": "modifier",
+							"id": "949982e0-9d3a-4fc5-8b13-b01d15e9fdb3",
+							"name": "Frequência: Diária",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 3,
+							"notes": "Perde 1 PV por hora sem a aplicação de uma dose diária"
+						},
+						{
+							"type": "modifier",
+							"id": "9178a021-84d5-43d9-863b-ff67b834a323",
+							"disabled": true,
+							"name": "Frequência: Semanal",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 2,
+							"notes": "Perde 1 PV a cada seis horas sem a aplicação de uma dose semanal."
+						},
+						{
+							"type": "modifier",
+							"id": "e06fedce-5fe2-40de-acde-2eace481da13",
+							"disabled": true,
+							"name": "Frequência: Mensal",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 1,
+							"notes": "Perde 1 PV a cada dia sem a aplicação de uma dose mensal."
+						},
+						{
+							"type": "modifier",
+							"id": "535f1a8f-2bbf-4a06-bd67-3b902b415006",
+							"disabled": true,
+							"name": "Frequência: Trimestral",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 0.33333,
+							"notes": "Perde 1 PV a cada três dias sem a aplicação de uma dose trimestral."
+						},
+						{
+							"type": "modifier",
+							"id": "41f5b280-2485-4f07-925c-47cf20b11af1",
+							"disabled": true,
+							"name": "Frequência: Anual",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 0.1,
+							"notes": "Perde 1 PV a cada duas semanas sem a aplicação de uma dose anual."
+						},
+						{
+							"type": "modifier",
+							"id": "026ea799-ae08-4d7f-91a0-94b3e36ac911",
+							"disabled": true,
+							"name": "Envelhecimento",
+							"reference": "B130",
+							"cost_type": "percentage",
+							"cost": 30,
+							"affects": "total",
+							"notes": "Para cada PV perdido, personagem também envelhece dois anos."
+						}
+					],
+					"reference": "B130",
+					"calc": {
+						"points": -60
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "ebdc2271-b1ab-42d8-8a7d-a33132f93fb5",
+					"name": "Maldição Divina",
+					"mental": true,
+					"supernatural": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "2580cbe8-07ea-41d3-b31d-ed6b1f0d1c77",
+							"disabled": true,
+							"name": "Menor",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total",
+							"notes": "@Maldição@"
+						},
+						{
+							"type": "modifier",
+							"id": "f0ec289a-6db2-4448-b111-b39886d6b18f",
+							"name": "Maior",
+							"cost_type": "points",
+							"cost": -10,
+							"affects": "total",
+							"notes": "Não pode entrar em uma casa pela primeira vez antes de ser convidado"
+						},
+						{
+							"type": "modifier",
+							"id": "e78cc550-faa0-4c61-aefa-2b262bbb940a",
+							"disabled": true,
+							"name": "Grave",
+							"cost_type": "points",
+							"cost": -15,
+							"affects": "total",
+							"notes": "@Maldição@"
+						}
+					],
+					"reference": "B148",
+					"calc": {
+						"points": -10
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "14916c00-0afc-4c81-8714-1b70e49ed036",
+					"name": "Não Respira",
+					"physical": true,
+					"exotic": true,
+					"base_points": 20,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "95718ef1-9440-40ba-a9d5-046068edfc22",
+							"disabled": true,
+							"name": "Guelras",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "2724e2c2-2735-423c-a734-30366f79008d",
+							"disabled": true,
+							"name": "Guelras",
+							"reference": "B73",
+							"cost_type": "points",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Sufoca no ar"
+						},
+						{
+							"type": "modifier",
+							"id": "553e3cde-1478-479c-9215-df75c4b52d12",
+							"disabled": true,
+							"name": "Absorção de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "ea95aa20-6183-4420-a8c4-f47b4a9055bb",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 25 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "4e588e41-5dd4-4bd7-b128-6d7ebb59ae59",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 50 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "e6f93a7c-035a-485b-9b0e-93f14b678c8b",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -30,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 100 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "eae75bdf-a43d-410f-81aa-7b4e8ceca473",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 200 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "408b1cfe-c889-4239-b062-b01a720d059d",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 300 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "ff5f393d-9d4e-4b46-bc1d-6c0b7e26916e",
+							"disabled": true,
+							"name": "Combustão de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						}
+					],
+					"reference": "B73",
+					"calc": {
+						"points": 20
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "ba334eb2-7ccb-496e-ade6-d28b84a422c3",
+					"name": "Drenagem",
+					"physical": true,
+					"supernatural": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "d7222c53-9862-4df2-881c-5d9a57f15f5a",
+							"name": "Comum",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total",
+							"notes": "Sangue Humano"
+						},
+						{
+							"type": "modifier",
+							"id": "f9ba6869-3399-4ccf-bc92-af7ae31ba908",
+							"disabled": true,
+							"name": "Ocasional",
+							"cost_type": "points",
+							"cost": -10,
+							"affects": "total",
+							"notes": "@Substância@"
+						},
+						{
+							"type": "modifier",
+							"id": "890eac64-58b5-4b64-aa52-c7ff784ca2d5",
+							"disabled": true,
+							"name": "Rara",
+							"cost_type": "points",
+							"cost": -15,
+							"affects": "total",
+							"notes": "@Substância@"
+						},
+						{
+							"type": "modifier",
+							"id": "e6803304-5349-40cc-abf2-ff54993e7359",
+							"name": "Ilegal",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						}
+					],
+					"reference": "B136",
+					"calc": {
+						"points": -10
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "c4b3ae2b-606f-4d04-9e91-3d8cf74b8cdf",
+					"name": "Aversão",
+					"mental": true,
+					"supernatural": true,
+					"levels": "1",
+					"base_points": -9,
+					"points_per_level": -1,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "401df36c-c0a9-43af-ad3c-419a967dd9ca",
+							"disabled": true,
+							"name": "Muito Comum",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 3,
+							"notes": "@A Quê@"
+						},
+						{
+							"type": "modifier",
+							"id": "c1560234-c938-4844-9726-0d6baaf08ba1",
+							"name": "Comum",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 2,
+							"notes": "Água Corrente"
+						},
+						{
+							"type": "modifier",
+							"id": "552e8a8d-df1e-4376-841f-5d17af7afa3c",
+							"disabled": true,
+							"name": "Ocasional",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 1,
+							"notes": "@A Quê@"
+						},
+						{
+							"type": "modifier",
+							"id": "a51e7cbe-2c56-41e2-94eb-95c74217793e",
+							"disabled": true,
+							"name": "Rara",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 0.5,
+							"notes": "@A Quê@"
+						},
+						{
+							"type": "modifier",
+							"id": "a2d69efa-80e4-4178-82a0-5d80e77394d5",
+							"disabled": true,
+							"name": "Não Pode ser Preso",
+							"reference": "B124",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "c12c1222-2d33-4f61-a9e3-67136bb11c5b",
+							"disabled": true,
+							"name": "Insensível",
+							"reference": "H25",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						}
+					],
+					"reference": "B123",
+					"calc": {
+						"points": -20
+					},
+					"notes": "Proíbe o personagem de ficar a menos de um metro (por nível) de Água Corrente",
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "b76af9e0-a8bc-4020-8055-338cbaf6cfed",
+					"name": "Aversão",
+					"mental": true,
+					"supernatural": true,
+					"levels": "1",
+					"base_points": -9,
+					"points_per_level": -1,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "0745e2a8-3337-4792-97ff-c87da0c2ccc9",
+							"disabled": true,
+							"name": "Muito Comum",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 3,
+							"notes": "@A Quê@"
+						},
+						{
+							"type": "modifier",
+							"id": "942b1bac-f95e-4090-9d5a-411e53adc43e",
+							"disabled": true,
+							"name": "Comum",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 2,
+							"notes": "@A Quê@"
+						},
+						{
+							"type": "modifier",
+							"id": "8a6330b0-3a2b-45f6-804b-6b1492e21b4e",
+							"name": "Ocasional",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 1,
+							"notes": "Alho"
+						},
+						{
+							"type": "modifier",
+							"id": "8dbb89b1-c377-4cbe-a6b8-ef771413ea0d",
+							"disabled": true,
+							"name": "Rara",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 0.5,
+							"notes": "@A Quê@"
+						},
+						{
+							"type": "modifier",
+							"id": "4f42c372-b8e7-4359-bb8a-e3eae8a825c7",
+							"disabled": true,
+							"name": "Não Pode ser Preso",
+							"reference": "B124",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d0449bc9-6a37-497e-aba6-ab25dd96867f",
+							"disabled": true,
+							"name": "Insensível",
+							"reference": "H25",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						}
+					],
+					"reference": "B123",
+					"calc": {
+						"points": -10
+					},
+					"notes": "Proíbe o personagem de ficar a menos de um metro (por nível) de Alho",
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "27f2d0ff-f806-4106-bddb-dd64545bb010",
+					"name": "Aversão",
+					"mental": true,
+					"supernatural": true,
+					"levels": "5",
+					"base_points": -9,
+					"points_per_level": -1,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "3edc0c6d-15bb-4677-a804-0c867d2de9c5",
+							"disabled": true,
+							"name": "Muito Comum",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 3,
+							"notes": "@A Quê@"
+						},
+						{
+							"type": "modifier",
+							"id": "ce06af8e-09db-420b-95cc-7490d289d868",
+							"disabled": true,
+							"name": "Comum",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 2,
+							"notes": "@A Quê@"
+						},
+						{
+							"type": "modifier",
+							"id": "9a4040ec-c24c-490f-99d7-6944cf9b3fbd",
+							"name": "Ocasional",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 1,
+							"notes": "Símbolos Religiosos"
+						},
+						{
+							"type": "modifier",
+							"id": "59bfd94e-7ca2-4d29-a60c-ceda0af7ec6e",
+							"disabled": true,
+							"name": "Rara",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 0.5,
+							"notes": "@A Quê@"
+						},
+						{
+							"type": "modifier",
+							"id": "cd450160-2196-460f-8f09-842f2e4adb1f",
+							"disabled": true,
+							"name": "Não Pode ser Preso",
+							"reference": "B124",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "4d653ba6-d2c5-4dc1-855d-45739770aad7",
+							"disabled": true,
+							"name": "Insensível",
+							"reference": "H25",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						}
+					],
+					"reference": "B123",
+					"calc": {
+						"points": -14
+					},
+					"notes": "Proíbe o personagem de ficar a menos de um metro (por nível) de Símbolos Religiosos",
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "f6cc71ea-2081-44f5-9e04-0e3e5414c1bd",
+					"name": "Tolerância a Ferimentos",
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "cc6b4683-294c-48a5-a7f1-dc47d58e800e",
+							"disabled": true,
+							"name": "Difuso",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 100,
+							"affects": "total",
+							"notes": "O personagem é imune a lesões incapacitantes e reduz o dano que ele sofre com a maioria dos golpes físicos; a maioria dos inimigos (a critério do Mestre) não é capaz de empurrar ou agarrar o personagem! Ele não sangra, não é afetado por toxinas de origem sanguínea é imune a ataques que interrompem a circulação de uma parte do sangue do corpo. Ataques por perfuração ou perfurantes (de qualquer gravidade) nunca provocam mais que 1 PV de dano, independente do dano penetrante! Outros tipos de ataques também nunca causam mais que 2 PV de dano. Exceção: ataques de área, de cone e explosões causam o dano normal."
+						},
+						{
+							"type": "modifier",
+							"id": "523c74e6-882c-4059-bb6c-77abedd67b11",
+							"disabled": true,
+							"name": "Homogêneo",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 40,
+							"affects": "total",
+							"notes": "Aplica-se os seguintes modificadores de ferimento: perf e pa++, ×1/2; pa+, ×1/3; pa, ×1/5; e pa-, ×1/10"
+						},
+						{
+							"type": "modifier",
+							"id": "ebfeff1c-80c7-46af-ae15-478b4b883082",
+							"disabled": true,
+							"name": "Sem Sangue",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "O personagem não sangra, não é afetado por toxinas de origem sanguínea é imune a ataques que interrompem a circulação de uma parte do sangue do corpo"
+						},
+						{
+							"type": "modifier",
+							"id": "bba197ff-0687-4ca0-b4b5-1087aece5cc2",
+							"disabled": true,
+							"name": "Sem Cérebro",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "O cérebro do personagem não pode ser usado como alvo para causar dano adicional. um golpe no crânio ou no olho é considerado como um golpe normal no rosto (com a diferença que um ferimento no olho pode mutilar esse órgão)."
+						},
+						{
+							"type": "modifier",
+							"id": "d26976e6-361e-4760-a311-5f193b5613a4",
+							"disabled": true,
+							"name": "Sem Olhos",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "O personagem não tem olhos, logo eles não podem ser atacados. O personagem é imune a ataques que produzem cegueira."
+						},
+						{
+							"type": "modifier",
+							"id": "002becf6-2223-4bbd-937a-106300d0ae6f",
+							"disabled": true,
+							"name": "Sem Cabeça",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 7,
+							"affects": "total",
+							"notes": "Crânio, cérebro e rosto não podem ser usados como alvo"
+						},
+						{
+							"type": "modifier",
+							"id": "53c7244f-0781-4403-917b-060332c009fb",
+							"disabled": true,
+							"name": "Sem Pescoço",
+							"reference": "B95",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "O personagem não tem pescoço. Por esse motivo, ele não tem o ponto de impacto “pescoço” e não pode ser decapitado, asfixiado nem estrangulado."
+						},
+						{
+							"type": "modifier",
+							"id": "4c6172ee-cc7c-4299-980f-ffa786178fb7",
+							"disabled": true,
+							"name": "Sem Órgãos Vitais",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "Considere todos os golpes em “órgãos vitais” ou na “virilha” como golpes no tronco."
+						},
+						{
+							"type": "modifier",
+							"id": "02c5875b-a042-4f87-84fe-e237534de35e",
+							"name": "Não-Vivo",
+							"reference": "B94",
+							"cost_type": "points",
+							"cost": 20,
+							"affects": "total",
+							"notes": "Aplica-se os seguintes modificadores de ferimento: perf e pa++, ×1; pa+, ×1/2; pa, ×1/3; e pa-, ×1/5"
+						}
+					],
+					"reference": "B94",
+					"calc": {
+						"points": 20
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "4e0c19f0-5c0e-4e2b-bd1a-8ca423c9c9b8",
+					"name": "Insubstancialidade",
+					"mental": true,
+					"physical": true,
+					"exotic": true,
+					"base_points": 80,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "03a834aa-211a-4446-a01c-24f89ec39833",
+							"disabled": true,
+							"name": "Afeta a Matéria",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "a680a3d3-995a-4566-910b-3a226cdb0a10",
+							"disabled": true,
+							"name": "Capaz de Carregar Objetos",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": 10,
+							"affects": "total",
+							"notes": "Até o Valor de Nenhuma Carga"
+						},
+						{
+							"type": "modifier",
+							"id": "4346cc53-be59-4d94-aeeb-03b75c6319c8",
+							"disabled": true,
+							"name": "Capaz de Carregar Objetos",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total",
+							"notes": "Até o Valor de Carga Leve"
+						},
+						{
+							"type": "modifier",
+							"id": "e9462fe5-3905-4070-8534-c819eb1d1791",
+							"disabled": true,
+							"name": "Capaz de Carregar Objetos",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total",
+							"notes": "Até o Valor de Carga Média"
+						},
+						{
+							"type": "modifier",
+							"id": "f4a7dd95-bce3-4291-b677-8d4ae6dab058",
+							"disabled": true,
+							"name": "Capaz de Carregar Objetos",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"notes": "Até o Valor de Carga Pesada"
+						},
+						{
+							"type": "modifier",
+							"id": "df772b36-5333-4d90-98e1-b466b46f5b3b",
+							"disabled": true,
+							"name": "Mudança Parcial",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "425da9c9-c201-4216-afd7-e5f2ebb17559",
+							"disabled": true,
+							"name": "Mudança Parcial",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"notes": "O personagem é capaz de tornar o objeto que estiver carregando material sem derrubá-lo"
+						},
+						{
+							"type": "modifier",
+							"id": "15e16040-8ec2-4d4b-89b2-6c067dc6a6c4",
+							"disabled": true,
+							"name": "Permanentemente Ativo",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "f46f204e-a9c6-40c5-b981-b0a2925e21af",
+							"disabled": true,
+							"name": "Normalmente Ativa",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "Materialização custa 1 PF por segundo"
+						},
+						{
+							"type": "modifier",
+							"id": "30966718-99a1-4088-909a-ecfcea39780d",
+							"disabled": true,
+							"name": "Sem Deslocamento Vertical",
+							"reference": "P56",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "22499ff4-b1b6-459f-95fc-2093af20cad4",
+							"disabled": true,
+							"name": "Barulhento",
+							"reference": "P56",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d02472c7-4afe-4c74-80b4-97a62a15af62",
+							"disabled": true,
+							"name": "Projeção",
+							"reference": "P56",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "dca83532-49a4-4645-a628-b296cccbfd0f",
+							"disabled": true,
+							"name": "Reversão",
+							"reference": "H16",
+							"cost_type": "percentage",
+							"cost": 60,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d30ee9ae-2f7c-431b-b6de-b19f91087aa1",
+							"disabled": true,
+							"name": "Toque",
+							"reference": "H16",
+							"cost_type": "percentage",
+							"cost": 0,
+							"affects": "total",
+							"notes": "Sempre Ativa"
+						},
+						{
+							"type": "modifier",
+							"id": "d00ba6da-0696-41e5-a67b-b63f210cd8be",
+							"disabled": true,
+							"name": "Toque",
+							"reference": "H16",
+							"cost_type": "percentage",
+							"cost": 5,
+							"affects": "total",
+							"notes": "Ativada ou Desativada à Vontade"
+						},
+						{
+							"type": "modifier",
+							"id": "d9c0ebb9-be3f-422c-8a4e-05ddc608b6d4",
+							"disabled": true,
+							"name": "Materialização Difícil",
+							"reference": "H16",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Mutuamente Excludente com Normalmente Ativa."
+						},
+						{
+							"type": "modifier",
+							"id": "87066576-2d8e-4d31-904a-a094ba584829",
+							"disabled": true,
+							"name": "Materialização Ectoplásmica",
+							"reference": "H16",
+							"cost_type": "percentage",
+							"cost": -35,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "577d8e11-2f56-49db-9c38-97ff1af9e420",
+							"disabled": true,
+							"name": "Ar Fantasma",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "c232cbff-b30a-435c-8780-66652eedace0",
+							"disabled": true,
+							"name": "Comunicação Substancial",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": 40,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "64044bdc-05db-4a37-a04e-bef884a385cf",
+							"name": "Custa Fadiga",
+							"reference": "B111",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total",
+							"levels": 2
+						}
+					],
+					"reference": "B65",
+					"calc": {
+						"points": 72
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "54480585-e8d1-40e0-ac89-d2a743f1caba",
+					"name": "Visão Noturna",
+					"physical": true,
+					"levels": "5",
+					"points_per_level": 1,
+					"reference": "B97",
+					"calc": {
+						"points": 5
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "4c80c328-eaad-4643-9a82-fff3506b7fb1",
+					"round_down": true,
+					"name": "Resistente",
+					"physical": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "534e9951-4337-451b-95eb-a8189862eaf4",
+							"name": "Riscos ao Metabolismo",
+							"reference": "B85",
+							"cost_type": "points",
+							"cost": 30,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "be22dc21-5a6a-48e7-bcb8-47fc5a725cd5",
+							"disabled": true,
+							"name": "@Comum: Venenos, Enjoos, etc.@",
+							"reference": "B85",
+							"cost_type": "points",
+							"cost": 15,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "e13ff9ef-07c0-4be7-bb3f-d9fdaf4262fb",
+							"disabled": true,
+							"name": "@Ocasional: Doenças, Venenos Ingeridos, etc.@",
+							"reference": "B85",
+							"cost_type": "points",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "a55a3522-8cd2-4596-92a9-2387bc2ee80f",
+							"disabled": true,
+							"name": "@Raro: Aceleração, Doença de Altitude, Doença de Descompressão, Enjoo Marítimo, Enjoo Espacial, Nanomáquinas, etc.@",
+							"reference": "B85",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "87619104-3c13-4400-8c49-096e096c4f0d",
+							"name": "Imunidade",
+							"reference": "B85",
+							"cost_type": "multiplier",
+							"cost": 1
+						},
+						{
+							"type": "modifier",
+							"id": "f36c6efd-cecb-4c56-b59f-a28aa5e30922",
+							"disabled": true,
+							"name": "+8 nos testes de HT para Resistir",
+							"reference": "B85",
+							"cost_type": "multiplier",
+							"cost": 0.5
+						},
+						{
+							"type": "modifier",
+							"id": "21b8c13e-7463-4744-b865-504f8f86b4aa",
+							"disabled": true,
+							"name": "+3 nos testes de HT para Resistir",
+							"reference": "B85",
+							"cost_type": "multiplier",
+							"cost": 0.33
+						}
+					],
+					"reference": "B84",
+					"calc": {
+						"points": 30
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "1b12fa46-07d7-4540-a747-013b8c4962b1",
+					"name": "Falar com Animais",
+					"mental": true,
+					"exotic": true,
+					"base_points": 25,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "d1a5e634-0a10-42df-a731-aee3ed1bdafc",
+							"disabled": true,
+							"name": "Especializada",
+							"reference": "B60",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "Todos os animais aquáticos"
+						},
+						{
+							"type": "modifier",
+							"id": "fc64561a-d119-4f8c-90be-d80939a52307",
+							"disabled": true,
+							"name": "Especializada",
+							"reference": "B60",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "Todos os animais terrestres"
+						},
+						{
+							"type": "modifier",
+							"id": "328aed78-996d-4e1e-b96a-193833b04c84",
+							"disabled": true,
+							"name": "Especializada",
+							"reference": "B60",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total",
+							"notes": "@Uma classe: Mamíferos, Aves, etc.@"
+						},
+						{
+							"type": "modifier",
+							"id": "afda01e4-7bda-4a9c-93e3-72f632cf4f46",
+							"name": "Especializada",
+							"reference": "B60",
+							"cost_type": "percentage",
+							"cost": -60,
+							"affects": "total",
+							"notes": "Morcegos e Lobos"
+						},
+						{
+							"type": "modifier",
+							"id": "e5531d55-9cc2-4081-8407-4d7bd2b46830",
+							"disabled": true,
+							"name": "Especializada",
+							"reference": "B60",
+							"cost_type": "percentage",
+							"cost": -80,
+							"affects": "total",
+							"notes": "@Uma espécie: Gatos Domésticos, Araras, etc.@"
+						},
+						{
+							"type": "modifier",
+							"id": "c8ce2b27-063b-4ae3-a2f4-afbfa516a7d0",
+							"disabled": true,
+							"name": "Sapiência",
+							"reference": "P77",
+							"cost_type": "percentage",
+							"cost": 40,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "b88453ff-5ad9-43d6-85fa-99252ea666be",
+							"disabled": true,
+							"name": "Universal",
+							"reference": "P77",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						}
+					],
+					"reference": "B60",
+					"calc": {
+						"points": 10
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "f3153e32-84d6-40ef-94a0-f311981639b2",
+					"name": "Traço Inerente: Estéril",
+					"physical": true,
+					"reference": "B262",
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "0779b524-bcd1-4690-b3a8-507a69ea3b71",
+					"name": "Características Sobrenaturais",
+					"physical": true,
+					"supernatural": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "f9b30802-16a1-46c8-a0a2-9a1fd2b08e87",
+							"disabled": true,
+							"name": "Sem Calor Corporal",
+							"reference": "B125",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total",
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"amount": -1,
+									"situation": "de pessoas que tocarem no personagem - cumprimentarem com um aperto de mão, beijarem, etc."
+								}
+							],
+							"notes": "+1 nos testes para descobrir seu segredo"
+						},
+						{
+							"type": "modifier",
+							"id": "04dc55aa-6ed9-4994-a266-46874e9c9dca",
+							"name": "Sem Calor Corporal",
+							"reference": "B125",
+							"cost_type": "points",
+							"cost": -1,
+							"affects": "total",
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"amount": -1,
+									"situation": "de pessoas que tocarem no personagem - cumprimentarem com um aperto de mão, beijarem, etc."
+								}
+							],
+							"notes": "Capaz de aquecer sua pele temporariamente; como um vampiro depois de se alimentar, por exemplo. +1 nos testes para descobrir seu segredo"
+						},
+						{
+							"type": "modifier",
+							"id": "803c5e5b-064c-4ba9-96b4-dafabdc33806",
+							"name": "Sem Reflexo",
+							"reference": "B125",
+							"cost_type": "points",
+							"cost": -10,
+							"affects": "total",
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"amount": -2,
+									"situation": "de pessoas que perceberem que o personagem não tem reflexo"
+								}
+							],
+							"notes": "+2 nos testes para descobrir seu segredo"
+						},
+						{
+							"type": "modifier",
+							"id": "56470ba1-7b03-4753-91de-e16ce80a4ab2",
+							"disabled": true,
+							"name": "Sem Sombra",
+							"reference": "B125",
+							"cost_type": "points",
+							"cost": -10,
+							"affects": "total",
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"amount": -2,
+									"situation": "de pessoas que perceberem que o personagem não tem sombra"
+								}
+							],
+							"notes": "+2 nos testes para descobrir seu segredo"
+						},
+						{
+							"type": "modifier",
+							"id": "a99e6f4e-3728-46c8-964e-ba34d39c1981",
+							"disabled": true,
+							"name": "Palidez",
+							"reference": "B125",
+							"cost_type": "points",
+							"cost": -10,
+							"affects": "total",
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"amount": -2,
+									"situation": "de pessoas que puderem ver o personagem sem maquiagem sob uma boa iluminação"
+								}
+							],
+							"notes": "+2 nos testes para descobrir seu segredo"
+						},
+						{
+							"type": "modifier",
+							"id": "e3810996-1b1a-40f1-8d9f-52eaa8623ca9",
+							"name": "Palidez",
+							"reference": "B125",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total",
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"amount": -2,
+									"situation": "de pessoas que puderem ver o personagem sem maquiagem sob uma boa iluminação"
+								}
+							],
+							"notes": "Capaz de adquirir o rubor da vida temporariamente; como um vampiro depois de se alimentar, por exemplo. +2 nos testes para descobrir seu segredo"
+						}
+					],
+					"reference": "B125",
+					"calc": {
+						"points": -16
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "4d276892-d78c-48e6-8b08-0558a9a81a0f",
+					"name": "Dentes Afiados",
+					"physical": true,
+					"exotic": true,
+					"base_points": 1,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "corte",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Mordida",
+							"reach": "C",
+							"parry": "Não",
+							"block": "Não",
+							"calc": {
+								"level": 0,
+								"parry": "Não",
+								"block": "Não",
+								"damage": "thr-1 corte"
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Briga"
+								},
+								{
+									"type": "dx"
+								}
+							]
+						}
+					],
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "81564df0-7d2b-44c7-86bc-fb6046589e18",
+							"name": "Concedido pela Mordida de Vampiro",
+							"reference": "B72",
+							"cost_type": "points",
+							"cost": -1,
+							"affects": "total"
+						}
+					],
+					"reference": "B52",
+					"calc": {
+						"points": 0
+					},
+					"categories": [
+						"Qualidade"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "cd96e428-38a1-4ea6-911e-e1ef629dbff5",
+					"name": "Idade Imutável",
+					"physical": true,
+					"exotic": true,
+					"base_points": 15,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "bb2c72d0-b44b-44bf-a63b-81f0aecd8448",
+							"disabled": true,
+							"name": "Controle Etário",
+							"reference": "B63",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "ed4707ca-8f09-4f69-837d-77f31451151b",
+							"disabled": true,
+							"name": "Somente IQ",
+							"reference": "RSWL24",
+							"cost_type": "percentage",
+							"cost": -75,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "c53fb99c-ba61-4e6b-a7ae-751013b06de4",
+							"disabled": true,
+							"name": "Pausar Envelhecimento, Semanalmente",
+							"reference": "PSI18",
+							"cost_type": "percentage",
+							"cost": 80,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "0e4a78f8-cf3f-4da0-acfd-31b2cb03c2a1",
+							"disabled": true,
+							"name": "Pausar Envelhecimento, Mensalmente",
+							"reference": "PSI18",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "1a9b4803-16a2-4fdd-b176-548a534ef13d",
+							"disabled": true,
+							"name": "Pausar Envelhecimento, Anualmente",
+							"reference": "PSI18",
+							"cost_type": "percentage",
+							"cost": 130,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "fc4dae92-cf58-45e7-99a4-b1aa8a6bd4a8",
+							"disabled": true,
+							"name": "Estender Vida",
+							"reference": "PSI18",
+							"cost_type": "percentage",
+							"cost": -30,
+							"affects": "total"
+						}
+					],
+					"reference": "B63",
+					"calc": {
+						"points": 15
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "080a11a6-5155-435b-ab1c-1e29a12b11ca",
+					"name": "Apetite Incontrolável (Sangue Humano)",
+					"mental": true,
+					"supernatural": true,
+					"base_points": -15,
+					"cr": 12,
+					"reference": "B122",
+					"calc": {
+						"points": -15
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "37371215-5866-480b-94d5-12a7a43eea19",
+					"name": "Sem Recuperação (Parcial)",
+					"physical": true,
+					"exotic": true,
+					"base_points": -20,
+					"reference": "B156",
+					"calc": {
+						"points": -20
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "21acfc61-0771-4257-9675-bd189ca03369",
+					"name": "Impossível de Matar",
+					"physical": true,
+					"exotic": true,
+					"levels": "2",
+					"points_per_level": 50,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "43c3024e-5ae1-4cef-b0b5-c22dbea6f4ba",
+							"disabled": true,
+							"name": "Calcanhar de Aquiles",
+							"reference": "B64",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"notes": "@Calcanhar de Aquiles Raro@"
+						},
+						{
+							"type": "modifier",
+							"id": "4dbf4ee6-b10d-4f22-a171-ad7cdb18f02e",
+							"disabled": true,
+							"name": "Calcanhar de Aquiles",
+							"reference": "B64",
+							"cost_type": "percentage",
+							"cost": -30,
+							"affects": "total",
+							"notes": "@Calcanhar de Aquiles Ocasional@"
+						},
+						{
+							"type": "modifier",
+							"id": "d523273b-e67a-4b16-a200-badada8691e4",
+							"name": "Calcanhar de Aquiles",
+							"reference": "B64",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total",
+							"notes": "Madeira"
+						},
+						{
+							"type": "modifier",
+							"id": "3f6a4ded-b4d4-4b83-bc18-79dff353ee8e",
+							"disabled": true,
+							"name": "Impedimento",
+							"reference": "B64",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total",
+							"notes": "@Rare Hindrance@"
+						},
+						{
+							"type": "modifier",
+							"id": "6b38126f-539b-459f-86b6-25150bc915d6",
+							"disabled": true,
+							"name": "Impedimento",
+							"reference": "B95",
+							"cost_type": "percentage",
+							"cost": -15,
+							"affects": "total",
+							"notes": "@Occasional Hindrance@"
+						},
+						{
+							"type": "modifier",
+							"id": "0c8c53f4-fef1-41ae-ad1a-5ba07bc6a180",
+							"disabled": true,
+							"name": "Impedimento",
+							"reference": "B95",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total",
+							"notes": "@Common Hindrance@"
+						},
+						{
+							"type": "modifier",
+							"id": "7cbd5cae-1b65-4420-93b3-45c7a7259e25",
+							"disabled": true,
+							"name": "Reencarnação",
+							"reference": "B64",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "3fad8674-bf6a-4029-8586-b8f074229a7e",
+							"disabled": true,
+							"name": "Gatilho",
+							"reference": "B64",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total",
+							"notes": "@Gatilho Raro@"
+						},
+						{
+							"type": "modifier",
+							"id": "c3c76080-7c4c-46ee-8b4f-bf4a5ad21669",
+							"disabled": true,
+							"name": "Gatilho",
+							"reference": "B64",
+							"cost_type": "percentage",
+							"cost": -15,
+							"affects": "total",
+							"notes": "@Gatilho Ocasional@"
+						},
+						{
+							"type": "modifier",
+							"id": "8f30d990-28aa-434b-b645-9c4c3771798a",
+							"disabled": true,
+							"name": "Gatilho",
+							"reference": "B64",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total",
+							"notes": "@Gatilho Comum@"
+						}
+					],
+					"reference": "B64",
+					"calc": {
+						"points": 50
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "4dc46730-3656-42bf-9923-34ebefdd8439",
+					"name": "Mordida de Vampiro",
+					"physical": true,
+					"exotic": true,
+					"levels": "0",
+					"base_points": 30,
+					"points_per_level": 5,
+					"reference": "B72",
+					"calc": {
+						"points": 30
+					},
+					"notes": "o personagem pode sugar 1 PV/nível por segundo. A cada 3 PV roubados, o personagem cura 1 PV ou 1 PF (decisão do personagem). Pode morder em um combate sem se alimentar. Adicionar Dentes (Dentes Afiados) ou Dentes (Bico Afiado) – a critério do jogador, sem custo adicional de pontos.",
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "c6a88477-4f5a-49c9-8402-b69b98a95c01",
+					"name": "Fraqueza",
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "54b4f8d3-c4bb-4238-bcfa-0526decdf37a",
+							"name": "1d de dano por minuto",
+							"reference": "B143",
+							"cost_type": "points",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "7c4103b0-a2df-480d-ba56-7ea9981dd547",
+							"disabled": true,
+							"name": "1d de dano a cada 5 minutos",
+							"reference": "B143",
+							"cost_type": "points",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "1ce12d2c-5e85-45c3-b8bd-1ba4ca7a8b15",
+							"disabled": true,
+							"name": "1d de dano a cada 30 minutos",
+							"reference": "B143",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "49a26575-6b63-4efd-b0ed-ea7d2449df6f",
+							"disabled": true,
+							"name": "@Substância Rara@",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 0.5
+						},
+						{
+							"type": "modifier",
+							"id": "ff12ff5b-e78f-43af-b07e-f0e8505ca64c",
+							"disabled": true,
+							"name": "@Substância Ocasional@",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 1
+						},
+						{
+							"type": "modifier",
+							"id": "056ef6a5-1d5c-4c44-81df-204700e8c534",
+							"name": "Luz do Sol",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 2
+						},
+						{
+							"type": "modifier",
+							"id": "9ac98185-7bcd-404e-a0c8-618197db13a7",
+							"disabled": true,
+							"name": "@Substância Muito Comum@",
+							"reference": "B143",
+							"cost_type": "multiplier",
+							"cost": 3
+						},
+						{
+							"type": "modifier",
+							"id": "eb9b6f7f-c0e1-4558-ae10-a59e9ebbcc62",
+							"disabled": true,
+							"name": "Somente Fadiga",
+							"reference": "B143",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d3a3165a-3911-4fff-9a74-d9e68d291380",
+							"disabled": true,
+							"name": "Variável",
+							"reference": "B143",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total"
+						}
+					],
+					"reference": "B143",
+					"calc": {
+						"points": -40
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				}
+			]
+		}
+	]
+}

@@ -22,3 +22,18 @@ const commandFolders = fs.readdirSync("./src/commands");
 //Others confs
 
 
+  //autocomplete
+  client.on("interactionCreate", async (interaction) => {
+    if (interaction.isAutocomplete()) {
+      const command = interaction.client.commands.get(interaction.commandName);
+      if (!command) {
+        return;
+      }
+      try {
+        await command.autocomplete(interaction);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  });
+

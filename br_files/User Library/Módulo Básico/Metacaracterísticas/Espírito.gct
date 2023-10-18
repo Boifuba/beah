@@ -1,0 +1,688 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "5bd9877d-01e0-444c-9332-abe523bd6955",
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "a5374d82-7816-4adb-b8d8-86eeb060e61a",
+			"container_type": "meta_trait",
+			"name": "Metacaracterística: Espírito",
+			"reference": "B262",
+			"calc": {
+				"points": 261
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "44aab12c-bb08-4d4d-902d-b9c7da0ba46d",
+					"name": "Não Respira",
+					"physical": true,
+					"exotic": true,
+					"base_points": 20,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "7fb391ab-527b-4562-a1cf-7cbca73b0208",
+							"disabled": true,
+							"name": "Guelras",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "cd9aa080-3fd7-4c04-87f8-8750ef2b87b8",
+							"disabled": true,
+							"name": "Guelras",
+							"reference": "B73",
+							"cost_type": "points",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Sufoca no ar"
+						},
+						{
+							"type": "modifier",
+							"id": "fd3c21b0-f093-4d6b-bf12-ec6a49d86705",
+							"disabled": true,
+							"name": "Absorção de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "56cac858-0a2d-4708-b385-b2b3fdad6ab0",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 25 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "b7d99226-1e9e-4892-9903-81092a6d41a1",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 50 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "cdf60ade-f059-4fb7-8e77-a51eb962a87f",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -30,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 100 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "a9d2b771-e010-45a3-9564-c28b04079087",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 200 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "301b4f0a-1503-40aa-b126-25c3081add48",
+							"disabled": true,
+							"name": "Reserva de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"notes": "Capaz de “prender o fôlego” durante um período 300 vezes maior que o normal"
+						},
+						{
+							"type": "modifier",
+							"id": "32458da2-0ec6-4dc1-9b26-1a0b33ae9e7d",
+							"disabled": true,
+							"name": "Combustão de Oxigênio",
+							"reference": "B73",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						}
+					],
+					"reference": "B73",
+					"calc": {
+						"points": 20
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "15248ba5-f128-458a-b415-52710566891b",
+					"name": "Não Come nem Bebe",
+					"physical": true,
+					"exotic": true,
+					"base_points": 10,
+					"reference": "B72",
+					"calc": {
+						"points": 10
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "78789033-8d73-4e24-830b-e26621ffda58",
+					"name": "Não Dorme",
+					"physical": true,
+					"exotic": true,
+					"base_points": 20,
+					"reference": "B72",
+					"calc": {
+						"points": 20
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "b965144c-9c07-4b11-af1a-b64f91ec8d3f",
+					"name": "Insubstancialidade",
+					"mental": true,
+					"physical": true,
+					"exotic": true,
+					"base_points": 80,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "da7a39bb-bd83-4221-8457-dd3151c10c4e",
+							"name": "Afeta a Matéria",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "c02fa32f-b6aa-4d83-9f89-bad4ce4bb002",
+							"disabled": true,
+							"name": "Capaz de Carregar Objetos",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": 10,
+							"affects": "total",
+							"notes": "Até o Valor de Nenhuma Carga"
+						},
+						{
+							"type": "modifier",
+							"id": "84f78d29-7510-4171-b555-91387bd141cc",
+							"disabled": true,
+							"name": "Capaz de Carregar Objetos",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total",
+							"notes": "Até o Valor de Carga Leve"
+						},
+						{
+							"type": "modifier",
+							"id": "c772849b-f50f-4be4-8056-a1cd50f3f349",
+							"disabled": true,
+							"name": "Capaz de Carregar Objetos",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total",
+							"notes": "Até o Valor de Carga Média"
+						},
+						{
+							"type": "modifier",
+							"id": "42625e8f-4240-4e8e-948e-7f7db9b62ed2",
+							"disabled": true,
+							"name": "Capaz de Carregar Objetos",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"notes": "Até o Valor de Carga Pesada"
+						},
+						{
+							"type": "modifier",
+							"id": "c3d7dd03-58f2-4278-b9d8-03164b98b30c",
+							"disabled": true,
+							"name": "Mudança Parcial",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "b1109fe8-9f11-4b5d-89a9-9151bf7df34b",
+							"disabled": true,
+							"name": "Mudança Parcial",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"notes": "O personagem é capaz de tornar o objeto que estiver carregando material sem derrubá-lo"
+						},
+						{
+							"type": "modifier",
+							"id": "654ce6e8-ae54-4870-9a61-823d3a8da3ea",
+							"disabled": true,
+							"name": "Permanentemente Ativo",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "07900cfa-2a03-470d-bb6e-243287e108d3",
+							"name": "Normalmente Ativa",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "Materialização custa 1 PF por segundo"
+						},
+						{
+							"type": "modifier",
+							"id": "41f64d33-03ac-4ec8-9f7a-8c81b5cdd852",
+							"disabled": true,
+							"name": "Sem Deslocamento Vertical",
+							"reference": "P56",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "4ef694ea-7c49-4735-abda-5e217136227a",
+							"disabled": true,
+							"name": "Barulhento",
+							"reference": "P56",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "a7ed84da-d198-47bb-8632-9029f13a634e",
+							"disabled": true,
+							"name": "Projeção",
+							"reference": "P56",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "b304c391-e543-419b-9c0b-c68d7aafdf24",
+							"disabled": true,
+							"name": "Reversão",
+							"reference": "H16",
+							"cost_type": "percentage",
+							"cost": 60,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "936d2d39-d567-4a58-adaa-cedee06cf535",
+							"disabled": true,
+							"name": "Toque",
+							"reference": "H16",
+							"cost_type": "percentage",
+							"cost": 0,
+							"affects": "total",
+							"notes": "Sempre Ativa"
+						},
+						{
+							"type": "modifier",
+							"id": "383e33ab-058c-4e20-8102-e3bbe1384708",
+							"disabled": true,
+							"name": "Toque",
+							"reference": "H16",
+							"cost_type": "percentage",
+							"cost": 5,
+							"affects": "total",
+							"notes": "Ativada ou Desativada à Vontade"
+						},
+						{
+							"type": "modifier",
+							"id": "dde4bd92-6aff-45cc-9909-8f2783611a6e",
+							"disabled": true,
+							"name": "Materialização Difícil",
+							"reference": "H16",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Mutuamente Excludente com Normalmente Ativa."
+						},
+						{
+							"type": "modifier",
+							"id": "15babbdf-58c0-49d9-a35d-7d930b721279",
+							"disabled": true,
+							"name": "Materialização Ectoplásmica",
+							"reference": "H16",
+							"cost_type": "percentage",
+							"cost": -35,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "7e735216-2898-4be6-8d65-414ecfe57c99",
+							"disabled": true,
+							"name": "Ar Fantasma",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "82ee80a9-2f9a-45b4-bca6-5a339a14e6a8",
+							"disabled": true,
+							"name": "Comunicação Substancial",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": 40,
+							"affects": "total"
+						}
+					],
+					"reference": "B65",
+					"calc": {
+						"points": 128
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "ad111814-8ac4-464c-b9e6-d42dfa4d674b",
+					"name": "Invisibilidade",
+					"mental": true,
+					"physical": true,
+					"exotic": true,
+					"base_points": 40,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "b4a2bb02-81ea-414c-ab44-ef91a5f20170",
+							"disabled": true,
+							"name": "Afeta Máquinas",
+							"reference": "B67",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "58acae08-efa5-4b9f-a340-6122a0e56742",
+							"disabled": true,
+							"name": "Capaz de Carregar Objetos",
+							"reference": "B68",
+							"cost_type": "percentage",
+							"cost": 10,
+							"affects": "total",
+							"notes": "Até o Valor de Nenhuma Carga"
+						},
+						{
+							"type": "modifier",
+							"id": "225952dd-1d82-490a-a236-cce6674115e1",
+							"disabled": true,
+							"name": "Capaz de Carregar Objetos",
+							"reference": "B68",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total",
+							"notes": "Até o Valor de Carga Leve"
+						},
+						{
+							"type": "modifier",
+							"id": "0ef1d2a6-bf51-44b5-a179-fe5f804df532",
+							"disabled": true,
+							"name": "Capaz de Carregar Objetos",
+							"reference": "B68",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total",
+							"notes": "Até o Valor de Carga Média"
+						},
+						{
+							"type": "modifier",
+							"id": "f46d72dd-485b-472c-b6ac-8954e3c6cc95",
+							"disabled": true,
+							"name": "Capaz de Carregar Objetos",
+							"reference": "B68",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"notes": "Até o Valor de Carga Pesada"
+						},
+						{
+							"type": "modifier",
+							"id": "81420bed-52d0-4b91-8789-5ac94acd7fde",
+							"disabled": true,
+							"name": "Estendida",
+							"reference": "B68",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total",
+							"notes": "@Tipo@"
+						},
+						{
+							"type": "modifier",
+							"id": "c65d53b7-5497-4fb2-abde-e6b51ff8643f",
+							"disabled": true,
+							"name": "Ativada ou Desativada à Vontade",
+							"reference": "B67",
+							"cost_type": "percentage",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "a7aef0c4-8fa8-4784-b082-c416bc4b4b78",
+							"name": "Normalmente Ativa",
+							"reference": "B68",
+							"cost_type": "percentage",
+							"cost": 5,
+							"affects": "total",
+							"notes": "Ficar visível custa 1 PF por segundo"
+						},
+						{
+							"type": "modifier",
+							"id": "4da8d7a7-7e5f-4e35-9f19-6eab64d30d6f",
+							"disabled": true,
+							"name": "Somente Máquinas",
+							"reference": "B68",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "2ec2c1dc-659e-41bb-aad9-4e7d2c4cb51b",
+							"name": "Somente Matéria",
+							"reference": "B68",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "b668f402-0776-4a4b-835d-25c56cc1f1e2",
+							"disabled": true,
+							"name": "Reflexo Visível",
+							"reference": "B68",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "ef2cb2ee-a212-4b0b-8426-eb6e16b279b3",
+							"disabled": true,
+							"name": "Sombra Visível",
+							"reference": "B68",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "07a86e34-e42c-4479-b023-7250036c173f",
+							"disabled": true,
+							"name": "Franja",
+							"reference": "P57",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						}
+					],
+					"reference": "B67",
+					"calc": {
+						"points": 38
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "e7fa3079-4c74-42a6-a9ae-bfb80dcefbde",
+					"round_down": true,
+					"name": "Resistente",
+					"physical": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "452a2036-0f69-4d72-aae4-b6f996938768",
+							"name": "Riscos ao Metabolismo",
+							"reference": "B85",
+							"cost_type": "points",
+							"cost": 30,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "82d5ee0e-f246-42ad-a4cf-ee31b87ea1ec",
+							"disabled": true,
+							"name": "@Comum: Venenos, Enjoos, etc.@",
+							"reference": "B85",
+							"cost_type": "points",
+							"cost": 15,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "8c4e945b-0dcc-4927-a1be-343eb1c9eb0d",
+							"disabled": true,
+							"name": "@Ocasional: Doenças, Venenos Ingeridos, etc.@",
+							"reference": "B85",
+							"cost_type": "points",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "84ab8551-13ce-414a-95e4-4982da2a1a49",
+							"disabled": true,
+							"name": "@Raro: Aceleração, Doença de Altitude, Doença de Descompressão, Enjoo Marítimo, Enjoo Espacial, Nanomáquinas, etc.@",
+							"reference": "B85",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "f058a69b-a164-4845-9ba9-913eab77ac1c",
+							"name": "Imunidade",
+							"reference": "B85",
+							"cost_type": "multiplier",
+							"cost": 1
+						},
+						{
+							"type": "modifier",
+							"id": "a8220671-a227-4645-9445-7a8393df0619",
+							"disabled": true,
+							"name": "+8 nos testes de HT para Resistir",
+							"reference": "B85",
+							"cost_type": "multiplier",
+							"cost": 0.5
+						},
+						{
+							"type": "modifier",
+							"id": "7e784171-200f-4dd5-a6db-0fabba06aeb1",
+							"disabled": true,
+							"name": "+3 nos testes de HT para Resistir",
+							"reference": "B85",
+							"cost_type": "multiplier",
+							"cost": 0.33
+						}
+					],
+					"reference": "B84",
+					"calc": {
+						"points": 30
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "062a7225-21c7-4f4b-b6e4-194474f9a3d1",
+					"name": "Idade Imutável",
+					"physical": true,
+					"exotic": true,
+					"base_points": 15,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "9a88486d-d5b1-446c-86bb-57538ed40f6a",
+							"disabled": true,
+							"name": "Controle Etário",
+							"reference": "B63",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "e4b237cf-b837-4a46-be9d-8aae204a97b4",
+							"disabled": true,
+							"name": "Somente IQ",
+							"reference": "RSWL24",
+							"cost_type": "percentage",
+							"cost": -75,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "383e1a6e-afd5-439e-82a9-0d721db3f82f",
+							"disabled": true,
+							"name": "Pausar Envelhecimento, Semanalmente",
+							"reference": "PSI18",
+							"cost_type": "percentage",
+							"cost": 80,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "a9966bcb-ad6b-45e8-977e-d527b3a60943",
+							"disabled": true,
+							"name": "Pausar Envelhecimento, Mensalmente",
+							"reference": "PSI18",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "db3bc01b-55e8-4783-9ede-23951e4bbffb",
+							"disabled": true,
+							"name": "Pausar Envelhecimento, Anualmente",
+							"reference": "PSI18",
+							"cost_type": "percentage",
+							"cost": 130,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "68caa20c-f8d5-4a9f-9a77-a7fb78b3abf4",
+							"disabled": true,
+							"name": "Estender Vida",
+							"reference": "PSI18",
+							"cost_type": "percentage",
+							"cost": -30,
+							"affects": "total"
+						}
+					],
+					"reference": "B63",
+					"calc": {
+						"points": 15
+					},
+					"categories": [
+						"Vantagem"
+					]
+				}
+			]
+		}
+	]
+}

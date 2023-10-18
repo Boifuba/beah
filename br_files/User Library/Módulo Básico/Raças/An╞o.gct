@@ -1,0 +1,361 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "db595a53-30b7-4927-9410-021bd794d025",
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "c87eb0c1-5495-4089-97e8-d14e7df7f166",
+			"container_type": "race",
+			"name": "Anão",
+			"reference": "B261",
+			"ancestry": "Human",
+			"calc": {
+				"points": 35
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "257f00a8-2dcb-4667-b9b0-5da3dfc46c92",
+					"name": "Modificadores de Atributos",
+					"physical": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "7d6f8f11-7f3f-42aa-b0e6-5b9f71389f66",
+							"name": "HT +1",
+							"reference": "B15",
+							"cost_type": "points",
+							"cost": 10,
+							"affects": "total",
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": 1,
+									"attribute": "ht"
+								}
+							]
+						},
+						{
+							"type": "modifier",
+							"id": "82788d58-8c4a-404d-88fd-81fc97c09baa",
+							"name": "Vont +1",
+							"reference": "B16",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": 1,
+									"attribute": "will"
+								}
+							]
+						},
+						{
+							"type": "modifier",
+							"id": "8b85bf52-c6f8-4765-9d2e-1b1a87fff831",
+							"name": "MT -1",
+							"reference": "B19",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": -1,
+									"attribute": "sm"
+								}
+							]
+						}
+					],
+					"reference": "B15",
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "8c91ad6d-2e22-4f0b-ab69-c73eec1f0745",
+					"name": "Detectar",
+					"mental": true,
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "a7f136d9-6da1-41bc-9a23-44fc040fffe8",
+							"name": "Ouro",
+							"reference": "B53",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "084ac1b1-9b6a-4dc3-a4c4-198c68f5074f",
+							"disabled": true,
+							"name": "@Substância/Condição Ocasional@",
+							"reference": "B53",
+							"cost_type": "points",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "cb968430-24a3-4172-b197-96cf5d780d36",
+							"disabled": true,
+							"name": "@Substância/Condição Comum@",
+							"reference": "B53",
+							"cost_type": "points",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "227346c7-6a8f-45bc-9f37-c6e105cb5246",
+							"disabled": true,
+							"name": "@Substância/Condição Muito Comum@",
+							"reference": "B53",
+							"cost_type": "points",
+							"cost": 30,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "37e8680f-d38f-41d7-9d39-eedc8c4d2aa9",
+							"disabled": true,
+							"name": "Precisão",
+							"reference": "B53",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "f874c55a-44de-456c-9381-78fecea8460d",
+							"disabled": true,
+							"name": "Detecção de Sinais",
+							"reference": "B53",
+							"cost_type": "percentage",
+							"cost": 0,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d2ddae7b-c0e2-4709-82a3-652952ef7fca",
+							"name": "Vaga",
+							"reference": "B53",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "505c90ac-0eef-4e71-9567-557cf98dd76a",
+							"disabled": true,
+							"name": "Analisador",
+							"reference": "P47",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "ffc2c5b9-fc6f-4400-9ac1-e4823cdd104c",
+							"disabled": true,
+							"name": "Direção Aproximada",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "9e1d4fca-1b4b-41b4-b532-d5c50a609fc9",
+							"disabled": true,
+							"name": "Precisão, Sem Pontaria",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": 90,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "990e17d2-e38d-4ccd-8e5e-4e3227dde4ae",
+							"disabled": true,
+							"name": "Somente Análise",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "f9bc0cfe-7765-4c82-8271-d2899dc9167a",
+							"disabled": true,
+							"name": "Não Pode Analisar",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						}
+					],
+					"reference": "B53",
+					"calc": {
+						"points": 3
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "b502f97a-c4ef-41e1-9d7d-acbedf380a82",
+					"name": "Expectativa de Vida Ampliada",
+					"physical": true,
+					"exotic": true,
+					"levels": "1",
+					"points_per_level": 2,
+					"reference": "B59",
+					"calc": {
+						"points": 2
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "a3a92466-694c-4bc7-bcbe-11307ce7a145",
+					"name": "Visão Noturna",
+					"physical": true,
+					"levels": "5",
+					"points_per_level": 1,
+					"reference": "B97",
+					"calc": {
+						"points": 5
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "2521ad48-b36e-47fc-98f2-e5da4a674bef",
+					"name": "Talento (Artífice)",
+					"mental": true,
+					"levels": "1",
+					"points_per_level": 10,
+					"reference": "B90",
+					"calc": {
+						"points": 10
+					},
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Armeiro"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Carpintaria"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Eletricista"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Conserto de Equipamento Eletrônico"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Engenharia"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Maquinista"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Alvenaria"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Mecânica"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Ferreiro"
+							}
+						},
+						{
+							"type": "reaction_bonus",
+							"amount": 1,
+							"per_level": true,
+							"situation": "qualquer pessoa para quem o personagem trabalha"
+						}
+					],
+					"categories": [
+						"Talento",
+						"Vantagem"
+					]
+				}
+			]
+		}
+	]
+}

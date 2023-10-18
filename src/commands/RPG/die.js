@@ -2,12 +2,12 @@ const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("die")
-    .setDescription("Maneuvers")
+    .setName("morte")
+    .setDescription("Testes de morte.")
     .addStringOption((option) =>
       option
         .setName("query")
-        .setDescription("Input a query")
+        .setDescription("Escolha uma opção.")
         .setRequired(true)
         .setAutocomplete(true)
     ),

@@ -1,0 +1,100 @@
+{
+  "weekdays": [
+    "Domingo",
+    "Segunda",
+    "Terça",
+    "Quarta",
+    "Quinta",
+    "Sexta",
+    "Sábado"
+  ],
+  "day_zero_weekday": 1,
+  "months": [
+    {
+      "name": "Janeiro",
+      "days": 31
+    },
+    {
+      "name": "Fevereiro",
+      "days": 28
+    },
+    {
+      "name": "Março",
+      "days": 31
+    },
+    {
+      "name": "Abril",
+      "days": 30
+    },
+    {
+      "name": "Maio",
+      "days": 31
+    },
+    {
+      "name": "Junho",
+      "days": 30
+    },
+    {
+      "name": "Julho",
+      "days": 31
+    },
+    {
+      "name": "Agosto",
+      "days": 31
+    },
+    {
+      "name": "Setembro",
+      "days": 30
+    },
+    {
+      "name": "Outubro",
+      "days": 31
+    },
+    {
+      "name": "Novembro",
+      "days": 30
+    },
+    {
+      "name": "Dezembro",
+      "days": 31
+    }
+  ],
+  "seasons": [
+    {
+      "name": "Verão",
+      "start_month": 11,
+      "start_day": 1,
+      "end_month": 2,
+      "end_day": 28
+    },
+    {
+      "name": "Outono",
+      "start_month": 3,
+      "start_day": 1,
+      "end_month": 5,
+      "end_day": 31
+    },
+    {
+      "name": "Inverno",
+      "start_month": 6,
+      "start_day": 1,
+      "end_month": 8,
+      "end_day": 31
+    },
+    {
+      "name": "Primavera",
+      "start_month": 9,
+      "start_day": 1,
+      "end_month": 10,
+      "end_day": 31
+    }
+  ],
+  "era": "EC",
+  "previous_era": "AEC",
+  "leap": {
+    "month": 2,
+    "every": 4,
+    "except": 100,
+    "unless": 400
+  }
+}

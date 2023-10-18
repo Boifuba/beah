@@ -1,0 +1,875 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "9ff6c7f8-5f16-4973-91b5-7cf5a8683413",
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "6e8f7644-3041-45f2-9c32-a4e5e31532e8",
+			"container_type": "race",
+			"name": "Felinoide",
+			"reference": "B261",
+			"ancestry": "Human",
+			"calc": {
+				"points": 35
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "d564f1fc-c3c0-4ec7-ae55-7469dd51c1db",
+					"name": "Audição Aguçada",
+					"physical": true,
+					"levels": "2",
+					"points_per_level": 2,
+					"reference": "B88",
+					"calc": {
+						"points": 4
+					},
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"per_level": true,
+							"attribute": "hearing"
+						}
+					],
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "425ba506-b79e-42a2-a897-85cf97b1c472",
+					"name": "Paladar/Olfato Apurado",
+					"physical": true,
+					"levels": "1",
+					"points_per_level": 2,
+					"reference": "B88",
+					"calc": {
+						"points": 2
+					},
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"per_level": true,
+							"attribute": "taste_smell"
+						}
+					],
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "cb206917-78f8-45c0-b23b-f252d830e84d",
+					"name": "Modificadores de Atributos",
+					"physical": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "1c372b4e-3578-45c8-b92e-2810c4306b90",
+							"name": "DX +1",
+							"reference": "B15",
+							"cost_type": "points",
+							"cost": 20,
+							"affects": "total",
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": 1,
+									"attribute": "dx"
+								}
+							]
+						},
+						{
+							"type": "modifier",
+							"id": "75e17a23-422f-4241-9a10-35475b32c532",
+							"name": "ST -1",
+							"reference": "B15",
+							"cost_type": "points",
+							"cost": -10,
+							"affects": "total",
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": -1,
+									"attribute": "st"
+								}
+							]
+						}
+					],
+					"reference": "B15",
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "a148d280-0bd5-4e58-9ca7-034628cc388e",
+					"name": "Queda de Gato",
+					"physical": true,
+					"exotic": true,
+					"base_points": 10,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "31eac300-4ba4-46ee-8ec2-7ab26f2ce6ae",
+							"disabled": true,
+							"name": "Queda Suave",
+							"reference": "P43",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "269877ff-c47f-4e1e-8b8f-1ae733434518",
+							"disabled": true,
+							"name": "Paraquedas",
+							"reference": "P43",
+							"cost_type": "percentage",
+							"cost": -30,
+							"affects": "total"
+						}
+					],
+					"reference": "B81",
+					"calc": {
+						"points": 10
+					},
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "5d74fcba-c23b-4add-83d9-80a76789d412",
+					"name": "Garras Afiadas",
+					"physical": true,
+					"base_points": 5,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "corte",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Talho",
+							"reach": "C",
+							"parry": "0",
+							"block": "Não",
+							"calc": {
+								"level": 0,
+								"parry": "0",
+								"block": "Não",
+								"damage": "thr-1 corte"
+							},
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Briga"
+								},
+								{
+									"type": "skill",
+									"name": "Boxe"
+								},
+								{
+									"type": "skill",
+									"name": "Caratê"
+								}
+							]
+						}
+					],
+					"reference": "B61",
+					"calc": {
+						"points": 5
+					},
+					"notes": "Mãos",
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "589b7028-c239-4aa5-8cdf-ca69aab9a1b0",
+					"name": "Garras Afiadas",
+					"physical": true,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "corte",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Talho",
+							"reach": "C",
+							"parry": "0",
+							"block": "Não",
+							"calc": {
+								"level": 0,
+								"parry": "0",
+								"block": "Não",
+								"damage": "thr-1 corte"
+							},
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Briga"
+								},
+								{
+									"type": "skill",
+									"name": "Boxe"
+								},
+								{
+									"type": "skill",
+									"name": "Caratê"
+								}
+							]
+						},
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "corte",
+								"st": "thr"
+							},
+							"usage": "Chute",
+							"reach": "C,1",
+							"parry": "Não",
+							"block": "Não",
+							"calc": {
+								"level": 0,
+								"parry": "Não",
+								"block": "Não",
+								"damage": "thr corte"
+							},
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Caratê",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Briga",
+									"modifier": -2
+								}
+							]
+						}
+					],
+					"reference": "B61",
+					"calc": {
+						"points": 0
+					},
+					"notes": "Pés",
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "e7a89537-71ab-463e-8d09-4964bc48c680",
+					"name": "Reflexos em Combate",
+					"mental": true,
+					"base_points": 15,
+					"reference": "B82",
+					"calc": {
+						"points": 15
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "advantage_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Noção do Tempo Ampliado"
+								}
+							}
+						]
+					},
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "starts_with",
+								"qualifier": "sacar rápido"
+							}
+						},
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"attribute": "dodge"
+						},
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"attribute": "parry"
+						},
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"attribute": "block"
+						},
+						{
+							"type": "attribute_bonus",
+							"amount": 2,
+							"attribute": "fright_check"
+						}
+					],
+					"notes": "O personagem nunca fica “paralisado” em uma situação de surpresa; +6 em todos os testes de IQ para voltar a si ou se recuperar de uma situação de surpresa ou “atordoamento” mental.  Seu grupo recebe +1 nos testes de iniciativa (+2 se você for o líder)",
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "8d1dedbf-0209-46a7-a171-5ff5c5866b6a",
+					"name": "Resistência a Dano",
+					"physical": true,
+					"exotic": true,
+					"levels": "1",
+					"points_per_level": 5,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "6ef8a92b-4e29-4ada-b1a5-be50e2499fac",
+							"disabled": true,
+							"name": "Campo de Força",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "af1df0fc-250a-4170-915c-3cd86f2d0e83",
+							"disabled": true,
+							"name": "Enrijecido",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total",
+							"levels": 1
+						},
+						{
+							"type": "modifier",
+							"id": "1a903ebb-006a-4a74-82f9-3e62b8efab71",
+							"disabled": true,
+							"name": "Absorção",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 80,
+							"affects": "total",
+							"notes": "Amplia @Habilidade@"
+						},
+						{
+							"type": "modifier",
+							"id": "0d7b3edf-c9da-4ea9-8d90-853eaa78fda3",
+							"disabled": true,
+							"name": "Absorção",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 80,
+							"affects": "total",
+							"notes": "Só para cura"
+						},
+						{
+							"type": "modifier",
+							"id": "a6edb2ce-b0ee-4d7e-aa58-2ac03d213cfc",
+							"disabled": true,
+							"name": "Absorção",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"notes": "Amplia qualquer habilidade"
+						},
+						{
+							"type": "modifier",
+							"id": "9ee245ad-8a27-4bd5-8d5a-b35fd4ee6c35",
+							"disabled": true,
+							"name": "Reflexão",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "53f87a4c-d026-4976-8136-2e9dc0bcba73",
+							"disabled": true,
+							"name": "Maldição",
+							"reference": "H14",
+							"cost_type": "points",
+							"cost": -1,
+							"affects": "total",
+							"notes": "@Rara@"
+						},
+						{
+							"type": "modifier",
+							"id": "165856ff-5fa4-4718-9970-70ff63c3b3fd",
+							"disabled": true,
+							"name": "Maldição",
+							"reference": "H14",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total",
+							"notes": "@Ocasional@"
+						},
+						{
+							"type": "modifier",
+							"id": "83549c3b-2973-4c2c-ac9e-9fb3631cb5ef",
+							"disabled": true,
+							"name": "Maldição",
+							"reference": "H14",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"notes": "@Comum@"
+						},
+						{
+							"type": "modifier",
+							"id": "efb64288-58cb-4b2b-86a8-0e74defad98e",
+							"disabled": true,
+							"name": "Maldição",
+							"reference": "H14",
+							"cost_type": "percentage",
+							"cost": -15,
+							"affects": "total",
+							"notes": "@Muito Comum@"
+						},
+						{
+							"type": "modifier",
+							"id": "3c2a0c26-300e-41d7-ae54-e5367e3b7c37",
+							"disabled": true,
+							"name": "Direcional",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Frente"
+						},
+						{
+							"type": "modifier",
+							"id": "086dcb2d-262a-40a6-a073-58c04a6faca7",
+							"disabled": true,
+							"name": "Flexível",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "ca1043a9-3722-4643-a66f-78eba88fc09e",
+							"disabled": true,
+							"name": "Limitada",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "@Forma de Ataque Muito Comum@"
+						},
+						{
+							"type": "modifier",
+							"id": "416807e5-9cd7-42da-835d-c36234fc6b3c",
+							"disabled": true,
+							"name": "Semiablativa",
+							"reference": "B84",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "13805918-dbc5-462b-a473-a0fa7cbbe6a5",
+							"disabled": true,
+							"name": "Sem Armadura",
+							"reference": "B84",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "f5ce68be-1f09-4d33-8a84-e3494de3ebb9",
+							"disabled": true,
+							"name": "Direcional",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "@Direção: Costas, Direita, Esquerda, Acima ou Abaixo@"
+						},
+						{
+							"type": "modifier",
+							"id": "2877e887-fba2-4434-aae3-c6b24b7099b4",
+							"disabled": true,
+							"name": "Limitada",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "@Forma de Ataque Comum@"
+						},
+						{
+							"type": "modifier",
+							"id": "7955cbab-9ecf-48ad-b4fc-5bed13222a90",
+							"disabled": true,
+							"name": "Pele Resistente",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "Qualquer efeito que requer uma ruptura na pele ou contato com a pele afetará o personagem."
+						},
+						{
+							"type": "modifier",
+							"id": "067f7b6f-c5aa-4f8a-b9ed-b4d100b743b6",
+							"disabled": true,
+							"name": "Limitada",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -60,
+							"affects": "total",
+							"notes": "@Forma de Ataque Ocasional@"
+						},
+						{
+							"type": "modifier",
+							"id": "81b94ca2-cab4-496b-b1d4-6690b8fd684a",
+							"disabled": true,
+							"name": "Ablativa",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -80,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "0776a8f2-9eb6-4f8e-9c66-33b3d4c728d0",
+							"disabled": true,
+							"name": "Limitada",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -80,
+							"affects": "total",
+							"notes": "@Forma de Ataque Rara@"
+						},
+						{
+							"type": "modifier",
+							"id": "01a19395-5269-444c-b999-3eb34906972b",
+							"disabled": true,
+							"name": "Laminada",
+							"reference": "RSWL18",
+							"cost_type": "percentage",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "f7a94128-2be0-430b-a449-361a4446c24e",
+							"disabled": true,
+							"name": "À Prova de Maldição",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "6681621e-1564-467d-8bbe-8ca57ba00f27",
+							"disabled": true,
+							"name": "Somente Maldições",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": 0,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "796dc053-f73d-44ce-97bf-c9e28710effc",
+							"disabled": true,
+							"name": "Parcial (@Ponto de Impacto, 1 nível por -1 de modificador de ataque, Tronco vale -10%@)",
+							"reference": "B83",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						}
+					],
+					"reference": "B83",
+					"calc": {
+						"points": 5
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "skull"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "face"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "neck"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "torso"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "vitals"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "groin"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "arm"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "hand"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "leg"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "foot"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "tail"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "wing"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "fin"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "brain"
+						}
+					],
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "cc339486-426b-4085-aa6b-520e514be6e8",
+					"name": "Traço Inerente: Voz Ronronante",
+					"physical": true,
+					"reference": "B261",
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "d13e2522-1ab7-42e7-b797-d2994648fb0e",
+					"name": "Traço Inerente: Cauda",
+					"physical": true,
+					"reference": "B261",
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "98b6c7a4-8e38-4cfc-af53-d8e4d8c8ad50",
+					"name": "Impulsividade",
+					"mental": true,
+					"base_points": -10,
+					"cr": 12,
+					"reference": "B145",
+					"calc": {
+						"points": -10
+					},
+					"notes": "O personagem precisa de um sucesso em um teste de autocontrole para ser capaz de esperar e ponderar. No caso de um fracasso, ele deve agir.",
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "898b7f13-f4ae-43fd-ac2b-de0666419c59",
+					"name": "Sonolento",
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "6fc9e51a-805d-493e-aa65-7ab124928955",
+							"name": "1/2 do tempo",
+							"reference": "B157",
+							"cost_type": "points",
+							"cost": -8,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "2046f8a7-2c49-4294-8fe1-c7a266746572",
+							"disabled": true,
+							"name": "2/3 do tempo",
+							"reference": "B157",
+							"cost_type": "points",
+							"cost": -16,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "9b2cd361-3853-4dca-a3da-83ea1965b6cd",
+							"disabled": true,
+							"name": "3/4 do tempo",
+							"reference": "B157",
+							"cost_type": "points",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "0c39029c-9834-46f9-8364-77c6804d70cb",
+							"disabled": true,
+							"name": "7/8 do tempo",
+							"reference": "B157",
+							"cost_type": "points",
+							"cost": -26,
+							"affects": "total"
+						}
+					],
+					"reference": "B157",
+					"calc": {
+						"points": -8
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "b20686ab-bf31-49b4-abe1-09348e9535b2",
+					"name": "Dentes Afiados",
+					"physical": true,
+					"exotic": true,
+					"base_points": 1,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "corte",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Mordida",
+							"reach": "C",
+							"parry": "Não",
+							"block": "Não",
+							"calc": {
+								"level": 0,
+								"parry": "Não",
+								"block": "Não",
+								"damage": "thr-1 corte"
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Briga"
+								},
+								{
+									"type": "dx"
+								}
+							]
+						}
+					],
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "cf29e792-2bda-44b3-8e94-d1b1a6d934f2",
+							"disabled": true,
+							"name": "Concedido pela Mordida de Vampiro",
+							"reference": "B72",
+							"cost_type": "points",
+							"cost": -1,
+							"affects": "total"
+						}
+					],
+					"reference": "B52",
+					"calc": {
+						"points": 1
+					},
+					"categories": [
+						"Qualidade"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "26f46b3a-b037-4752-8a90-add156530df6",
+					"name": "Tolerância à Temperatura",
+					"physical": true,
+					"levels": "1",
+					"points_per_level": 1,
+					"reference": "B95",
+					"calc": {
+						"points": 1
+					},
+					"categories": [
+						"Vantagem"
+					]
+				}
+			]
+		}
+	]
+}

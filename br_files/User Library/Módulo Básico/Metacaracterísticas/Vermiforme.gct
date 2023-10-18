@@ -1,0 +1,104 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "92919b2a-9a9f-479e-9022-a625fa9aecfd",
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "223b7762-854c-4d06-a4fe-02e3923503ac",
+			"container_type": "meta_trait",
+			"name": "Metacaracterística: Vermiforme",
+			"reference": "B263",
+			"calc": {
+				"points": -35
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "a4387bba-035c-4e6c-b2d9-a4b1b941c615",
+					"name": "Flexibilidade (Ultraflexibilidade das Juntas)",
+					"physical": true,
+					"base_points": 15,
+					"reference": "B61",
+					"calc": {
+						"points": 15
+					},
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": 5,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "escalada"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 5,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "fuga"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 5,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "arte erótica"
+							}
+						}
+					],
+					"notes": "O personagem pode ignorar penalidades de até -5 por trabalhar em espaços apertados.",
+					"categories": [
+						"Vantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "0ca13f85-db8e-4fd7-9d46-e13abe8fcfed",
+					"name": "Sem Pernas (Desliza)",
+					"physical": true,
+					"exotic": true,
+					"reference": "B156",
+					"calc": {
+						"points": 0
+					},
+					"categories": [
+						"Desvantagem"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "b11dd788-1575-41f0-a99d-c7bbbf8a3522",
+					"name": "Sem Manuseadores",
+					"physical": true,
+					"base_points": -50,
+					"reference": "B149",
+					"calc": {
+						"points": -50
+					},
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"categories": [
+						"Desvantagem"
+					]
+				}
+			]
+		}
+	]
+}
