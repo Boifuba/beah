@@ -1,7 +1,7 @@
 {
-  "name": "fnord_public",
-  "version": "1.0.0",
-  "description": "",
+  "name": "beah",
+  "version": "0.0.1",
+  "description": "Um bot de discord para ajudar a jogar GURPS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
