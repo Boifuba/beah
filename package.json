@@ -1,6 +1,6 @@
 {
-  "name": "beah",
-  "version": "0.0.1",
+  "name": "estevao",
+  "version": "0.0.2",
   "description": "Um bot de discord para ajudar a jogar GURPS",
   "main": "index.js",
   "scripts": {
