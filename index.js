@@ -37,3 +37,10 @@ const commandFolders = fs.readdirSync("./src/commands");
     }
   });
 
+  client.once('ready', () => {
+    console.log(`Logado como ${client.user.tag}!`);
+    console.log(`Estou em ${client.guilds.cache.size} servidores!`);
+    client.guilds.cache.forEach((guild) => {
+      console.log(guild.name);
+    });
+  });

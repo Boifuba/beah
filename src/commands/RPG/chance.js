@@ -7,7 +7,7 @@ module.exports = {
     .addNumberOption((option) =>
       option
         .setName("nh")
-        .setDescription("Insira uma valor para calcular desvantagens")
+        .setDescription("Insira uma valor para calcular probalidades entre 3 e 18")
         .setRequired(true)
     ),
 
@@ -111,9 +111,23 @@ module.exports = {
         failure: "1.39",
         critical_failure: "0.46",
       },
+      {
+        skill: 17,
+        critical_success: "9.26",
+        success: "88.89",
+        failure: "1.39",
+        critical_failure: "0.46",
+      },
+      {
+        skill: 18,
+        critical_success: "9.26",
+        success: "88.89",
+        failure: "1.39",
+        critical_failure: "0.46",
+      },
     ];
-    const skillToSearch = interaction.options._hoistedOptions[0].value;
-
+    let skillToSearch = interaction.options._hoistedOptions[0].value;
+    if (skillToSearch > 18) skillToSearch = 18
     let foundObject = table.find((obj) => obj.skill === skillToSearch);
     let critical_success, success, failure, critical_failure; // Define the variables here
 
@@ -121,39 +135,42 @@ module.exports = {
       let { critical_success, success, failure, critical_failure } =
         foundObject;
 
-           const embed = new EmbedBuilder();
+      const embed = new EmbedBuilder();
 
-      embed.setColor(0x5506ce).addFields(
-        {
-          name: "Sucesso Crítico",
-          value: `${critical_success}%`,
-          inline: true,
-        },
-        { name: "\u200B", value: "\u200B", inline: true },
+      embed
+        .setColor(0x5506ce)
+        .setThumbnail("https://i.imgur.com/nC0LfsR.png")
+        .setTitle('Probalidades')
+        .addFields(
+          {
+            name: "Sucesso Crítico",
+            value: `${critical_success}%`,
+            inline: true,
+          },
+          { name: "\u200B", value: "\u200B", inline: true },
 
-        {
-          name: "Sucesso Comum",
-          value: `${success}%`,
-          inline: true,
-        },
+          {
+            name: "Sucesso Comum",
+            value: `${success}%`,
+            inline: true,
+          },
 
-        {
-          name: "Falha Comum",
-          value: `${failure}%`,
-          inline: true,
-        },
-        { name: "\u200B", value: "\u200B", inline: true },
+          {
+            name: "Falha Comum",
+            value: `${failure}%`,
+            inline: true,
+          },
+          { name: "\u200B", value: "\u200B", inline: true },
 
-        {
-          name: "Falha Crítica",
-          value: `${critical_failure}%`,
-          inline: true,
-        }
-      );
+          {
+            name: "Falha Crítica",
+            value: `${critical_failure}%`,
+            inline: true,
+          }
+        );
 
       await interaction.reply({ embeds: [embed], ephemeral: true });
-    } else {
-      console.log(`Nenhum objeto com a skill ${skillToSearch} foi encontrado.`);
+
     }
-  },
-};
+  }
+}

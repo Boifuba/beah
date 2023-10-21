@@ -4,7 +4,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("morte")
     .setDescription("Testes de morte.")
-    .addStringOption((option) =>
+    .addNumberOption((option) =>
       option
         .setName("query")
         .setDescription("Escolha uma opção.")
