@@ -2,6 +2,9 @@
 # Beah Discord Bot
 
 GURPS[^1] Fnord Bot is a stand-alone, interactive, discord bot to work as game aid to [GURPS 4<sup>th</sup> Edition](http://www.sjgames.com/gurps) roleplaying game system.
+## Noob way
+
+If want to avoid all install stuff and condigurations just invite the bot to your server [clicking here!](https://discord.com/oauth2/authorize?client_id=997822340400418858&permissions=8&scope=bot) and skip all instructions bellow.
 
 ## How to Use
 If you're not familiar with running Node.js applications, this guide may not be suitable for you. However, it's not overly complicated, and you can find various tutorials on the internet to help you learn. Here's what you'll need:
