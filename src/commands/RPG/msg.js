@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require("discord.js");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("msg")
-    .setDescription("Mostra a xp do pessoal")
+    .setDescription("Envia mensagem para todos do cargo escolhido.")
     .addRoleOption((option) =>
       option
         .setName("campaign")

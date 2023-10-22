@@ -13,3 +13,13 @@
 https://i.imgur.com/hPv6Gnv.png
 
 circulo : https://i.imgur.com/nC0LfsR.png
+
+
+
+
+- Combate à Distância
+  - Speed/Range | Size | Linear Measurement
+  - RoF
+  - Malf
+
+

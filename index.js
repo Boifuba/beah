@@ -44,3 +44,8 @@ const commandFolders = fs.readdirSync("./src/commands");
       console.log(guild.name);
     });
   });
+
+  // Lista Comandos
+  const listCommand = require('./src/commands/RPG/comandos');
+  client.commands.set(listCommand.data.name, listCommand);
+  
