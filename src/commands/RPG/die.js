@@ -2,19 +2,17 @@ const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("morte")
-    .setDescription("Testes de morte.")
-    .addNumberOption((option) =>
+    .setName("die")
+    .setDescription("Maneuvers")
+    .addStringOption((option) =>
       option
         .setName("query")
-        .setDescription("Escolha uma opção.")
+        .setDescription("Input a query")
         .setRequired(true)
         .setAutocomplete(true)
     ),
   async autocomplete(interaction, client) {
     const value = interaction.options.getFocused().toLowerCase();
-
-    const { todayThumbnail } = todayGame();
 
     let choices = [
       "Less than 1/3 your HP left",
@@ -108,8 +106,8 @@ module.exports = {
       .setColor(0x5506ce)
       .setTitle(query)
       .setDescription(desc)
-      .setThumbnail(todayThumbnail);
+      .setThumbnail("https://i.imgur.com/nC0LfsR.png");
 
-    await interaction.reply({ embeds: [embed] });
+    await interaction.reply({ embeds: [embed], ephemeral: true });
   },
 };
