@@ -3,11 +3,11 @@ const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("chance")
-    .setDescription("Probabilidade de rolagem")
+    .setDescription("Statistics")
     .addNumberOption((option) =>
       option
-        .setName("nh")
-        .setDescription("Insira uma valor para calcular probalidades entre 3 e 18")
+        .setName("number")
+        .setDescription("Inserta value.")
         .setRequired(true)
     ),
 
@@ -140,30 +140,30 @@ module.exports = {
       embed
         .setColor(0x5506ce)
         .setThumbnail("https://i.imgur.com/nC0LfsR.png")
-        .setTitle('Probalidades')
+        .setTitle('Probalities')
         .addFields(
           {
-            name: "Sucesso Crítico",
+            name: "Critical Success.",
             value: `${critical_success}%`,
             inline: true,
           },
           { name: "\u200B", value: "\u200B", inline: true },
 
           {
-            name: "Sucesso Comum",
+            name: "Common Success.",
             value: `${success}%`,
             inline: true,
           },
 
           {
-            name: "Falha Comum",
+            name: "Common Failure.",
             value: `${failure}%`,
             inline: true,
           },
           { name: "\u200B", value: "\u200B", inline: true },
 
           {
-            name: "Falha Crítica",
+            name: "Critical Failure.",
             value: `${critical_failure}%`,
             inline: true,
           }

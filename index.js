@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits, EmbedBuilder, PermissionsBitField, Permissions, MessageManager, Embed, Collection } = require(`discord.js`);
+const { Client, GatewayIntentBits,  EmbedBuilder, PermissionsBitField, Permissions, MessageManager, Embed, Collection, TextChannel } = require(`discord.js`);
 const fs = require('fs');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] }); 
 
@@ -38,14 +38,13 @@ const commandFolders = fs.readdirSync("./src/commands");
   });
 
   client.once('ready', () => {
-    console.log(`Logado como ${client.user.tag}!`);
     console.log(`Estou em ${client.guilds.cache.size} servidores!`);
     client.guilds.cache.forEach((guild) => {
-      console.log(guild.name);
+      console.log(` - ${guild.name}`);
     });
   });
 
   // Lista Comandos
-  const listCommand = require('./src/commands/RPG/comandos');
+  const listCommand = require('./src/commands/utilities/suporte');
   client.commands.set(listCommand.data.name, listCommand);
   

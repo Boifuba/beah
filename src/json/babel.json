@@ -3,7 +3,7 @@
 	"pg_br": "34",
 	"name_en": "Magic Resistance",
 	"pg_en": "67",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "Abençoado",
 	"pg_br": "35",
@@ -27,7 +27,7 @@
 	"pg_br": "35",
 	"name_en": "Terrain Adaptation",
 	"pg_en": "93",
-	"cost": "0ou5"
+	"cost": "0 or 5"
 }, {
 	"name_br": "Aderência",
 	"pg_br": "35",
@@ -39,13 +39,13 @@
 	"pg_br": "90",
 	"name_en": "Smooth Operator",
 	"pg_en": "91",
-	"cost": "15/nível"
+	"cost": "15/level"
 }, {
 	"name_br": "Aliados",
 	"pg_br": "35",
 	"name_en": "Allies",
 	"pg_en": "36",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Aliados",
 	"pg_br": "38",
@@ -57,7 +57,7 @@
 	"pg_br": "38",
 	"name_en": "Mana Enhancer",
 	"pg_en": "68",
-	"cost": "50/nível"
+	"cost": "50/level"
 }, {
 	"name_br": "Anfíbio",
 	"pg_br": "38",
@@ -69,7 +69,7 @@
 	"pg_br": "39",
 	"name_en": "Unusual Background",
 	"pg_en": "96",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Apagado",
 	"pg_br": "39",
@@ -81,7 +81,7 @@
 	"pg_br": "21",
 	"name_en": "Appearance",
 	"pg_en": "21",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Apetrechos",
 	"pg_br": "39",
@@ -93,7 +93,7 @@
 	"pg_br": "40",
 	"name_en": "Magery",
 	"pg_en": "66",
-	"cost": "5+10/nível"
+	"cost": "5+10/level"
 }, {
 	"name_br": "Arrebatador",
 	"pg_br": "40",
@@ -111,19 +111,19 @@
 	"pg_br": "90",
 	"name_en": "Artificer",
 	"pg_en": "90",
-	"cost": "10/nível"
+	"cost": "10/level"
 }, {
 	"name_br": "Artista Talentoso",
 	"pg_br": "90",
 	"name_en": "Gifted Artist",
 	"pg_en": "90",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Ataque Adicional",
 	"pg_br": "42",
 	"name_en": "Extra Attack",
 	"pg_en": "53",
-	"cost": "25/nível"
+	"cost": "25/level"
 }, {
 	"name_br": "Ataque Constritivo",
 	"pg_br": "42",
@@ -135,7 +135,7 @@
 	"pg_br": "42",
 	"name_en": "Innate Attack",
 	"pg_en": "61",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Atirador",
 	"pg_br": "43",
@@ -147,13 +147,13 @@
 	"pg_br": "43",
 	"name_en": "Affliction",
 	"pg_en": "35",
-	"cost": "10/nível"
+	"cost": "10/level"
 }, {
 	"name_br": "Audição Aguçada",
 	"pg_br": "88",
 	"name_en": "Acute Hearing",
 	"pg_en": "35",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "Audição Discriminatória",
 	"pg_br": "44",
@@ -165,7 +165,7 @@
 	"pg_br": "44",
 	"name_en": "Parabolic Hearing",
 	"pg_en": "72",
-	"cost": "4/nível"
+	"cost": "4/level"
 }, {
 	"name_br": "Audição Subsônica",
 	"pg_br": "44",
@@ -201,7 +201,7 @@
 	"pg_br": "45",
 	"name_en": "Extra Arms",
 	"pg_en": "53",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Cabeça Adicional",
 	"pg_br": "46",
@@ -219,7 +219,7 @@
 	"pg_br": "46",
 	"name_en": "Chameleon",
 	"pg_en": "41",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Camaleão Social",
 	"pg_br": "46",
@@ -249,19 +249,19 @@
 	"pg_br": "47",
 	"name_en": "Payload",
 	"pg_en": "74",
-	"cost": "1/nível"
+	"cost": "1/level"
 }, {
 	"name_br": "Carisma",
 	"pg_br": "47",
 	"name_en": "Charisma",
 	"pg_en": "41",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Cibernética",
 	"pg_br": "47",
 	"name_en": "Cybernetics",
 	"pg_en": "46",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Clarisenciência",
 	"pg_br": "47",
@@ -279,19 +279,19 @@
 	"pg_br": "90",
 	"name_en": "Animal Friend",
 	"pg_en": "90",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Consumo Reduzido",
 	"pg_br": "48",
 	"name_en": "Reduced Consumption",
 	"pg_en": "80",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "Contatos",
 	"pg_br": "48",
 	"name_en": "Contacts",
 	"pg_en": "44",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Controle da Mente",
 	"pg_br": "49",
@@ -303,19 +303,19 @@
 	"pg_br": "50",
 	"name_en": "Metabolism Control",
 	"pg_en": "68",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Controle Térmico",
 	"pg_br": "50",
 	"name_en": "Temperature Control",
 	"pg_en": "92",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Crescimento",
 	"pg_br": "50",
 	"name_en": "Growth",
 	"pg_en": "58",
-	"cost": "10/nível"
+	"cost": "10/level"
 }, {
 	"name_br": "Cronolocalização",
 	"pg_br": "74",
@@ -333,19 +333,19 @@
 	"pg_br": "90",
 	"name_en": "Healer",
 	"pg_en": "90",
-	"cost": "10/nível"
+	"cost": "10/level"
 }, {
 	"name_br": "Dedos Verdes",
 	"pg_br": "90",
 	"name_en": "Green Thumb",
 	"pg_en": "90",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Defesas Ampliada",
 	"pg_br": "51",
 	"name_en": "Enhanced Defenses",
 	"pg_en": "51",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Dentes",
 	"pg_br": "52",
@@ -363,37 +363,37 @@
 	"pg_br": "52",
 	"name_en": "Enhanced Move",
 	"pg_en": "52",
-	"cost": "20/nível"
+	"cost": "20/level"
 }, {
 	"name_br": "Destemor",
 	"pg_br": "53",
 	"name_en": "Fearlessness",
 	"pg_en": "55",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "Destino",
 	"pg_br": "53",
 	"name_en": "Destiny",
 	"pg_en": "48",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Destreza Manual Elevada",
 	"pg_br": "53",
 	"name_en": "High Manual Dexterity",
 	"pg_en": "59",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Detectar",
 	"pg_br": "53",
 	"name_en": "Detect",
 	"pg_en": "48",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Difícil de Subjugar",
 	"pg_br": "53",
 	"name_en": "Hardto Subdue",
 	"pg_en": "59",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "Digestão Universal",
 	"pg_br": "54",
@@ -435,25 +435,25 @@
 	"pg_br": "56",
 	"name_en": "Hard to Kill",
 	"pg_en": "58",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "DX Braçal",
 	"pg_br": "56",
 	"name_en": "Arm DX",
 	"pg_en": "40",
-	"cost": "12 ou 16/nível"
+	"cost": "12 ou 16/level"
 }, {
 	"name_br": "Elasticidade",
 	"pg_br": "56",
 	"name_en": "Stretching",
 	"pg_en": "88",
-	"cost": "6/nível"
+	"cost": "6/level"
 }, {
 	"name_br": "Elo Mental",
 	"pg_br": "57",
 	"name_en": "Mind link",
 	"pg_en": "70",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Empatia",
 	"pg_br": "57",
@@ -483,7 +483,7 @@
 	"pg_br": "57",
 	"name_en": "Shrinking",
 	"pg_en": "85",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Equilíbrio Perfeito",
 	"pg_br": "58",
@@ -495,25 +495,25 @@
 	"pg_br": "58",
 	"name_en": "Signature Gear",
 	"pg_en": "85",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Escavação",
 	"pg_br": "58",
 	"name_en": "Tunneling",
 	"pg_en": "94",
-	"cost": "30+5/nível"
+	"cost": "30+5/level"
 }, {
 	"name_br": "Escorregadio",
 	"pg_br": "58",
 	"name_en": "Slippery",
 	"pg_en": "85",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "Escudo Mental",
 	"pg_br": "58",
 	"name_en": "Mind Shield",
 	"pg_en": "70",
-	"cost": "4/nível"
+	"cost": "4/level"
 }, {
 	"name_br": "Espinhos",
 	"pg_br": "58",
@@ -543,7 +543,7 @@
 	"pg_br": "59",
 	"name_en": "Extended Lifespan",
 	"pg_en": "53",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "Experiência-G",
 	"pg_br": "59",
@@ -555,7 +555,7 @@
 	"pg_br": "91",
 	"name_en": "Outdoorsman",
 	"pg_en": "91",
-	"cost": "10/nível"
+	"cost": "10/level"
 }, {
 	"name_br": "Facilidade para Idiomas",
 	"pg_br": "59",
@@ -603,7 +603,7 @@
 	"pg_br": "60",
 	"name_en": "Favor",
 	"pg_en": "55",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Fé Verdadeira",
 	"pg_br": "60",
@@ -627,7 +627,7 @@
 	"pg_br": "71",
 	"name_en": "Alternate Form",
 	"pg_en": "83",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Forma de Sombras",
 	"pg_br": "61",
@@ -639,7 +639,7 @@
 	"pg_br": "61",
 	"name_en": "Claws",
 	"pg_en": "42",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Golpeadores",
 	"pg_br": "62",
@@ -651,25 +651,25 @@
 	"pg_br": "62",
 	"name_en": "Contact Group",
 	"pg_en": "44",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Habilidade Matemática",
 	"pg_br": "91",
 	"name_en": "Mathematical Ability",
 	"pg_en": "90",
-	"cost": "10/nível"
+	"cost": "10/level"
 }, {
 	"name_br": "Habilidade Musical",
 	"pg_br": "91",
 	"name_en": "Musical Ability",
 	"pg_en": "91",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Habilidades Modulares",
 	"pg_br": "63",
 	"name_en": "Modular Abilities",
 	"pg_en": "71",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Hermafromorfo",
 	"pg_br": "63",
@@ -681,43 +681,43 @@
 	"pg_br": "29",
 	"name_en": "Rank",
 	"pg_en": "29",
-	"cost": "5ou10/nível"
+	"cost": "5ou10/level"
 }, {
 	"name_br": "Hierarquia Administrativa",
 	"pg_br": "30",
 	"name_en": "Administrative Rank",
 	"pg_en": "30",
-	"cost": "5ou10/nível"
+	"cost": "5ou10/level"
 }, {
 	"name_br": "Hierarquia Comercial",
 	"pg_br": "30",
 	"name_en": "Merchant Rank",
 	"pg_en": "30",
-	"cost": "5ou10/nível"
+	"cost": "5ou10/level"
 }, {
 	"name_br": "Hierarquia Honorária",
 	"pg_br": "29",
 	"name_en": "Courtesy Rank",
 	"pg_en": "29",
-	"cost": "1/nível"
+	"cost": "1/level"
 }, {
 	"name_br": "Hierarquia Militar",
 	"pg_br": "30",
 	"name_en": "Military Rank",
 	"pg_en": "30",
-	"cost": "5ou10/nível"
+	"cost": "5ou10/level"
 }, {
 	"name_br": "Hierarquia Policial",
 	"pg_br": "30",
 	"name_en": "Police Rank",
 	"pg_en": "30",
-	"cost": "5ou10/nível"
+	"cost": "5ou10/level"
 }, {
 	"name_br": "Hierarquia Religiosa",
 	"pg_br": "30",
 	"name_en": "Religious Rank",
 	"pg_en": "30",
-	"cost": "5ou10/nível"
+	"cost": "5ou10/level"
 }, {
 	"name_br": "Hipoalgia",
 	"pg_br": "63",
@@ -783,7 +783,7 @@
 	"pg_br": "66",
 	"name_en": "Permeation",
 	"pg_en": "75",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Intuição",
 	"pg_br": "67",
@@ -795,7 +795,7 @@
 	"pg_br": "67",
 	"name_en": "Power Investiture",
 	"pg_en": "77",
-	"cost": "10/nível"
+	"cost": "10/level"
 }, {
 	"name_br": "Invisibilidade",
 	"pg_br": "67",
@@ -849,7 +849,7 @@
 	"pg_br": "69",
 	"name_en": "Nictitating Membrane",
 	"pg_en": "71",
-	"cost": "1/nível"
+	"cost": "1/level"
 }, {
 	"name_br": "Memória Eidética",
 	"pg_br": "69",
@@ -879,13 +879,13 @@
 	"pg_br": "70",
 	"name_en": "Compartmentalized Mind",
 	"pg_en": "43",
-	"cost": "50/nível"
+	"cost": "50/level"
 }, {
 	"name_br": "Mestre de Armas",
 	"pg_br": "70",
 	"name_en": "Weapon Master",
 	"pg_en": "99",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Metabolismo Impoluto",
 	"pg_br": "101",
@@ -897,19 +897,19 @@
 	"pg_br": "70",
 	"name_en": "Shape shifting",
 	"pg_en": "83",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Mordidade Vampiro",
 	"pg_br": "72",
 	"name_en": "Vampiric Bite",
 	"pg_en": "96",
-	"cost": "30+5/nível"
+	"cost": "30+5/level"
 }, {
 	"name_br": "Morfose",
 	"pg_br": "72",
 	"name_en": "Morph",
 	"pg_en": "84",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Não Come nem Bebe",
 	"pg_br": "72",
@@ -963,13 +963,13 @@
 	"pg_br": "23",
 	"name_en": "High TL",
 	"pg_en": "23",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Obscurecer",
 	"pg_br": "74",
 	"name_en": "Obscure",
 	"pg_en": "72",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "Obstinado",
 	"pg_br": "74",
@@ -999,7 +999,7 @@
 	"pg_br": "75",
 	"name_en": "Altered TimeRate",
 	"pg_en": "38",
-	"cost": "100/nível"
+	"cost": "100/level"
 }, {
 	"name_br": "Paladar Discriminatório",
 	"pg_br": "75",
@@ -1011,13 +1011,13 @@
 	"pg_br": "88",
 	"name_en": "Acute Taste and Smell",
 	"pg_en": "35",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "Patronos",
 	"pg_br": "75",
 	"name_en": "Patrons",
 	"pg_en": "72",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Pelagem",
 	"pg_br": "101",
@@ -1041,19 +1041,19 @@
 	"pg_br": "77",
 	"name_en": "Security Clearance",
 	"pg_en": "82",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Pernas Adicionais",
 	"pg_br": "77",
 	"name_en": "Extra Legs",
 	"pg_en": "54",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Perspicácia Comercial",
 	"pg_br": "91",
 	"name_en": "Business Acumen",
 	"pg_en": "90",
-	"cost": "10/nível"
+	"cost": "10/level"
 }, {
 	"name_br": "Poderes Legais",
 	"pg_br": "78",
@@ -1077,7 +1077,7 @@
 	"pg_br": "80",
 	"name_en": "Less Sleep",
 	"pg_en": "65",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "Precognição",
 	"pg_br": "80",
@@ -1089,7 +1089,7 @@
 	"pg_br": "80",
 	"name_en": "Breath-Holding",
 	"pg_en": "41",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "Propósito Maior",
 	"pg_br": "80",
@@ -1119,13 +1119,13 @@
 	"pg_br": "81",
 	"name_en": "Enhanced Tracking",
 	"pg_en": "53",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Reconhecimento Social",
 	"pg_br": "81",
 	"name_en": "Social Regard",
 	"pg_en": "86",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Recuperação Acelerada",
 	"pg_br": "82",
@@ -1161,7 +1161,7 @@
 	"pg_br": "82",
 	"name_en": "Regeneration",
 	"pg_en": "80",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Reivindicar Hospitalidade",
 	"pg_br": "82",
@@ -1173,19 +1173,19 @@
 	"pg_br": "26",
 	"name_en": "Independent Income",
 	"pg_en": "26",
-	"cost": "1/nível"
+	"cost": "1/level"
 }, {
 	"name_br": "Reputação",
 	"pg_br": "26",
 	"name_en": "Reputation",
 	"pg_en": "26",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Resistência a Dano",
 	"pg_br": "83",
 	"name_en": "Damage Resistance",
 	"pg_en": "46",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Resistência à Pressão",
 	"pg_br": "84",
@@ -1203,7 +1203,7 @@
 	"pg_br": "84",
 	"name_en": "Resistant",
 	"pg_en": "80",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Restaurar Membros",
 	"pg_br": "85",
@@ -1215,13 +1215,13 @@
 	"pg_br": "85",
 	"name_en": "Binding",
 	"pg_en": "40",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "Riqueza",
 	"pg_br": "25",
 	"name_en": "Wealth",
 	"pg_en": "25",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Rosto Sincero",
 	"pg_br": "101",
@@ -1257,7 +1257,7 @@
 	"pg_br": "87",
 	"name_en": "Scanning Sense",
 	"pg_en": "81",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Sentido de Vibração",
 	"pg_br": "88",
@@ -1275,13 +1275,13 @@
 	"pg_br": "88",
 	"name_en": "Serendipity",
 	"pg_en": "83",
-	"cost": "15/nível"
+	"cost": "15/level"
 }, {
 	"name_br": "Silêncio",
 	"pg_br": "89",
 	"name_en": "Silence",
 	"pg_en": "85",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Sonda Mental",
 	"pg_br": "89",
@@ -1293,43 +1293,43 @@
 	"pg_br": "89",
 	"name_en": "Luck",
 	"pg_en": "66",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "ST Braçal",
 	"pg_br": "89",
 	"name_en": "Arm ST",
 	"pg_en": "40",
-	"cost": "3,5,ou8/nível"
+	"cost": "3,5,ou8/level"
 }, {
 	"name_br": "ST de Golpe",
 	"pg_br": "89",
 	"name_en": "Striking ST",
 	"pg_en": "88",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "ST de Levantamento",
 	"pg_br": "89",
 	"name_en": "Lifting ST",
 	"pg_en": "65",
-	"cost": "3/nível"
+	"cost": "3/level"
 }, {
 	"name_br": "Status",
 	"pg_br": "28",
 	"name_en": "Status",
 	"pg_en": "28",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Super Escalada",
 	"pg_br": "90",
 	"name_en": "Super Climbing",
 	"pg_en": "89",
-	"cost": "3/nível"
+	"cost": "3/level"
 }, {
 	"name_br": "Super Salto",
 	"pg_br": "90",
 	"name_en": "Super Jump",
 	"pg_en": "89",
-	"cost": "10/nível"
+	"cost": "10/level"
 }, {
 	"name_br": "Super Sorte",
 	"pg_br": "90",
@@ -1347,37 +1347,37 @@
 	"pg_br": "90",
 	"name_en": "Talent",
 	"pg_en": "89",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Talento Instintivo",
 	"pg_br": "91",
 	"name_en": "Wild Talent",
 	"pg_en": "99",
-	"cost": "20/nível"
+	"cost": "20/level"
 }, {
 	"name_br": "Tato Apurado",
 	"pg_br": "88",
 	"name_en": "Acute Touch",
 	"pg_en": "35",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "Telecinese",
 	"pg_br": "92",
 	"name_en": "Telekinesis",
 	"pg_en": "92",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Telecomunicação",
 	"pg_br": "93",
 	"name_en": "Telecommunication",
 	"pg_en": "91",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Terror",
 	"pg_br": "94",
 	"name_en": "Terror",
 	"pg_en": "93",
-	"cost": "30+10/nível"
+	"cost": "30+10/level"
 }, {
 	"name_br": "Títere",
 	"pg_br": "94",
@@ -1389,19 +1389,19 @@
 	"pg_br": "94",
 	"name_en": "Injury Tolerance",
 	"pg_en": "60",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Tolerância à Radiação",
 	"pg_br": "95",
 	"name_en": "Radiation Tolerance",
 	"pg_en": "79",
-	"cost": "Variável"
+	"cost": "Varies"
 }, {
 	"name_br": "Tolerância à Temperatura",
 	"pg_br": "95",
 	"name_en": "Temperature Tolerance",
 	"pg_en": "93",
-	"cost": "1/nível"
+	"cost": "1/level"
 }, {
 	"name_br": "Tolerância ao Álcool",
 	"pg_br": "101",
@@ -1479,7 +1479,7 @@
 	"pg_br": "88",
 	"name_en": "Acute Vision",
 	"pg_en": "35",
-	"cost": "2/nível"
+	"cost": "2/level"
 }, {
 	"name_br": "Visão Hiperespectral",
 	"pg_br": "97",
@@ -1491,7 +1491,7 @@
 	"pg_br": "97",
 	"name_en": "Microscopic Vision",
 	"pg_en": "68",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Visão no Escuro",
 	"pg_br": "97",
@@ -1503,13 +1503,13 @@
 	"pg_br": "97",
 	"name_en": "Night Vision",
 	"pg_en": "71",
-	"cost": "1/nível"
+	"cost": "1/level"
 }, {
 	"name_br": "Visão Penetrante",
 	"pg_br": "97",
 	"name_en": "Penetrating Vision",
 	"pg_en": "74",
-	"cost": "10/nível"
+	"cost": "10/level"
 }, {
 	"name_br": "Visão Periférica",
 	"pg_br": "98",
@@ -1521,7 +1521,7 @@
 	"pg_br": "98",
 	"name_en": "Telescopic Vision",
 	"pg_en": "92",
-	"cost": "5/nível"
+	"cost": "5/level"
 }, {
 	"name_br": "Visualização",
 	"pg_br": "98",

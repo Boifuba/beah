@@ -1,13 +1,14 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
-
+// const { Client, GatewayIntentBits } = require("discord.js");
+//
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("suportes")
-    .setDescription("Lista comandos de suporte para o bot")
+    .setName("help")
+    .setDescription("Support itens")
     .addStringOption((option) =>
       option
         .setName("query")
-        .setDescription("Escolha uma das opções.")
+        .setDescription("Pick an option.")
         .setRequired(true)
         .setAutocomplete(true)
     ),
@@ -15,7 +16,12 @@ module.exports = {
   async autocomplete(interaction) {
     const value = interaction.options.getFocused().toLowerCase();
 
-    const choices = ["Comandos do Bot", "Contato", "Downloads", "Status do Servidor"];
+    const choices = [
+      "Bot commands",
+      "Contacts",
+      "Server Status",
+      "Public",
+    ];
 
     const filtered = choices
       .filter((choice) => choice.toLowerCase().includes(value))
@@ -37,64 +43,51 @@ module.exports = {
       .setThumbnail("https://i.imgur.com/nC0LfsR.png");
 
     switch (query) {
-      case "Comandos do Bot":
+      case "Bot commands":
         const commandList = interaction.client.commands.map(
           (command) => command.data.name
         );
         embed.setDescription(commandList.join("\n"));
         break;
-      case "Contato":
+      case "Contacts":
         embed.setDescription(
-          "Entre em contato nesses enderenços e deixe suas dúvidas FIque à vontade de convidar o bot para o seu canal ou juntar-se a nós em nosso servidor GURPS."
+          "Contact us at these addresses and leave your questions. Feel free to invite the bot to your channel or join us on our GURPS server."
         );
         embed.addFields([
           {
-            name: "Postar um erro:",
+            name: "Create an issue:",
             value: "[GitHub](https://github.com/Boifuba/beah)",
             inline: true,
           },
           {
-            name: "Canal do Bot:",
-            value: "[Entrar](https://discord.gg/cJTttwHg)",
+            name: "Bot Channel:",
+            value: "[Enter](https://discord.gg/cJTttwHg)",
             inline: true,
           },
           {
-            name: "Convidar o bot",
-            value: "[link](https://top.gg/bot/997822340400418858)",
+            name: "Invite a bot",
+            value: "[Link](https://top.gg/bot/997822340400418858)",
             inline: true,
           },
         ]);
         break;
 
-      case "Downloads":
-        embed.setDescription(
-          "~~DIGA NÃO À PIRATARIA~~  \n Link para Downloads de materiais de apoio."
-        );
-        embed.addFields(
-          {
-            name: "\u200B",
-            value: "\u200B",
-          },
-          {
-            name: "MEGA1",
-            value: "[DOWNLOAD](https://bit.ly/WarehouseTwentyFree)",
-            inline: true,
-          },
-          {
-            name: "MEGA2",
-            value:
-              "[DOWNLOAD](https://mega.nz/folder/QxkXGCIa#5xXDaK5bX-ThKceVFdXr7g)",
-            inline: true,
-          },
-          {
-            name: "Livros pt_BR",
-            value:
-              "[DOWNLOAD](https://drive.google.com/drive/folders/1fFD-8-qAidbAuyB5SIb8jjm6AaXM-r2B?usp=drive_link)",
-            inline: true,
-          }
-        );
+      case "Public":
+        let totalUsers = 0;
+
+        interaction.client.guilds.cache.forEach((guild) => {
+          totalUsers += guild.memberCount;
+        });
+        const guildCount = interaction.client.guilds.cache.size;
+
+        await interaction.reply;
+        embed
+          .setTitle("Server Status")
+          .setDescription(
+            `The bot is on **${guildCount}** servers and helping **${totalUsers}** players.`
+          );
         break;
-      case "Status do Servidor":
+      case "Server Status":
         const guild = interaction.guild; // Obter a guild da interação
 
         let a = guild.memberCount;
@@ -108,32 +101,35 @@ module.exports = {
           (x) => x.presence?.status === "dnd"
         ).size;
 
-        embed.setTitle("Status do servidor");
+        embed.setTitle("Server Status");
         embed.setDescription(
-          "Lista os membros do servidor de acordo com seus status!"
+          "List of users by activity."
         );
-        embed.setFooter({ text: `Requested by ${interaction.user.username}`, iconURL: interaction.user.avatarURL() })
+        embed.setFooter({
+          text: `Requested by ${interaction.user.username}`,
+          iconURL: interaction.user.avatarURL(),
+        });
 
         embed.addFields({
           name: "Online",
-          value: `  🟢  ${b} membros`,
+          value: `  🟢  ${b} members`,
         });
         embed.addFields({
-          name: "Ausentes",
-          value: `  🟡  ${c} membros`,
+          name: "Idle",
+          value: `  🟡  ${c} members`,
         });
         embed.addFields({
-          name: "Ocupados",
-          value: `  🔴  ${d} membros`,
+          name: "Busy",
+          value: `  🔴  ${d} members`,
         });
         embed.addFields({
-          name: "Membros totais",
-          value: `👥 ${a} membros`,
+          name: "Total members",
+          value: `👥 ${a} members`,
         });
 
         break;
       default:
-        embed.setDescription("Eu não sei que merda foi essa!");
+        embed.setDescription("Oh Sheit!");
         break;
     }
 
