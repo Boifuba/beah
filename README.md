@@ -47,7 +47,7 @@ Make sure you have Node.js and npm installed on your machine.
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/yourbot.git
+git clone https://github.com/Boifuba/beah.git
 ```
 
 Navigate to the project folder:
