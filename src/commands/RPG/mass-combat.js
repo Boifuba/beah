@@ -268,26 +268,26 @@ subcommand
         const query = interaction.options.getString("query");
         if (query === "All-Out Defense") {
           desc =
-            "The ambushers’ commander may select any strategy but a defense strategy on the first round. In addition, the ambushers receive defensive bonuses, which are normally only allowed for defenses. Treat the other side as suffering from confusion (above).";
+            "Don’t retreat an inch! A commander who chooses this option receives a +2 battle strategy modifier, and also reduces his PB loss by one should he lose the round. He cannot gain PB if he wins, however – and unless he wins by sufficient margin to take 0% losses, any casualties his side takes are doubled.";
         }
         if (query === "Defense") {
-          desc = "Both sides are free to pick any battle strategy.";
+          desc = "This is the basic defense option. A defending force gets a +1 battle strategy modifier but cannot gain PB if victorious. They may take advantage of any Defense Bonus for terrain that they began with, though.";
         }
         if (query === "Deliberate Defense") {
           desc =
-            "Neither side may select Deliberate Attack or Deliberate Defense. A mobile force cannot choose a retreat strategy, or any defense strategy other than Mobile Defense, on the first round.";
+            "NThis is a well-prepared defense. It’s never an option in an encounter battle or for a side that starts the battle confused. In a pitched battle, it’s allowed only on the first round – and only to a force that has a Defense Bonus. Either side may use it freely during a siege (pp. 39-40). It gives the user a +1 battle strategy modifier – or +2 if he has Fire Superiority – plus any Defense Bonus from favorable terrain.\n If the defender wins or ties, his defense inflicts +5% casualties on the attacker. However, he cannot gain PB if victorious. In addition, choosing a Deliberate Defense surrenders the initiative; see Special Cases (pp. 35-36)";
         }
         if (query === "Mobile Defense") {
           desc =
-            "The commander of a “confused” force must choose either Rally or Full Retreat on the first round. If he chooses Rally, then he gets a Leadership roll at the end of each round; success means he rallies his force and is free to choose a strategy other than Rally or Retreat on later rounds";
+            "A “defense in depth” that trades space for lives. This choice gives the commander a +1 battle strategy modifier if his force has Cavalry Superiority and/or Naval Superiority. Regardless, if he loses or ties the round, the enemy gains an extra +1 PB (even if defending!) while the commander’s force suffers 5% fewer casualties (minimum 0%). Like other defenses, victory doesn’t allow the defender to gain PB.";
         }
         if (query === "Parley") {
             desc =
-              "The commander of a “confused” force must choose either Rally or Full Retreat on the first round. If he chooses Rally, then he gets a Leadership roll at the end of each round; success means he rallies his force and is free to choose a strategy other than Rally or Retreat on later rounds";
+              "This is an attempt to negotiate a pause in the battle to talk – often to give or demand surrender terms. The enemy      decides whether to accept after the battle strategies are announced (see Special Cases, pp. 35-36). The GM may wish to  make a reaction roll (see pp. B559-562) to determine whether the enemy commander is interested! If the other side refuses the offer, the fight continues and the side that selected Parley is assumed to have chosen Defense instead – but with an extra -1 battle strategy modifier, since the commander wasn’t as focused on winning this round. If the enemy agrees to parley, the battle pauses temporarily as each side warily regards the other (and gathers any wounded). Negotiations can proceed via emissaries, radio, or other indirect channels, or face to face, and might lead to events such as a challenge to single combat";
           }
           if (query === "Rally") {
             desc =
-              "The commander of a “confused” force must choose either Rally or Full Retreat on the first round. If he chooses Rally, then he gets a Leadership roll at the end of each round; success means he rallies his force and is free to choose a strategy other than Rally or Retreat on later rounds";
+              "This strategy is used only when a force is confused for whatever reason, but typically because it was caught by surprise – and the commander doesn’t wish to order a Full Retreat. A force in this situation has either lost or never   achieved proper combat formation, but the commander is trying to remedy that. He suffers a -2 battle strategy modifier, but if his force survives the round, he may attempt a Leadership roll at -2 at the end of the round. Success indicates that his force rallied and is no longer confused.";
           }
         const embed = new EmbedBuilder();
   
