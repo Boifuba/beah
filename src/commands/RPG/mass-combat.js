@@ -246,7 +246,7 @@ subcommand
             'Charge! A commander who chooses this option adds a +2 battle strategy modifier. If he wins the round, his forces also inflict +5% casualties on the enemy. But there’s a cost: Unless he wins by sufficient margin to take 0% losses, any casualties his force takes are doubled.';
         }
         if (query === "Attack") {
-          desc = `This is an order to advance – or, if the forces are already in contact, to press hard against the enemy. The commander is assumed to be using all appropriate battlefield tactics for the period and troops involved. There are no special modifiers, making this a safe “default” option for any commander`
+          desc = `This is an order to advance – or, if the forces are already in contact, to press hard against the enemy. The commmander is assumed to be using all appropriate battlefield tactics for the period and troops involved. There are no special modidfiers, making this a safe “default” option for any commander`
         }
         if (query === "Deliberate Attack") {
           desc =
@@ -255,7 +255,7 @@ subcommand
         if (query === "Indirect Attack") {
           desc =
             `This represents the commander detaching part of his force on a wide outflanking maneuver, faking a retreat, or performing some other risky-but-cunning move. He gets a -3 battle strategy modifier (only -2 if he enjoys C3I Superiority). If he wins, double his margin of victory; e.g., if the attacker succeeds by 5 and the defender succeeds by 1, the margin of victory is 4, which would then be doubled to 8. This allows a good or lucky general to achieve a truly spectacular
-            result! Repeated Indirect Attacks offer diminishing returns, however, as the foe will be wary of further tricks. On the second and subsequent Indirect Attacks, multiply the margin of victory by only 1.5 (round up); in addition, a force suffers an extra -2 battle strategy modifier if it follows one Indirect Attack with another on the very next round.`;
+            result! Repeated Indirect Attacks offer diminishing returns, however, as the foe will be wary of further tricks. On the second and subsequent Indirect Attacks, multiply the margin of victory by only 1.5 (round up); in addition, a force suffers an extra -2 battle strategy modifier if it follows one Indirect Attack with another on the very next round.`;
             
         }
         const embed = new EmbedBuilder();
@@ -283,7 +283,7 @@ subcommand
         }
         if (query === "Parley") {
             desc =
-              "This is an attempt to negotiate a pause in the battle to talk – often to give or demand surrender terms. The enemy      decides whether to accept after the battle strategies are announced (see Special Cases, pp. 35-36). The GM may wish to  make a reaction roll (see pp. B559-562) to determine whether the enemy commander is interested! If the other side refuses the offer, the fight continues and the side that selected Parley is assumed to have chosen Defense instead – but with an extra -1 battle strategy modifier, since the commander wasn’t as focused on winning this round. If the enemy agrees to parley, the battle pauses temporarily as each side warily regards the other (and gathers any wounded). Negotiations can proceed via emissaries, radio, or other indirect channels, or face to face, and might lead to events such as a challenge to single combat";
+              "This is an attempt to negotiate a pause in the battle to talk – often to give or demand surrender terms. The enemy decides whether to accept after the battle strategies are announced (see Special Cases, pp. 35-36). The GM may wish to  make a reaction roll (see pp. B559-562) to determine whether the enemy commander is interested! If the other side refuses the offer, the fight continues and the side that selected Parley is assumed to have chosen Defense instead – but with an extra -1 battle strategy modifier, since the commander wasn’t as focused on winning this round. If the enemy agrees to parley, the battle pauses temporarily as each side warily regards the other (and gathers any wounded). Negotiations can proceed via emissaries, radio, or other indirect channels, or face to face, and might lead to events such as a challenge to single combat";
           }
           if (query === "Rally") {
             desc =
@@ -303,7 +303,7 @@ subcommand
             enemy gains an extra +1 PB, and any casualties the retreating force sustains this round also apply to its logistic force! Win or lose, any casualties the enemy suffers are halved (round down).`
         }
         if (query === "Full Retreat") {
-          desc = `This is an attempt to withdraw as quickly as possible without the retreat degenerating into a rout. It gives the commander a +8 battle strategy modifier and his force takes 10% fewer casualties than usual, but any casualties sustained apply to both his fighting force and his logistic force.
+          desc = `This is an attempt to withdraw as quickly as possible without the retreat degenerating into a rout. It gives the commander a +8 battle strategy modifier and his force takes 10% fewer casualties than usual, but any casualties sustained apply to both his fighting force and his logistic force.
           Regardless of who “wins” the round, the retreating force loses the battle, any survivors escape, and it inflicts no casualties at all on the enemy! The retreating force commander takes an extra -2 battle strategy modifier when performing a Full Retreat as a result of confusion. In any situation where retreat  would be difficult – e.g., a land force must retreat over a narrow bridge – the GM may apply an additional -2 or worse.`
         }
      
