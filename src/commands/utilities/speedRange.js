@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require('discord.js');
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('speed')
-    .setDescription('Mostra quantos membros tem no servidor e quais seus status'),
+    .setDescription('Show Speed/Range/Size/ Linear MEasure Table.'),
   async execute(interaction) {
     if (!interaction) {
       console.error('This command must be used as a Discord interaction.');

@@ -3,7 +3,7 @@ const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('ranged-fire')
-    .setDescription('Lista todos os comandos do bot')
+    .setDescription('List ranged tables')
     .addStringOption((option) =>
       option
         .setName('query')
