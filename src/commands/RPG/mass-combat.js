@@ -246,7 +246,7 @@ subcommand
             'Charge! A commander who chooses this option adds a +2 battle strategy modifier. If he wins the round, his forces also inflict +5% casualties on the enemy. But there’s a cost: Unless he wins by sufficient margin to take 0% losses, any casualties his force takes are doubled.';
         }
         if (query === "Attack") {
-          desc = `This is an order to advance – or, if the forces are already in contact, to press hard against the enemy. The commander is assumed to be using all appropriate battlefield tactics for the period and troops involved. There are no special modifiers, making this a safe “default” option for any commander`
+          desc = `This is an order to advance – or, if the forces are already in contact, to press hard against the enemy. The commmander is assumed to be using all appropriate battlefield tactics for the period and troops involved. There are no special modidfiers, making this a safe “default” option for any commander`
         }
         if (query === "Deliberate Attack") {
           desc =
@@ -255,7 +255,7 @@ subcommand
         if (query === "Indirect Attack") {
           desc =
             `This represents the commander detaching part of his force on a wide outflanking maneuver, faking a retreat, or performing some other risky-but-cunning move. He gets a -3 battle strategy modifier (only -2 if he enjoys C3I Superiority). If he wins, double his margin of victory; e.g., if the attacker succeeds by 5 and the defender succeeds by 1, the margin of victory is 4, which would then be doubled to 8. This allows a good or lucky general to achieve a truly spectacular
-            result! Repeated Indirect Attacks offer diminishing returns, however, as the foe will be wary of further tricks. On the second and subsequent Indirect Attacks, multiply the margin of victory by only 1.5 (round up); in addition, a force suffers an extra -2 battle strategy modifier if it follows one Indirect Attack with another on the very next round.`;
+            result! Repeated Indirect Attacks offer diminishing returns, however, as the foe will be wary of further tricks. On the second and subsequent Indirect Attacks, multiply the margin of victory by only 1.5 (round up); in addition, a force suffers an extra -2 battle strategy modifier if it follows one Indirect Attack with another on the very next round.`;
             
         }
         const embed = new EmbedBuilder();
@@ -268,26 +268,26 @@ subcommand
         const query = interaction.options.getString("query");
         if (query === "All-Out Defense") {
           desc =
-            "The ambushers’ commander may select any strategy but a defense strategy on the first round. In addition, the ambushers receive defensive bonuses, which are normally only allowed for defenses. Treat the other side as suffering from confusion (above).";
+            "Don’t retreat an inch! A commander who chooses this option receives a +2 battle strategy modifier, and also reduces his PB loss by one should he lose the round. He cannot gain PB if he wins, however – and unless he wins by sufficient margin to take 0% losses, any casualties his side takes are doubled.";
         }
         if (query === "Defense") {
-          desc = "Both sides are free to pick any battle strategy.";
+          desc = "This is the basic defense option. A defending force gets a +1 battle strategy modifier but cannot gain PB if victorious. They may take advantage of any Defense Bonus for terrain that they began with, though.";
         }
         if (query === "Deliberate Defense") {
           desc =
-            "Neither side may select Deliberate Attack or Deliberate Defense. A mobile force cannot choose a retreat strategy, or any defense strategy other than Mobile Defense, on the first round.";
+            "NThis is a well-prepared defense. It’s never an option in an encounter battle or for a side that starts the battle confused. In a pitched battle, it’s allowed only on the first round – and only to a force that has a Defense Bonus. Either side may use it freely during a siege (pp. 39-40). It gives the user a +1 battle strategy modifier – or +2 if he has Fire Superiority – plus any Defense Bonus from favorable terrain.\n If the defender wins or ties, his defense inflicts +5% casualties on the attacker. However, he cannot gain PB if victorious. In addition, choosing a Deliberate Defense surrenders the initiative; see Special Cases (pp. 35-36)";
         }
         if (query === "Mobile Defense") {
           desc =
-            "The commander of a “confused” force must choose either Rally or Full Retreat on the first round. If he chooses Rally, then he gets a Leadership roll at the end of each round; success means he rallies his force and is free to choose a strategy other than Rally or Retreat on later rounds";
+            "A “defense in depth” that trades space for lives. This choice gives the commander a +1 battle strategy modifier if his force has Cavalry Superiority and/or Naval Superiority. Regardless, if he loses or ties the round, the enemy gains an extra +1 PB (even if defending!) while the commander’s force suffers 5% fewer casualties (minimum 0%). Like other defenses, victory doesn’t allow the defender to gain PB.";
         }
         if (query === "Parley") {
             desc =
-              "The commander of a “confused” force must choose either Rally or Full Retreat on the first round. If he chooses Rally, then he gets a Leadership roll at the end of each round; success means he rallies his force and is free to choose a strategy other than Rally or Retreat on later rounds";
+              "This is an attempt to negotiate a pause in the battle to talk – often to give or demand surrender terms. The enemy decides whether to accept after the battle strategies are announced (see Special Cases, pp. 35-36). The GM may wish to  make a reaction roll (see pp. B559-562) to determine whether the enemy commander is interested! If the other side refuses the offer, the fight continues and the side that selected Parley is assumed to have chosen Defense instead – but with an extra -1 battle strategy modifier, since the commander wasn’t as focused on winning this round. If the enemy agrees to parley, the battle pauses temporarily as each side warily regards the other (and gathers any wounded). Negotiations can proceed via emissaries, radio, or other indirect channels, or face to face, and might lead to events such as a challenge to single combat";
           }
           if (query === "Rally") {
             desc =
-              "The commander of a “confused” force must choose either Rally or Full Retreat on the first round. If he chooses Rally, then he gets a Leadership roll at the end of each round; success means he rallies his force and is free to choose a strategy other than Rally or Retreat on later rounds";
+              "This strategy is used only when a force is confused for whatever reason, but typically because it was caught by surprise – and the commander doesn’t wish to order a Full Retreat. A force in this situation has either lost or never   achieved proper combat formation, but the commander is trying to remedy that. He suffers a -2 battle strategy modifier, but if his force survives the round, he may attempt a Leadership roll at -2 at the end of the round. Success indicates that his force rallied and is no longer confused.";
           }
         const embed = new EmbedBuilder();
   
@@ -303,7 +303,7 @@ subcommand
             enemy gains an extra +1 PB, and any casualties the retreating force sustains this round also apply to its logistic force! Win or lose, any casualties the enemy suffers are halved (round down).`
         }
         if (query === "Full Retreat") {
-          desc = `This is an attempt to withdraw as quickly as possible without the retreat degenerating into a rout. It gives the commander a +8 battle strategy modifier and his force takes 10% fewer casualties than usual, but any casualties sustained apply to both his fighting force and his logistic force.
+          desc = `This is an attempt to withdraw as quickly as possible without the retreat degenerating into a rout. It gives the commander a +8 battle strategy modifier and his force takes 10% fewer casualties than usual, but any casualties sustained apply to both his fighting force and his logistic force.
           Regardless of who “wins” the round, the retreating force loses the battle, any survivors escape, and it inflicts no casualties at all on the enemy! The retreating force commander takes an extra -2 battle strategy modifier when performing a Full Retreat as a result of confusion. In any situation where retreat  would be difficult – e.g., a land force must retreat over a narrow bridge – the GM may apply an additional -2 or worse.`
         }
      

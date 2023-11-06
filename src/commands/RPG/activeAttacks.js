@@ -6,7 +6,7 @@ module.exports = {
     .setDescription("Maneuvers")
     .addSubcommand((subcommand) =>
       subcommand
-        .setName("basic")
+        .setName("3d5")
         .setDescription("List of basic attacks")
         .addStringOption((option) =>
           option
@@ -167,7 +167,7 @@ module.exports = {
         ac = "Any";
         mv = "Full Move";
       }
-      if (query === "Move") {
+      if (query === "Trigger") {
         desc =
           "Hold your action, then take an Attack, All-Out Attack, Committed Attack, Defensive Attack, Feint, Ready or Stop Hit. Specify exactly what your action will be and what will trigger it. You may also perform a Step and Wait, loosing your Step in the proceeding Maneuver.";
         ac = "Any";
