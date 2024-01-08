@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="../css/style.css">
+
+
+<body>
+    <div class="navbar">
+        <div class="grid-container">
+            <div class="logo">
+                <a href="./index.html"> <img src="https://i.imgur.com/0vnA9bi.png" alt=""></a>
+            </div>
+            <div class="menu">
+                <h1>Blog do Boi</h1>
+            </div>
+            <div class="login-container">
+                
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get('id');
+
+        if (id) {
+            fetch(`https://campanhasdoboi.com.br:25000/api/blog/${id}`)
+                .then(response => response.json())
+                .then(post => {
+                    let contentElement = document.querySelector('.content');
+                    if (contentElement) {
+                        contentElement.innerHTML = `
+                  <h1>${post.title}</h1>
+                  <p class"smalltext">${post.smalltext}</p>
+                  <p>${post.text}</p>
+                  <img src="${post.image}" alt="Post image">
+                  <p>${new Date(post.date).toLocaleDateString()}</p>
+                  <p>#${post.tags}</p>
+                  <p>${post.date}</p>
+                `;
+                    }
+                });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+db.createUser(
+  {
+    user: "manipulador",
+    pwd: "p34rbedSupz",
+    roles: ["readWrite", "dbAdmin"]
+  }
+)
+
+mongodb://manipulador:p34rbedSupz@campanhasdoboi.com.br:27017/admin
+

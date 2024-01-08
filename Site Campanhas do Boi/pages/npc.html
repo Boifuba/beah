@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="../css/style.css">
+
+
+<body>
+    <div class="navbar">
+        <div class="grid-container">
+            <div class="logo">
+                <a href="../index.html"> <img src="https://i.imgur.com/0vnA9bi.png" alt=""></a>
+            </div>
+            <div class="menu">
+                <h1>NPC's de Conan</h1>
+            </div>
+          
+          
+        </div>
+    </div>
+    <div class="wrapper">
+
+
+
+
+
+
+
+
+        <div class="content"></div>
+    </div>
+
+    <!-- Início do Modal -->
+    <div id="imgModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+    <!-- Fim do Modal -->
+
+    </div>
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    </div>
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            var maxHeight = 0;
+
+            $('.text-container').each(function () {
+                maxHeight = Math.max(maxHeight, $(this).height());
+            });
+
+            $('.text-container').height(maxHeight);
+        });
+        // npc.js
+        let data; // Defina 'data' fora de qualquer função
+
+        fetch("https://campanhasdoboi.com.br:25000/api/conan")
+            .then((response) => response.json())
+            .then((jsonData) => {
+                data = jsonData; // Atribua os dados recebidos à variável 'data'
+                populateHTML(data); // Chame a função populateHTML com todos os dados
+
+                document
+                    .getElementById("searchButton")
+                    .addEventListener("click", function () {
+                        // Obtenha o valor do campo de entrada de texto
+                        let searchValue = document.getElementById("searchInput").value;
+
+                        // Filtre os dados baseado no valor de entrada
+                        let filteredData = data.filter(
+                            (obj) =>
+                                obj.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+                                obj.country.toLowerCase().includes(searchValue.toLowerCase())
+                        );
+
+                        populateHTML(filteredData);
+                    });
+            });
+
+        function populateHTML(data) {
+            let html = "";
+            let content = document.querySelector(".content");
+
+            // Ordena os dados por país
+            data.sort((a, b) => a.country.localeCompare(b.country));
+
+            // Agora, itere sobre os dados ordenados para criar o HTML
+            data.forEach((obj) => {
+                let titleClass = "";
+                // Check if country is 'Cimmeria'
+                if (obj.country === "Cimmeria") {
+                    titleClass = "cimmeria";
+                }
+                if (obj.country === "Border Kingdons") {
+                    titleClass = "border-kingdoms";
+                }
+                if (obj.country === "Brythunia") {
+                    titleClass = "brythunia";
+                }
+                if (obj.country === "Zíngara") {
+                    titleClass = "zingara";
+                }
+                if (obj.country === "Nemedia") {
+                    titleClass = "nemedia";
+                }
+                if (obj.country === "Zamora") {
+                    titleClass = "zamora";
+                }
+
+                html += `
+    <div class="grid-item">
+      <div class="title ${titleClass}">${obj.name}</div> 
+      <img src="${obj.image}" alt="${obj.name}">
+      <div class="text-container ${titleClass}">
+        <i>"${obj.description}"</i>
+        <br>
+        <br>
+        <div class="block-container">
+          <span><strong>Country:</strong></span> <span>${obj.country}</span><br>
+          <span><strong>Tribe:</strong></span> <span> ${obj.tribe}</span><br>
+          <span><strong>Title:</strong></span> <span> ${obj.title}</span><br>
+
+        </div>
+      </div>
+    </div>
+  `;
+            });
+
+            content.innerHTML = html;
+            content.addEventListener("click", function (event) {
+                if (event.target.tagName === "IMG") {
+                    modal.style.display = "block";
+                    modalImg.src = event.target.src;
+                }
+            });
+            modal.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+
+        // ISSO aqui é modal da imagem
+        var modal = document.getElementById("imgModal");
+        var modalImg = document.getElementById("img01");
+
+        document
+            .getElementById("searchInput")
+            .addEventListener("keyup", function (event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    document.getElementById("searchButton").click();
+                }
+            });
+
+    </script>
+</body>
+
+</html>

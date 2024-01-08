@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Editor</title>
+    </head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <body>
+        <!-- Place the first <script> tag in your HTML's <head> -->
+        <script src="https://cdn.tiny.cloud/1/ezly3g7sfcmytk3oz37ws8cfy4v1beor3s1ttpdov20r8o1q/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+        <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+        <script>
+      tinymce.init({
+        selector: 'textarea',
+        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+      });
+        </script>
+        <div class="navbar">
+            <div class="grid-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/boi.png" alt="">
+                    </a>
+                </div>
+                <div class="menu">
+                    <h1>NPC's de Conan</h1>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <form id="blog-form">
+                <label for="title" class="mt-40">Título</label>
+                <input type="text" name="title" id="title">
+                <label for="small-text" id="smalltext" class="mt-20">Small Text</label>
+                <input type="text" name="small-text" id="smalltext-input">
+                <span id="charCount">0 Caracteres</span>
+                <div class="flex-container-editor mt-20">
+                    <div class="info">
+                        <label for="data">Data</label>
+                        <input type="date" name="data" id="date">
+                    </div>
+                    <div class="info">
+                        <label for="tags">Tags</label>
+                        <div id="tag-container">
+                            <span id="tags" contenteditable="true"></span>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <label for="img">Image</label>
+                        <input type="text" name="img" id="img">
+                    </div>
+                </div>
+                <label for="textarea" class="mt-20">Texto</label>
+                <textarea name="content" id="text"></textarea>
+                <button class="mt-20">Enviar</button>
+            </form>
+            <div id="post-list"></div>
+        </div>
+        <script>
+            document.getElementById('title').addEventListener('input', function (e) {
+    document.getElementById('charCount').innerText = e.target.value.length + " Caracteres";
+    if (e.target.value.length > 50) {
+        document.getElementById('charCount').style.color = "red";
+    } else {
+        document.getElementById('charCount').style.color = "black";
+    }
+});
+
+document.getElementById('smalltext-input').addEventListener('input', function (e) {
+    document.getElementById('charCount').innerText = e.target.value.length + " Caracteres";
+    if (e.target.value.length > 90) {
+        document.getElementById('charCount').style.color = "red";
+    } else {
+        document.getElementById('charCount').style.color = "black";
+    }
+});
+// Get the post ID from the URL
+const urlParams = new URLSearchParams(window.location.search);
+const postId = urlParams.get('postId');
+
+if (postId) {
+    // Fetch the post data
+    fetch('https://campanhasdoboi.com.br:25000/api/blog/' + postId)
+        .then(response => response.json())
+        .then(post => {
+            // Fill in the form fields with the post data
+            document.getElementById('title').value = post.title;
+            document.getElementById('smalltext-input').value = post.smalltext;
+            document.getElementById('img').value = post.img;
+            document.getElementById('date').value = post.date; // Assign post.date directly from the helllllll
+            let tags = post.tags.join(', ');
+            document.getElementById('tags').innerText = tags;
+
+            document.getElementById('text').value = post.text;
+        });
+}
+
+document.getElementById('tags').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === 'Tab') {
+        e.preventDefault();
+
+        // Create a new tag
+        var tag = document.createElement('span');
+        tag.className = 'tag';
+        tag.textContent = this.textContent.trim();
+
+        // Add a remove button to the tag
+        var remove = document.createElement('span');
+        remove.className = 'remove';
+        remove.textContent = 'x';
+        remove.addEventListener('click', function() {
+            tag.remove();
+        });
+
+        tag.appendChild(remove);
+
+        // Add the tag to the container
+        var container = document.getElementById('tag-container');
+        container.insertBefore(tag, this);
+
+        // Clear the input
+        this.textContent = '';
+    }
+});
+
+document.querySelector('button').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Get the values from the form fields
+    const title = document.getElementById('title').value;
+    const smalltext = document.getElementById('smalltext-input').value;
+    const img = document.getElementById('img').value;
+    const date = document.getElementById('date').value;
+    const text = document.getElementById('text').value;
+
+    // Get the tags from the #tag-container and exclude the #tags element
+    let tags = Array.from(document.getElementById('tag-container').children)
+        .filter(child => child.id !== 'tags')
+        .map(tag => tag.textContent.slice(0, -1)); // Exclude the 'x' from the tag text
+console.log(tags);
+    // Create the post object
+    const post = { title, smalltext, img, date, tags, text }; // tags is already an array
+    // Send the post object to the server
+    fetch('https://campanhasdoboi.com.br:25000/api/blog', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(post)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+});
+
+
+
+
+
+        </script>
+    </body>
+</html>

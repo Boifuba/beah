@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <body>
+        <div class="navbar">
+            <div class="grid-container">
+                <div class="logo-post">
+                    <a href="../index.html">
+                        <img src="https://i.imgur.com/0vnA9bi.png" alt="">
+                    </a>
+                </div>
+                <div class="menu">
+                    <h1>Blog do Boi</h1>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="grid-post">
+                <div class="content"></div>
+                <div class="social-share-box">
+                    <p>Compartilhe esse Post seu Animal.</p>
+                    <div class="social-share">
+                        <a class="share-twitter" href="javascript:void(0);">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="share-facebook" href="javascript:void(0);">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a class="share-reddit" href="javascript:void(0);">
+                            <i class="fab fa-reddit"></i>
+                        </a>
+                        <a class="share-email" href="javascript:void(0);">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                        <a class="share-telegram" href="javascript:void(0);">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a class="share-whatsapp" href="javascript:void(0);">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <img src="${post.img}" class="post-image"  alt="">
+                <p class="post-text">${post.text}</p>
+                <p>${post.tags}</p>
+            </div>
+    
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      
+    <script>
+    // Função para buscar os posts relacionados
+function getRelatedPosts(tags) {
+    return fetch(`https://campanhasdoboi.com.br:25000/api/blog?tags=${tags.join(',')}`)
+        .then(response => response.json());
+}
+
+let urlParams = new URLSearchParams(window.location.search);
+let id = urlParams.get('id');
+
+if (id) {
+    fetch(`https://campanhasdoboi.com.br:25000/api/blog/${id}`)
+        .then(response => response.json())
+        .then(post => {
+            let contentElement = document.querySelector('.content');
+            if (contentElement) {
+                contentElement.innerHTML = `
+                <div class="post-author">
+                    <p class="name">Boifubá</p>
+                    <p>${new Date(post.date).toLocaleDateString()}</p>
+                </div>
+                <h1 class="post-title">${post.title}</h1>
+                <p class="post-smalltext">${post.smalltext}</p>
+                <img src="${post.img}" class="post-image"  alt="">
+                <p class="post-text">${post.text}</p>
+                <p>${post.tags}</p>
+                `;
+
+                // Get related posts
+                getRelatedPosts(post.tags).then(relatedPosts => {
+                    let relatedPostsElement = document.createElement('div');
+                    relatedPostsElement.className = 'related-posts';
+                    relatedPostsElement.innerHTML = '<h2>Posts Relacionados</h2>';
+                    relatedPosts.forEach(relatedPost => {
+                        relatedPostsElement.innerHTML += `
+                        <div class="related-post">
+                            <h3>${relatedPost.title}</h3>
+                            <p>${relatedPost.smalltext}</p>
+                            <a href="${relatedPost.url}">Leia mais</a>
+                        </div>
+                        `;
+                    });
+                    contentElement.appendChild(relatedPostsElement);
+                });
+            }
+        });
+}
+        
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("Já viu isso? ");
+            const username = encodeURIComponent("CefasSathler");
+        
+            document.querySelector('.share-twitter').href = `https://twitter.com/share?url=${url}&text=${text}via=${username}`;
+            document.querySelector('.share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            document.querySelector('.share-reddit').href = `https://reddit.com/submit?url=${url}&title=${text}`;
+            document.querySelector('.share-email').href = `mailto:?subject=${text}&body=${url}`;
+            document.querySelector('.share-telegram').href = `https://t.me/share/url?url=${url}&text=${text}`;
+            document.querySelector('.share-whatsapp').href = `whatsapp://send?text=${text}%20${url}`;
+        });
+    </script>
+    </body>
+</html>

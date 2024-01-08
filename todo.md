@@ -21,5 +21,6 @@ circulo : https://i.imgur.com/nC0LfsR.png
   - Speed/Range | Size | Linear Measurement
   - RoF
   - Malf
-
+  - Rolar em Segredo.
+  - roll damage
 

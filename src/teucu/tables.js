@@ -46,16 +46,16 @@ module.exports = {
     let jsonData;
 
     if (query === "Critical Hit") {
-      jsonData = require("../../json/criticalHit.json");
+      jsonData = require("../json/criticalHit.json");
     }
     if (query === "Critical Miss") {
-      jsonData = require("../../json/criticalMiss.json");
+      jsonData = require("../json/criticalMiss.json");
     }
     if (query === "Critical Spell") {
-      jsonData = require("../../json/criticalSpell.json");
+      jsonData = require("../json/criticalSpell.json");
     }
     if (query === "Critical Unarmed Miss") {
-      jsonData = require("../../json/criticalUnarmed.json");
+      jsonData = require("../json/criticalUnarmed.json");
     }
 
     const removeHTMLTags = (html) => {

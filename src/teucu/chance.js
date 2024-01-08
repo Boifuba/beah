@@ -1,4 +1,5 @@
 
+      
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 
 module.exports = {
@@ -9,7 +10,7 @@ module.exports = {
       subcommand
         .setName("3d6")
         .setDescription("Roll 3d6")
-        .addIntegerOption((option) =>  
+        .addIntegerOption((option) =>
           option
             .setName("value")
             .setDescription("Insert a value.")
@@ -26,11 +27,17 @@ module.exports = {
             .setDescription("Input a query")
             .setRequired(true)
         )
+    )
+    .addNumberOption((option) =>
+      option
+        .setName("number")
+        .setDescription("Insert a value.")
+        .setRequired(true)
     ),
 
   async execute(interaction) {
     const subcommand = interaction.options.getSubcommand();
-    console.warn(subcommand)
+
     if (subcommand === "3d6") {
       let table = [
         {
@@ -147,70 +154,72 @@ module.exports = {
         }
         ];
       
-        let skillToSearch = interaction.options.getInteger("value");
-        if (skillToSearch > 18) skillToSearch = 18;
-        let foundObject = table.find((obj) => obj.skill === skillToSearch);
-  
-        if (foundObject) {
-          let { critical_success, success, failure, critical_failure } = foundObject;
-  
-          const embed = new EmbedBuilder();
-  
-          embed
-            .setColor(0x5506ce)
-            .setThumbnail("https://i.imgur.com/nC0LfsR.png")
-            .setTitle("Probabilities")
-            .addFields(
-              {
-                name: "Critical Success.",
-                value: `${critical_success}%`,
-                inline: true,
-              },
-              { name: "\u200B", value: "\u200B", inline: true },
-              {
-                name: "Common Success.",
-                value: `${success}%`,
-                inline: true,
-              },
-              {
-                name: "Common Failure.",
-                value: `${failure}%`,
-                inline: true,
-              },
-              { name: "\u200B", value: "\u200B", inline: true },
-              {
-                name: "Critical Failure.",
-                value: `${critical_failure}%`,
-                inline: true,
-              }
-            );
-  
-          await interaction.reply({ embeds: [embed], ephemeral: true });
-      
+
+      let skillToSearch = interaction.options.getInteger("value");
+      if (skillToSearch > 18) skillToSearch = 18;
+      let foundObject = table.find((obj) => obj.skill === skillToSearch);
+
+      if (foundObject) {
+        let { critical_success, success, failure, critical_failure } = foundObject;
+
+        const embed = new EmbedBuilder();
+
+        embed
+          .setColor(0x5506ce)
+          .setThumbnail("https://i.imgur.com/nC0LfsR.png")
+          .setTitle("Probabilities")
+          .addFields(
+            {
+              name: "Critical Success",
+              value: `${critical_success}%`,
+              inline: true,
+            },
+            { name: "\u200B", value: "\u200B", inline: true },
+            {
+              name: "Common Success",
+              value: `${success}%`,
+              inline: true,
+            },
+            {
+              name: "Common Failure",
+              value: `${failure}%`,
+              inline: true,
+            },
+            { name: "\u200B", value: "\u200B", inline: true },
+            {
+              name: "Critical Failure",
+              value: `${critical_failure}%`,
+              inline: true,
             }
-        } else if (subcommand === "1d100") {
-          const userValue = interaction.options.getInteger("target");
-          const rollResult = Math.floor(Math.random() * 100) + 1;
-        
-          let isSuccess = rollResult <= userValue;
-        
-          const embed = new EmbedBuilder();
-          embed
-            .setColor(0x5506ce)
-            .setThumbnail("https://i.imgur.com/nC0LfsR.png")
-            .setTitle("Probability")
-            .addFields(
-              {
-                name: "Result",
-                value: `Rolled ${rollResult}`,
-                inline: true,
-              },
-              {
-                name: "Success",
-                value: isSuccess ? "Yes" : "No",
-                inline: true,
-              }
-            );
-        
-          await interaction.reply({ embeds: [embed], ephemeral: true });
-        }}}
+          );
+
+        await interaction.reply({ embeds: [embed], ephemeral: true });
+      }
+    } else if (subcommand === "1d100") {
+      const userValue = interaction.options.getInteger("target");
+      const rollResult = Math.floor(Math.random() * 100) + 1;
+
+      let isSuccess = rollResult <= userValue;
+
+      const embed = new EmbedBuilder();
+      embed
+        .setColor(0x5506ce)
+        .setThumbnail("https://i.imgur.com/nC0LfsR.png")
+        .setTitle("Probability")
+        .addFields(
+          {
+            name: "Result",
+            value: `Rolled ${rollResult}`,
+            inline: true,
+          },
+          {
+            name: "Success",
+            value: isSuccess ? "Yes" : "No",
+            inline: true,
+          }
+        );
+
+      await interaction.reply({ embeds: [embed], ephemeral: true });
+    }
+  },
+};

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+</head>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<body>
+    <div class="navbar">
+        <div class="grid-container">
+            <div class="logo">
+                <a href="../index.html"> <img src="../img/boi.png" alt=""></a>
+            </div>
+            <div class="menu">
+                <h1>Lista de Posts</h1>
+
+            </div>
+      
+        </div>
+    </div>
+    <div class="wrapper">
+        
+        <div id="post-list"></div>
+    </div>
+
+    <script>
+// Fetch all posts when the page loads
+// Fetch all posts when the page loads// Fetch all posts when the page loads
+window.addEventListener('load', function () {
+    fetch('https://campanhasdoboi.com.br:25000/api/blog')
+        .then(response => response.json())
+        .then(posts => {
+            // Create a list of posts
+            const postList = document.getElementById('post-list');
+
+            posts.forEach(post => {
+    // Format the date
+    const date = new Date(post.date);
+    const formattedDate = date.toLocaleDateString('pt-BR');
+
+    // Create a list item for each post
+    const listItem = document.createElement('li');
+    listItem.innerHTML = `
+        <div class="grid-item">
+            <img class="post-image" src="${post.img}" alt="${post.title}">
+            <div>
+                <h3><a href="post.html?id=${post._id}">${post.title}</a></h3>
+                <span class="format-date"><i class="fa fa-calendar"></i> ${formattedDate} - Boi da Praça </span>
+                <p class="smalltext">${post.smalltext}...</p>
+                <div class="but">
+                    <button class="leia-button">Edit</button>
+                    <button class="delete-button" style="background-color: red;">Delete</button>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Add an event listener to the edit button
+    listItem.querySelector('.leia-button').addEventListener('click', () => {
+        // Redirect to the edit page with the post ID as a query parameter
+        window.location.href = 'editor.html?postId=' + post._id;
+    });
+
+// Add an event listener to the delete button
+listItem.querySelector('.delete-button').addEventListener('click', () => {
+    // Display a confirmation dialog
+    const confirmed = confirm('Tem certeza de que deseja excluir o post "' + post.title + '"?');
+
+    // If the user clicked OK, delete the post
+    if (confirmed) {
+        // Send a DELETE request to the API
+        fetch('https://campanhasdoboi.com.br:25000/api/blog/' + post._id, {
+            method: 'DELETE',
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            // Remove the list item from the DOM
+            listItem.remove();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    }
+});
+
+    postList.appendChild(listItem);
+});
+        });
+});
+    </script>
+</body>
+
+</html>
+
+

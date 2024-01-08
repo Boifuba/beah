@@ -1,9 +1,8 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 const fs = require("fs");
 const path = require("path");
-const spellsJSON = require("../../json/spells.json"); 
-const dados = require("../../json/babel.json");
-
+const spellsJSON = require("../json/spells.json");
+const dados = require("../json/babel.json");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -51,7 +50,7 @@ module.exports = {
     const subcommand = interaction.options.getSubcommand();
 
     if (subcommand === "traits") {
-      const dados = require("../../json/babel.json");
+      const dados = require("../json/babel.json");
 
       try {
         const filtered = dados
@@ -148,46 +147,46 @@ module.exports = {
   
  */
     if (subcommand === "traits") {
-        try {
-            const palavraChave = interaction.options.getString("query"); // Obtenha a palavra-chave a partir das opções
-      
-            const resultados = dados.filter(
-              (item) =>
-                item.name_br.includes(palavraChave) ||
-                item.pg_br.includes(palavraChave) ||
-                item.name_en.includes(palavraChave) ||
-                item.cost.includes(palavraChave)
+      try {
+        const palavraChave = interaction.options.getString("query"); // Obtenha a palavra-chave a partir das opções
+
+        const resultados = dados.filter(
+          (item) =>
+            item.name_br.includes(palavraChave) ||
+            item.pg_br.includes(palavraChave) ||
+            item.name_en.includes(palavraChave) ||
+            item.cost.includes(palavraChave)
+        );
+
+        const embed = new EmbedBuilder() // Certifique-se de que está usando a classe EmbedBuilder corretamente
+          .setColor(0x5506ce)
+          .setDescription(`Results for "${palavraChave}"`);
+
+        resultados.forEach((resultado) => {
+          const { name_br, name_en, pg_br, pg_en, cost } = resultado;
+          embed
+            .setTitle(`${name_en}`)
+            .setThumbnail("https://i.imgur.com/MaLBvJU.png")
+            .setDescription(`Cost: ${cost}`)
+            .addFields(
+              {
+                name: `🇧🇷`,
+                value: `B${pg_br}`,
+                inline: true,
+              },
+              {
+                name: `🇺🇸`,
+                value: `B${pg_en}`,
+                inline: true,
+              }
             );
-      
-            const embed = new EmbedBuilder() // Certifique-se de que está usando a classe EmbedBuilder corretamente
-              .setColor(0x5506ce)
-              .setDescription(`Results for "${palavraChave}"`);
-      
-            resultados.forEach((resultado) => {
-              const { name_br, name_en, pg_br, pg_en, cost } = resultado;
-              embed
-                .setTitle(`${name_en}`)
-                .setThumbnail("https://i.imgur.com/MaLBvJU.png")
-                .setDescription(`Cost: ${cost}`)
-                .addFields(
-                  {
-                    name: `🇧🇷`,
-                    value: `B${pg_br}`,
-                    inline: true,
-                  },
-                  {
-                    name: `🇺🇸`,
-                    value: `B${pg_en}`,
-                    inline: true,
-                  }
-                );
-            });
-      
-            // Responder à interação com o objeto EmbedBuilder
-            await interaction.reply({ embeds: [embed] });
-          } catch (error) {
-            console.error("Erro na função execute:", error);
-          }
+        });
+
+        // Responder à interação com o objeto EmbedBuilder
+        await interaction.reply({ embeds: [embed] });
+      } catch (error) {
+        console.error("Erro na função execute:", error);
+      }
     }
 
     /*
